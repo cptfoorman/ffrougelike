@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://dsrqwfjiwe2qa"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_stvka"]
+
+[resource]
+script = ExtResource("1_stvka")
+attack_name = "Ravenshade"
+attackdmg = 30.0
+attack_desc = "Create Shade to Destroy Enemies"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(-10, 0)

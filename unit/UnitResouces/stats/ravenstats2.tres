@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://6u8em2qq4lf4"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_1lxb2"]
+
+[resource]
+script = ExtResource("1_1lxb2")
+name = "False Raven"
+speed = 15
+health = 50.0
+mana = 0.0
+strenght = 8
+inteligence = 2
+defense = 3.0

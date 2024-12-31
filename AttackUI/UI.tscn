@@ -1,0 +1,275 @@
+[gd_scene load_steps=9 format=3 uid="uid://k708pjaubi8r"]
+
+[ext_resource type="Script" path="res://AttackUI/attack_ui.gd" id="1_jjdch"]
+[ext_resource type="Script" path="res://AttackUI/MainUI.gd" id="1_viihh"]
+
+[sub_resource type="Animation" id="Animation_08rsw"]
+resource_name = "attackselectReset"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SelectEnemyUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-835, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SelectEnemyUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackUI:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, 706)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AttackUI:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dt72r"]
+resource_name = "select_slideIn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SelectEnemyUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-835, 4), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SelectEnemyUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qjhba"]
+resource_name = "select_slideOut"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SelectEnemyUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-835, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SelectEnemyUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nqejt"]
+resource_name = "slide_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(24, 706), Vector2(11, 439)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rl5o1"]
+resource_name = "slide_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(21, 443), Vector2(6, 657)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eosxs"]
+_data = {
+"attackselectReset": SubResource("Animation_08rsw"),
+"select_slideIn": SubResource("Animation_dt72r"),
+"select_slideOut": SubResource("Animation_qjhba"),
+"slide_in": SubResource("Animation_nqejt"),
+"slide_out": SubResource("Animation_rl5o1")
+}
+
+[node name="UI" type="CanvasLayer" node_paths=PackedStringArray("attackUI", "animPlayer")]
+follow_viewport_enabled = true
+script = ExtResource("1_viihh")
+attackUI = NodePath("AttackUI")
+animPlayer = NodePath("AnimationPlayer")
+
+[node name="TurnLabels" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.0
+offset_top = 6.0
+offset_right = 74.0
+offset_bottom = 46.0
+grow_horizontal = 2
+
+[node name="yourTurnLabel" type="Label" parent="TurnLabels"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "YOUR TURN"
+
+[node name="enemyTurnLabel" type="Label" parent="TurnLabels"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "ENEMY TURN"
+
+[node name="SelectEnemyUI" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchor_top = 0.855
+anchor_right = 0.108
+anchor_bottom = 0.995
+offset_left = -835.0
+offset_top = -550.04
+offset_right = -835.416
+offset_bottom = -549.76
+
+[node name="backButton" type="Button" parent="SelectEnemyUI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -56.0
+offset_right = 90.0
+offset_bottom = -14.0
+grow_vertical = 0
+text = "BACK"
+
+[node name="AttackUI" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchor_top = 0.684
+anchor_right = 1.0
+anchor_bottom = 0.989
+offset_left = 24.0
+offset_top = 262.768
+offset_right = -5.0
+offset_bottom = 263.128
+script = ExtResource("1_jjdch")
+
+[node name="MainContainer" type="PanelContainer" parent="AttackUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = -0.045
+anchor_right = 0.99
+anchor_bottom = 0.97
+offset_left = -13.984
+offset_top = 1.91
+offset_right = -13.77
+offset_bottom = 1.93999
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AttackUI/MainContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.5
+theme_override_constants/separation = 30
+
+[node name="AttackContainer" type="VBoxContainer" parent="AttackUI/MainContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eosxs")
+}
+
+[connection signal="pressed" from="SelectEnemyUI/backButton" to="." method="_on_back_button_pressed"]
+[connection signal="AttackDecided" from="AttackUI" to="." method="_on_attack_ui_attack_decided"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://jv4t1d0r73x1"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_0bxyf"]
+
+[resource]
+script = ExtResource("1_0bxyf")
+name = "FriendRaven"
+speed = 15
+health = 100.0
+mana = 0.0
+strenght = 10
+inteligence = 2
+defense = 5.0

@@ -1,0 +1,165 @@
+[gd_scene load_steps=11 format=3 uid="uid://ba87btxkl1a6"]
+
+[ext_resource type="Script" path="res://UnitPlacement/placement.gd" id="1_gqrju"]
+[ext_resource type="PackedScene" uid="uid://be5cg4av3mk5x" path="res://unit/unit.tscn" id="2_kktaj"]
+[ext_resource type="Script" path="res://UnitPlacement/placement_ui.gd" id="2_oj8ei"]
+[ext_resource type="PackedScene" uid="uid://bnkbulg51h351" path="res://UnitPlacement/unit_holder.tscn" id="3_jraic"]
+[ext_resource type="PackedScene" uid="uid://d12h27eryruqa" path="res://Dragables/drop_area.tscn" id="3_sqto0"]
+[ext_resource type="Resource" uid="uid://cnkpmd8665p06" path="res://unit/UnitResouces/UnitData/Friendly/BowmanData.tres" id="4_7golw"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="5_likil"]
+[ext_resource type="Resource" uid="uid://xojhwutx7nyq" path="res://unit/UnitResouces/UnitData/Friendly/RavenData.tres" id="5_t354c"]
+[ext_resource type="Script" path="res://EnemyDropmarker.gd" id="7_2i6nd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsiv7"]
+
+[node name="Placement" type="Node2D" node_paths=PackedStringArray("placementUI", "unitHolder", "row1", "row2", "row3", "row4", "row5", "row6")]
+script = ExtResource("1_gqrju")
+unitScene = ExtResource("2_kktaj")
+placementUI = NodePath("placementUI")
+unitHolder = NodePath("UnitHolder")
+row1 = NodePath("row1")
+row2 = NodePath("row2")
+row3 = NodePath("row3")
+availableEnemyUnitsArray = Array[ExtResource("5_likil")]([ExtResource("4_7golw"), ExtResource("5_t354c"), ExtResource("4_7golw")])
+row4 = NodePath("row4")
+row5 = NodePath("row5")
+row6 = NodePath("row6")
+
+[node name="row1" type="Node2D" parent="."]
+
+[node name="DropArea" parent="row1" instance=ExtResource("3_sqto0")]
+position = Vector2(120, 105)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="row1/DropArea"]
+shape = SubResource("RectangleShape2D_nsiv7")
+
+[node name="DropArea2" parent="row1" instance=ExtResource("3_sqto0")]
+position = Vector2(132, 151)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="row1/DropArea2"]
+shape = SubResource("RectangleShape2D_nsiv7")
+
+[node name="DropArea3" parent="row1" instance=ExtResource("3_sqto0")]
+position = Vector2(127, 207)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="row1/DropArea3"]
+shape = SubResource("RectangleShape2D_nsiv7")
+
+[node name="row2" type="Node2D" parent="."]
+
+[node name="DropArea" parent="row2" instance=ExtResource("3_sqto0")]
+position = Vector2(71, 105)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="row2/DropArea"]
+shape = SubResource("RectangleShape2D_nsiv7")
+
+[node name="DropArea2" parent="row2" instance=ExtResource("3_sqto0")]
+position = Vector2(72, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="row2/DropArea2"]
+shape = SubResource("RectangleShape2D_nsiv7")
+
+[node name="DropArea3" parent="row2" instance=ExtResource("3_sqto0")]
+position = Vector2(74, 207)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="row2/DropArea3"]
+shape = SubResource("RectangleShape2D_nsiv7")
+
+[node name="row3" type="Node2D" parent="."]
+position = Vector2(1, 0)
+
+[node name="DropArea" parent="row3" instance=ExtResource("3_sqto0")]
+position = Vector2(18, 103)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="row3/DropArea"]
+shape = SubResource("RectangleShape2D_nsiv7")
+
+[node name="DropArea2" parent="row3" instance=ExtResource("3_sqto0")]
+position = Vector2(17, 153)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="row3/DropArea2"]
+shape = SubResource("RectangleShape2D_nsiv7")
+
+[node name="DropArea3" parent="row3" instance=ExtResource("3_sqto0")]
+position = Vector2(14, 208)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="row3/DropArea3"]
+shape = SubResource("RectangleShape2D_nsiv7")
+
+[node name="row4" type="Node2D" parent="."]
+position = Vector2(1, 1)
+
+[node name="Marker2D" type="Marker2D" parent="row4"]
+position = Vector2(368, 97)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D2" type="Marker2D" parent="row4"]
+position = Vector2(385, 143)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D3" type="Marker2D" parent="row4"]
+position = Vector2(371, 203)
+script = ExtResource("7_2i6nd")
+
+[node name="row5" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="row5"]
+position = Vector2(275, 98)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D2" type="Marker2D" parent="row5"]
+position = Vector2(292, 144)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D3" type="Marker2D" parent="row5"]
+position = Vector2(278, 204)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D4" type="Marker2D" parent="row5"]
+position = Vector2(306, 115)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D5" type="Marker2D" parent="row5"]
+position = Vector2(323, 161)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D6" type="Marker2D" parent="row5"]
+position = Vector2(309, 221)
+script = ExtResource("7_2i6nd")
+
+[node name="row6" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="row6"]
+position = Vector2(400, 112)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D2" type="Marker2D" parent="row6"]
+position = Vector2(417, 158)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D3" type="Marker2D" parent="row6"]
+position = Vector2(403, 218)
+script = ExtResource("7_2i6nd")
+
+[node name="UnitHolder" parent="." instance=ExtResource("3_jraic")]
+
+[node name="placementUI" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+script = ExtResource("2_oj8ei")
+
+[node name="Control" type="Control" parent="placementUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 958.0
+offset_top = 588.0
+offset_right = 1113.0
+offset_bottom = 628.0
+
+[node name="Button" type="Button" parent="placementUI/Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "confirm placement"
+
+[connection signal="pressed" from="placementUI/Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="placementUI/Control/Button" to="UnitHolder" method="_on_button_pressed"]

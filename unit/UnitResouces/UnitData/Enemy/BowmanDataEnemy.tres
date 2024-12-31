@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=7 format=3 uid="uid://b4q5tspjhpvi6"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_vyf1k"]
+[ext_resource type="SpriteFrames" uid="uid://cjs2tyf5pq18r" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteFramesBowman.tres" id="2_2xni1"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="3_oihia"]
+[ext_resource type="Resource" uid="uid://cf32324sq7awa" path="res://unit/UnitResouces/UnitAttacks/BowJumpshot.tres" id="4_6ik2y"]
+[ext_resource type="Resource" uid="uid://b85kra5yr5j05" path="res://unit/UnitResouces/UnitAttacks/Bowpowershot.tres" id="5_o5awy"]
+[ext_resource type="Resource" uid="uid://cs1h45i55lvuf" path="res://unit/UnitResouces/stats/BowmanStats.tres" id="6_3kk7j"]
+
+[resource]
+script = ExtResource("1_vyf1k")
+spriteFrames = ExtResource("2_2xni1")
+unitStats = ExtResource("6_3kk7j")
+unitAttacks = Array[ExtResource("3_oihia")]([ExtResource("4_6ik2y"), ExtResource("5_o5awy")])
+anim_flip = true

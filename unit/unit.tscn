@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://be5cg4av3mk5x"]
+
+[ext_resource type="Script" path="res://unit/unit.gd" id="1_rnc5g"]
+[ext_resource type="Resource" uid="uid://dnksmpk0xyvyi" path="res://unit/UnitResouces/stats/ravenstats.tres" id="2_dnebs"]
+
+[node name="unit" type="Node2D" node_paths=PackedStringArray("animations", "selectButton")]
+script = ExtResource("1_rnc5g")
+animations = NodePath("AnimatedSprite2D")
+unitsstats = ExtResource("2_dnebs")
+selectButton = NodePath("AnimatedSprite2D/selectButton")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-64, -51)
+animation = &""
+centered = false
+offset = Vector2(-7.44828, -4)
+
+[node name="selectButton" type="Button" parent="AnimatedSprite2D"]
+anchors_preset = -1
+anchor_left = 0.357
+anchor_top = 0.423
+anchor_right = 0.596
+anchor_bottom = 0.68
+offset_left = -7.408
+offset_top = -4.031
+offset_right = -0.824005
+offset_bottom = -3.96
+
+[node name="health" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -22.0
+offset_top = 11.0
+offset_right = 66.0
+offset_bottom = 38.0
+scale = Vector2(0.5, 0.5)
+
+[connection signal="mouse_entered" from="AnimatedSprite2D/selectButton" to="." method="_on_select_button_mouse_entered"]
+[connection signal="mouse_exited" from="AnimatedSprite2D/selectButton" to="." method="_on_select_button_mouse_exited"]
+[connection signal="pressed" from="AnimatedSprite2D/selectButton" to="." method="_on_select_button_pressed"]

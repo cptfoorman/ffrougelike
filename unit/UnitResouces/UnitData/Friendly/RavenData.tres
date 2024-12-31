@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=7 format=3 uid="uid://xojhwutx7nyq"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_ocufu"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_hc4gk"]
+[ext_resource type="SpriteFrames" uid="uid://qucmm0ql78sn" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteframes.tres" id="2_saepe"]
+[ext_resource type="Resource" uid="uid://dsrqwfjiwe2qa" path="res://unit/UnitResouces/UnitAttacks/ravenshade.tres" id="4_badvl"]
+[ext_resource type="Resource" uid="uid://psrk3ucs5lr5" path="res://unit/UnitResouces/UnitAttacks/ravenslice.tres" id="5_hrwlp"]
+[ext_resource type="Resource" uid="uid://dnksmpk0xyvyi" path="res://unit/UnitResouces/stats/ravenstats.tres" id="6_nnh0g"]
+
+[resource]
+script = ExtResource("1_ocufu")
+spriteFrames = ExtResource("2_saepe")
+unitStats = ExtResource("6_nnh0g")
+unitAttacks = Array[ExtResource("2_hc4gk")]([ExtResource("4_badvl"), ExtResource("5_hrwlp")])
+anim_flip = true

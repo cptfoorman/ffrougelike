@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=7 format=3 uid="uid://cnkpmd8665p06"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_pbc58"]
+[ext_resource type="SpriteFrames" uid="uid://cjs2tyf5pq18r" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteFramesBowman.tres" id="2_d84au"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_ut5sw"]
+[ext_resource type="Resource" uid="uid://cf32324sq7awa" path="res://unit/UnitResouces/UnitAttacks/BowJumpshot.tres" id="4_bdeko"]
+[ext_resource type="Resource" uid="uid://b85kra5yr5j05" path="res://unit/UnitResouces/UnitAttacks/Bowpowershot.tres" id="5_x1u70"]
+[ext_resource type="Resource" uid="uid://cs1h45i55lvuf" path="res://unit/UnitResouces/stats/BowmanStats.tres" id="6_dq1e0"]
+
+[resource]
+script = ExtResource("1_pbc58")
+spriteFrames = ExtResource("2_d84au")
+unitStats = ExtResource("6_dq1e0")
+unitAttacks = Array[ExtResource("2_ut5sw")]([ExtResource("4_bdeko"), ExtResource("5_x1u70")])
+anim_flip = false

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwvhtailtsqt1"]
+
+[ext_resource type="PackedScene" uid="uid://d12h27eryruqa" path="res://Dragables/drop_area.tscn" id="1_logx4"]
+[ext_resource type="PackedScene" uid="uid://bjemn32fc0t37" path="res://Dragables/dragable.tscn" id="2_uirbi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y48yt"]
+radius = 26.0192
+
+[node name="Node2D" type="Node2D"]
+
+[node name="DropArea" parent="." instance=ExtResource("1_logx4")]
+position = Vector2(332, 151)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropArea"]
+shape = SubResource("CircleShape2D_y48yt")
+
+[node name="Dragable" parent="." instance=ExtResource("2_uirbi")]

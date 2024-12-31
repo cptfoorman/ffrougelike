@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://cf32324sq7awa"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_ufqja"]
+
+[resource]
+script = ExtResource("1_ufqja")
+attack_name = "Jumpshot"
+attackdmg = 30.0
+attack_desc = "Bowman jumps and shoots "
+attack_anim_name = "attack1"
+attack_ofset = Vector2(-20, 0)

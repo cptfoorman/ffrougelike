@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://b85kra5yr5j05"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_gtuk5"]
+
+[resource]
+script = ExtResource("1_gtuk5")
+attack_name = "Powershot"
+attackdmg = 50.0
+attack_desc = "Charges up a powerfull shot"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(-60, 0)
