@@ -26,6 +26,10 @@ signal EnemyUnitAdded(unit: Unit, unitPos: Vector2)
 @export var markersRow5: Array[DropMarker]
 @export var markersRow6: Array[DropMarker]
 
+
+func initializeUnitHolder(units: Array[UnitData]):
+	unitHolder.initialize(units)
+
 func fill_dropzone_arrays():
 	fill_dropzones1()
 	fill_dropzones2()

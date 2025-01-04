@@ -1,0 +1,139 @@
+[gd_scene load_steps=5 format=3 uid="uid://3r4w6ddxogyw"]
+
+[ext_resource type="Script" path="res://PartyBuilder/party_builder.gd" id="1_62rus"]
+[ext_resource type="PackedScene" uid="uid://bnkbulg51h351" path="res://UnitPlacement/unit_holder.tscn" id="2_ojfww"]
+[ext_resource type="PackedScene" uid="uid://d12h27eryruqa" path="res://Dragables/drop_area.tscn" id="3_vskxl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svukr"]
+
+[node name="party_builder" type="Node2D" node_paths=PackedStringArray("unitHolder")]
+script = ExtResource("1_62rus")
+unitHolder = NodePath("UnitHolder")
+
+[node name="UnitHolder" parent="." instance=ExtResource("2_ojfww")]
+
+[node name="Marker2D" type="Marker2D" parent="UnitHolder"]
+position = Vector2(723, 323)
+
+[node name="Marker2D2" type="Marker2D" parent="UnitHolder"]
+position = Vector2(788, 321)
+
+[node name="Marker2D3" type="Marker2D" parent="UnitHolder"]
+position = Vector2(850, 324)
+
+[node name="Marker2D4" type="Marker2D" parent="UnitHolder"]
+position = Vector2(921, 326)
+
+[node name="Marker2D5" type="Marker2D" parent="UnitHolder"]
+position = Vector2(975, 325)
+
+[node name="Marker2D6" type="Marker2D" parent="UnitHolder"]
+position = Vector2(1033, 328)
+
+[node name="Marker2D7" type="Marker2D" parent="UnitHolder"]
+position = Vector2(1085, 325)
+
+[node name="Marker2D8" type="Marker2D" parent="UnitHolder"]
+position = Vector2(973, 414)
+
+[node name="Marker2D9" type="Marker2D" parent="UnitHolder"]
+position = Vector2(1032, 412)
+
+[node name="Marker2D10" type="Marker2D" parent="UnitHolder"]
+position = Vector2(722, 414)
+
+[node name="Marker2D11" type="Marker2D" parent="UnitHolder"]
+position = Vector2(786, 412)
+
+[node name="Marker2D12" type="Marker2D" parent="UnitHolder"]
+position = Vector2(848, 414)
+
+[node name="Marker2D13" type="Marker2D" parent="UnitHolder"]
+position = Vector2(920, 413)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 15.0
+offset_right = 1164.0
+offset_bottom = 235.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.5
+offset_right = 83.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "CHOOSE YOUR PARTY"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -568.0
+offset_top = -50.0
+offset_right = 568.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 250
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+text = "Current Party"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Available Units"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(583, 328)
+
+[node name="current_party_drop_area" type="Node2D" parent="."]
+position = Vector2(-1, 0)
+
+[node name="DropArea" parent="current_party_drop_area" instance=ExtResource("3_vskxl")]
+position = Vector2(341, 317)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="current_party_drop_area/DropArea"]
+shape = SubResource("RectangleShape2D_svukr")
+
+[node name="DropArea2" parent="current_party_drop_area" instance=ExtResource("3_vskxl")]
+position = Vector2(353, 363)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="current_party_drop_area/DropArea2"]
+shape = SubResource("RectangleShape2D_svukr")
+
+[node name="DropArea3" parent="current_party_drop_area" instance=ExtResource("3_vskxl")]
+position = Vector2(348, 419)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="current_party_drop_area/DropArea3"]
+shape = SubResource("RectangleShape2D_svukr")
+
+[node name="DropArea4" parent="current_party_drop_area" instance=ExtResource("3_vskxl")]
+position = Vector2(268, 323)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="current_party_drop_area/DropArea4"]
+shape = SubResource("RectangleShape2D_svukr")
+
+[node name="DropArea5" parent="current_party_drop_area" instance=ExtResource("3_vskxl")]
+position = Vector2(280, 369)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="current_party_drop_area/DropArea5"]
+shape = SubResource("RectangleShape2D_svukr")
+
+[node name="DropArea6" parent="current_party_drop_area" instance=ExtResource("3_vskxl")]
+position = Vector2(275, 425)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="current_party_drop_area/DropArea6"]
+shape = SubResource("RectangleShape2D_svukr")

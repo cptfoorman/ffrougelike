@@ -11,7 +11,7 @@ var drag_speed: float = 50
 var current_area: DropArea = null
 
 signal Dropped(unit_data: UnitData)
-signal TakenAway
+signal TakenAway(unit_data: UnitData)
 
 # Called when the node enters the scene tree for the first time.
 func initialize() -> void:
@@ -47,6 +47,9 @@ func _input(event: InputEvent) -> void:
 					connect("TakenAway", Callable(area, "_on_dragable_taken_away"))
 					Dropped.emit(unitData)
 					global_position = area.global_position
+				if area is Dragable:
+					area.TakenAway.emit(unitData)
+					area.reset_position()
 		
 func reset_position():
 	global_position = initial_position

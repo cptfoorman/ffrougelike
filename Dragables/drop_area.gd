@@ -4,6 +4,7 @@ class_name DropArea
 var unit_data: UnitData
 	
 signal unitDataCounted(unitdata: UnitData)
+
 @onready var red: Sprite2D = %red
 @onready var yellow: Sprite2D = %yellow
 

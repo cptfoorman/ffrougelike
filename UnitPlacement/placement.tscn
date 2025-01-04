@@ -142,6 +142,34 @@ position = Vector2(403, 218)
 script = ExtResource("7_2i6nd")
 
 [node name="UnitHolder" parent="." instance=ExtResource("3_jraic")]
+availableUnitsArray = Array[ExtResource("5_likil")]([])
+
+[node name="Marker2D10" type="Marker2D" parent="UnitHolder"]
+position = Vector2(20, 38)
+
+[node name="Marker2D11" type="Marker2D" parent="UnitHolder"]
+position = Vector2(74, 40)
+
+[node name="Marker2D12" type="Marker2D" parent="UnitHolder"]
+position = Vector2(123, 39)
+
+[node name="Marker2D13" type="Marker2D" parent="UnitHolder"]
+position = Vector2(168, 40)
+
+[node name="Marker2D14" type="Marker2D" parent="UnitHolder"]
+position = Vector2(208, 40)
+
+[node name="Marker2D15" type="Marker2D" parent="UnitHolder"]
+position = Vector2(254, 40)
+
+[node name="Marker2D16" type="Marker2D" parent="UnitHolder"]
+position = Vector2(295, 40)
+
+[node name="Marker2D17" type="Marker2D" parent="UnitHolder"]
+position = Vector2(331, 39)
+
+[node name="Marker2D18" type="Marker2D" parent="UnitHolder"]
+position = Vector2(372, 37)
 
 [node name="placementUI" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true

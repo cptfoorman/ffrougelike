@@ -10,7 +10,8 @@ class_name UnitHolder
 
 @export var marker_array: Array[Marker2D]
 var current_marker_index: int = 0
-func _ready() -> void:
+func initialize(units: Array[UnitData])-> void:
+	availableUnitsArray.append_array(units)
 	current_marker_index = 0
 	fill_marker_array()
 	spawn_dragables()
@@ -46,5 +47,3 @@ func reset_current_marker_index():
 func clear_dragables():
 	for dragable in dragablesArray:
 		dragable.queue_free()
-func _on_button_pressed() -> void:
-	pass # Replace with function body.
