@@ -3,9 +3,12 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_q1cat"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_q1cat")
+name = ""
 speed = 10
 health = 10.0
 mana = 20.0
 strenght = 5
 inteligence = 5
+defense = 0.0

@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnkbulg51h351"]
+[gd_scene load_steps=3 format=3 uid="uid://bnkbulg51h351"]
 
 [ext_resource type="Script" path="res://UnitPlacement/unit_holder.gd" id="1_7xhbb"]
 [ext_resource type="PackedScene" uid="uid://bjemn32fc0t37" path="res://Dragables/dragable.tscn" id="2_lexlh"]
-[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="3_mh2h3"]
-[ext_resource type="Resource" uid="uid://xojhwutx7nyq" path="res://unit/UnitResouces/UnitData/Friendly/RavenData.tres" id="4_r8qqi"]
 
 [node name="UnitHolder" type="Node2D"]
 script = ExtResource("1_7xhbb")
 dragableScene = ExtResource("2_lexlh")
-availableUnitsArray = Array[ExtResource("3_mh2h3")]([ExtResource("4_r8qqi"), ExtResource("4_r8qqi"), ExtResource("4_r8qqi")])

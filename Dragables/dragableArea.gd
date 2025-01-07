@@ -19,7 +19,8 @@ func initialize() -> void:
 	animation.sprite_frames = unitData.get_spriteframes()
 	animation.play("idle")
 
-
+func get_unit_data()-> UnitData:
+	return unitData
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_dragging:
@@ -35,7 +36,7 @@ func _input(event: InputEvent) -> void:
 		is_dragging = false
 		var overlapingAreas = get_overlapping_areas()
 		if overlapingAreas.is_empty():
-			TakenAway.emit(self)
+			TakenAway.emit(unitData)
 			#if current_area != null:
 				#disconnect("Dropped", current_area._on_dragable_dropped)
 			reset_position()

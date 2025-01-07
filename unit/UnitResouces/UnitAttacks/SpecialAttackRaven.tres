@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://bnj2agct5jy2h"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_ukoxt"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_ukoxt")
+attack_name = "Raven Darknes"
+attackdmg = 50.0
+attack_desc = ""
+attack_anim_name = "attack4"
+attack_ofset = Vector2(0, 0)

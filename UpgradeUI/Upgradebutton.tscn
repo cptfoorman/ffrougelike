@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgjl24d3gg3db"]
+
+[ext_resource type="Script" path="res://UpgradeUI/Upgradebutton.gd" id="1_ooo6r"]
+
+[node name="Button" type="Button"]
+text = "upgradebutton"
+script = ExtResource("1_ooo6r")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -35,6 +35,7 @@ func enemy_attack():
 		attacker.play_attack_anim(defender.global_position)
 		await attacker.animations.animation_finished
 		attacker.currentAttack.use_attack(defender, attacker.get_main_attack_modifier())
+		await get_tree().create_timer(0.3).timeout
 		EnemyTurnOver.emit()
 	else:
 		UnitsEmpty.emit()

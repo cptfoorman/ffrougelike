@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_ufqja"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_ufqja")
 attack_name = "Jumpshot"
 attackdmg = 30.0

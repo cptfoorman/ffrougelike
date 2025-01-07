@@ -9,13 +9,16 @@ class_name UnitHolder
 
 
 @export var marker_array: Array[Marker2D]
-var current_marker_index: int = 0
+@onready var current_marker_index: int = 0
+@export var units_to_spawn: int = 5
 func initialize(units: Array[UnitData])-> void:
+	availableUnitsArray.resize(0)
 	availableUnitsArray.append_array(units)
-	current_marker_index = 0
+	for unit in availableUnitsArray:
+		unit.set_local_to_scene(true)
+	reset_current_marker_index()
 	fill_marker_array()
 	spawn_dragables()
-	reset_current_marker_index()
 	
 
 func fill_marker_array():
@@ -33,6 +36,7 @@ func spawn_dragables():
 	for unit in availableUnitsArray:
 		var newDragableUnit: Dragable = dragableScene.instantiate()
 		newDragableUnit.unitData = unit
+		newDragableUnit.unitData.set_local_to_scene(true)
 		add_child(newDragableUnit)
 		newDragableUnit.global_position = get_marker_pos()
 		current_marker_index += 1

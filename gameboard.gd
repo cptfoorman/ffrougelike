@@ -7,6 +7,10 @@ class_name Gameboard
 @export var current_enemy_unit: Unit
 @export var mainUI: UI
 
+func initialize(units: Array[UnitData]):
+	var unitPlacer: UnitPlacer = get_tree().get_first_node_in_group("UnitPlacer")
+	unitPlacer.initialize(units)
+
 func initialize_unit_signals() -> void:
 	connect_friendly_unit_signal()
 	connect_enemy_unit_signals()
@@ -55,8 +59,15 @@ func set_enemy_turn():
 	enemyUnitsGroup.set_possible_target_units(get_current_friendly_units())
 	enemyUnitsGroup.enemy_attack()
 func set_friendly_turn():
+	print("friendly TURN")
 	mainUI.set_friendly_turn()
 	set_friendly_buttons_enabled()
+	set_enemy_buttons_disabled()
+	var new_unit_array:= get_current_friendly_units()
+	if new_unit_array.is_empty() == true:
+		globalSceneLoader.instantiate_start_screen()
+	else:
+		print(new_unit_array)
 func initialize_enemy_units():
 	for child in enemyUnitsGroup.get_children():
 		if child is Unit:
@@ -86,6 +97,7 @@ func _on_enemy_units_enemy_turn_over() -> void:
 func _on_placement_placement_finished() -> void:
 	initialize_enemy_units()
 	initialize_unit_signals()
+	set_enemy_buttons_disabled()
 	
 
 
@@ -99,3 +111,10 @@ func _on_placement_enemy_unit_added(unit: Unit, unitPos: Vector2) -> void:
 	unit.reparent(enemyUnitsGroup)
 	unit.position = unitPos
 	unit.initialize()
+
+
+func _on_enemy_units_units_empty() -> void:
+	var survivor_units: Array[UnitData]
+	for unit in get_current_friendly_units():
+		survivor_units.append(unit.get_unit_data())
+	globalSceneLoader.instantiate_upgrader(survivor_units)

@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_0bxyf"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_0bxyf")
 name = "FriendRaven"
 speed = 15

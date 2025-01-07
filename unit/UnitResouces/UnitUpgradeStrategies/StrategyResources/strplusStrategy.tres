@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StrenghtIncreaseStrategy" load_steps=2 format=3 uid="uid://dsoexpfy67n34"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrenghtIncreaseStrategy.gd" id="1_x32wr"]
+
+[resource]
+script = ExtResource("1_x32wr")
+additional_strenght = 2
+description = "Strenght Up+2"
+textname = "Strenght Up"
+chardef = "ALL"

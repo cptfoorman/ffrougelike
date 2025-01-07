@@ -26,11 +26,20 @@ signal EnemyUnitAdded(unit: Unit, unitPos: Vector2)
 @export var markersRow5: Array[DropMarker]
 @export var markersRow6: Array[DropMarker]
 
+##so this is the unit placer, its job is to instantiate units scenes, give them proper unit data and initialize them
+## the rows and markers do violate DRY orinciples but its set up for a later mechanic
 
+
+
+func initialize(units: Array[UnitData]):
+	initializeUnitHolder(units)
 func initializeUnitHolder(units: Array[UnitData]):
 	unitHolder.initialize(units)
 
+##########################################################################
+##did the markers one by one for reasons above, rows would be important later
 func fill_dropzone_arrays():
+	print("found datazone")
 	fill_dropzones1()
 	fill_dropzones2()
 	fill_dropzones3()
@@ -39,6 +48,7 @@ func fill_dropzones1():
 	for child in row1.get_children():
 		if child is DropArea:
 			if child.unit_data != null:
+				print("found data")
 				dropzonesrow1.append(child)
 func fill_dropzones2():
 	dropzonesrow2.resize(0)
@@ -54,7 +64,7 @@ func fill_dropzones3():
 				dropzonesrow3.append(child)
 func get_unit_data_from_dropzone(dropZone: DropArea)->UnitData:
 	return dropZone.get_unit_data()
-
+	
 func fill_marker_arrays():
 	get_markers_row4()
 	get_markers_row5()
@@ -66,14 +76,12 @@ func get_markers_row4():
 		if child is DropMarker:
 			markersRow4.append(child)
 		
-	
 func get_markers_row5():
 	markersRow5.resize(0)
 	for child in row5.get_children():
 		if child is DropMarker:
 			markersRow5.append(child)
 		
-
 func get_markers_row6():
 	markersRow6.resize(0)
 	for child in row6.get_children():
@@ -86,6 +94,9 @@ func get_marker(markerArray: Array[DropMarker])->DropMarker:
 	markerArray.erase(new_marker)
 	return new_marker
 	
+############################################################
+###heres where instancing happens####################
+##this is a placeholder of sorts for enemies instances
 func fill_enemy_units():
 	for i in enemy_count:
 		var randomRow: Array[int] = [1,2,3]
@@ -100,6 +111,7 @@ func fill_enemy_units():
 
 func fill_units():
 	for dropzone in dropzonesrow1:
+		
 		instantiate_unit(get_unit_data_from_dropzone(dropzone), dropzone.global_position, 1)
 	for dropzone in dropzonesrow2:
 		instantiate_unit(get_unit_data_from_dropzone(dropzone), dropzone.global_position, 2)
@@ -111,9 +123,11 @@ func fill_units():
 	row2.hide()
 	row3.hide()
 	
-
+###############################################################################
+###these funcs instance just a blank unit which then gets data and initializes#
 func instantiate_enemy_unit(unit_data: UnitData, globalpos: Vector2, unitRow: int):
 	var new_unit: Unit = unitScene.instantiate()
+	new_unit.unitdata = unit_data
 	new_unit.animationFrames = unit_data.get_spriteframes()
 	new_unit.unitsstats = unit_data.get_unitstats()
 	new_unit.unitattacks.append_array(unit_data.get_unitAttacks())
@@ -125,6 +139,8 @@ func instantiate_enemy_unit(unit_data: UnitData, globalpos: Vector2, unitRow: in
 
 func instantiate_unit(unit_data: UnitData, globalpos: Vector2, unitRow: int):
 	var new_unit: Unit = unitScene.instantiate()
+	new_unit.unitdata = unit_data
+	new_unit.unitdata.set_local_to_scene(true)
 	new_unit.animationFrames = unit_data.get_spriteframes()
 	new_unit.unitsstats = unit_data.get_unitstats()
 	new_unit.unitattacks.append_array(unit_data.get_unitAttacks())
@@ -139,8 +155,9 @@ func instantiate_unit(unit_data: UnitData, globalpos: Vector2, unitRow: int):
 	
 func _on_button_pressed() -> void:
 	fill_marker_arrays()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.5).timeout
 	fill_enemy_units()
 	fill_dropzone_arrays()
+	await get_tree().create_timer(0.5).timeout
 	fill_units()
 	placementUI.hide()

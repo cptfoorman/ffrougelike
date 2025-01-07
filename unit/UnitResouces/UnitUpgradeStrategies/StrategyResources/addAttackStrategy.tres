@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://8dipswnqxyah"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_64eq1"]
+[ext_resource type="Resource" uid="uid://bnj2agct5jy2h" path="res://unit/UnitResouces/UnitAttacks/SpecialAttackRaven.tres" id="1_mj0gt"]
+
+[resource]
+script = ExtResource("1_64eq1")
+new_attack = ExtResource("1_mj0gt")
+description = "turn into ravens and slice from shadows"
+textname = "ravens attack "
+chardef = "Raven"

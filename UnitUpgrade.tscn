@@ -1,0 +1,255 @@
+[gd_scene load_steps=16 format=3 uid="uid://bii43sbgtee12"]
+
+[ext_resource type="Script" path="res://unit_upgrade.gd" id="1_lv825"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="2_hf0j4"]
+[ext_resource type="PackedScene" uid="uid://bnkbulg51h351" path="res://UnitPlacement/unit_holder.tscn" id="2_pvsyo"]
+[ext_resource type="PackedScene" uid="uid://bw68cv3f6dpki" path="res://Dragables/upgrade_drop_area.tscn" id="2_qshov"]
+[ext_resource type="Resource" uid="uid://cgip863x0trcq" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addAttackStrategy2.tres" id="3_4ga8i"]
+[ext_resource type="Script" path="res://UpgradeUI/UpgradeUI.gd" id="3_jpprc"]
+[ext_resource type="Resource" uid="uid://8dipswnqxyah" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addAttackStrategy.tres" id="4_eu44o"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="5_7ruev"]
+[ext_resource type="Resource" uid="uid://i762nxmbudps" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/intplusStrategy.tres" id="6_e037r"]
+[ext_resource type="Resource" uid="uid://dsoexpfy67n34" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/strplusStrategy.tres" id="7_tf6vs"]
+[ext_resource type="PackedScene" uid="uid://c0t63ipcmce5j" path="res://UpgradeUI/label.tscn" id="12_masci"]
+[ext_resource type="PackedScene" uid="uid://cgjl24d3gg3db" path="res://UpgradeUI/Upgradebutton.tscn" id="12_tlvu3"]
+
+[sub_resource type="Animation" id="Animation_o6we6"]
+resource_name = "upgrade_slidein"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1151, 1), Vector2(596, -2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-334, 2), Vector2(3, -1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7.45058e-09, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rvv4f"]
+resource_name = "upgrade_slideout"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(596, -2), Vector2(1151, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, -1), Vector2(-334, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0333333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_31ot1"]
+_data = {
+"upgrade_slidein": SubResource("Animation_o6we6"),
+"upgrade_slideout": SubResource("Animation_rvv4f")
+}
+
+[node name="UnitUpgradeScreen" type="Node2D" node_paths=PackedStringArray("upgradeUI", "unitHolder") groups=["UnitUpgrader"]]
+script = ExtResource("1_lv825")
+upgradeUI = NodePath("CanvasLayer")
+unitHolder = NodePath("UnitHolder")
+possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("7_tf6vs")])
+
+[node name="UnitHolder" parent="." instance=ExtResource("2_pvsyo")]
+
+[node name="Marker2D" type="Marker2D" parent="UnitHolder"]
+position = Vector2(96, 77)
+
+[node name="Marker2D2" type="Marker2D" parent="UnitHolder"]
+position = Vector2(161, 75)
+
+[node name="Marker2D3" type="Marker2D" parent="UnitHolder"]
+position = Vector2(223, 78)
+
+[node name="Marker2D4" type="Marker2D" parent="UnitHolder"]
+position = Vector2(294, 80)
+
+[node name="Marker2D5" type="Marker2D" parent="UnitHolder"]
+position = Vector2(348, 79)
+
+[node name="Marker2D6" type="Marker2D" parent="UnitHolder"]
+position = Vector2(406, 82)
+
+[node name="Marker2D7" type="Marker2D" parent="UnitHolder"]
+position = Vector2(458, 79)
+
+[node name="Marker2D8" type="Marker2D" parent="UnitHolder"]
+position = Vector2(346, 168)
+
+[node name="Marker2D9" type="Marker2D" parent="UnitHolder"]
+position = Vector2(405, 166)
+
+[node name="Marker2D10" type="Marker2D" parent="UnitHolder"]
+position = Vector2(95, 168)
+
+[node name="Marker2D11" type="Marker2D" parent="UnitHolder"]
+position = Vector2(159, 166)
+
+[node name="Marker2D12" type="Marker2D" parent="UnitHolder"]
+position = Vector2(221, 168)
+
+[node name="Marker2D13" type="Marker2D" parent="UnitHolder"]
+position = Vector2(293, 167)
+
+[node name="UpgradeDropArea" parent="." instance=ExtResource("2_qshov")]
+position = Vector2(404, 309)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(573, 321)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_jpprc")
+upgradeButtonScene = ExtResource("12_tlvu3")
+labelScene = ExtResource("12_masci")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_31ot1")
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -323.0
+offset_right = 301.0
+offset_bottom = 327.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="upgrades" type="VBoxContainer" parent="CanvasLayer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1486.0
+offset_top = -322.0
+offset_right = -1158.0
+offset_bottom = 197.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Unit Info"
+
+[node name="stats" type="VBoxContainer" parent="CanvasLayer/PanelContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer2/VBoxContainer/stats"]
+layout_mode = 2
+text = "Stats"
+
+[node name="attacks" type="VBoxContainer" parent="CanvasLayer/PanelContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer2/VBoxContainer/attacks"]
+layout_mode = 2
+text = "Attacks"
+
+[connection signal="UnitTaken" from="UpgradeDropArea" to="." method="_on_upgrade_drop_area_unit_taken"]
+[connection signal="unitDataCounted" from="UpgradeDropArea" to="." method="_on_upgrade_drop_area_unit_data_counted"]
+[connection signal="UpgradePassed" from="CanvasLayer" to="." method="_on_canvas_layer_upgrade_passed"]

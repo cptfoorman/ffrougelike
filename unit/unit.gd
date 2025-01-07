@@ -16,6 +16,7 @@ enum MainAttackModifier {strenght, inteligence}
 @export var flip_anim_h: bool 
 @export var unitsstats: UnitStats
 @export var unitattacks: Array[UnitAttack]
+@export var unitdata: UnitData
 var currentAttack: UnitAttack
 @export var selectButton: Button
 @onready var healthbar: ProgressBar = %health
@@ -38,7 +39,17 @@ func initialize() -> void:
 	healthbar.value = health
 	if Factionset == Faction.ENEMY:
 		set_button_disabled()
+	apply_unit_strategies()
+	for attack in unitattacks:
+		selectButton.tooltip_text += attack.attack_name + " 
+		"
 
+
+
+func apply_unit_strategies():
+	for strategy in unitdata.unitStrategies:
+		strategy.apply_strategy(self)
+		print("unit "+ str(unitdata)+ " applying")
 
 func get_main_attack_modifier()->int:
 	match attackModifier:
@@ -63,7 +74,9 @@ func take_damage(damage: float):
 	if health <= 0:
 		queue_free()
 		prints(unitsstats.name + " died")
-
+func get_unit_data()->UnitData:
+	return unitdata
+	
 func play_attack_anim(enemyposition: Vector2):
 	var default_position = global_position
 	var new_tween:= create_tween()

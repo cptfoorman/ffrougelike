@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://dacl34qfwj2k5"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_3caev"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_3caev")
+attack_name = "QuickSlice"
+attackdmg = 10.0
+attack_desc = "quick slice from mr. Raven"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)

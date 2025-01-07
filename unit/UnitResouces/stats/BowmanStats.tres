@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_o05x3"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_o05x3")
 name = "Bowman"
 speed = 15

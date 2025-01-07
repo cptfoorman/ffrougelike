@@ -16,6 +16,7 @@ func get_unit_data()->UnitData:
 	return unit_data
 
 func _on_dragable_dropped(unit_data: UnitData) -> void:
+	unitDataCounted.emit(unit_data)
 	yellow.hide()
 	red.show()
 	self.unit_data = unit_data
@@ -24,7 +25,7 @@ func _on_dragable_dropped(unit_data: UnitData) -> void:
 	print(newunitstats.name)
 
 
-func _on_dragable_taken_away(dragable: Dragable) -> void:
+func _on_dragable_taken_away(unit_data: UnitData) -> void:
 	red.hide()
 	yellow.show()
 	unit_data = null

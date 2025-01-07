@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4dkg6md2uiyo"]
+
+[ext_resource type="Script" path="res://start_screen.gd" id="1_4jhim"]
+
+[node name="StartScreen" type="CanvasLayer" groups=["StartScreen"]]
+script = ExtResource("1_4jhim")
+
+[node name="StartScreenUI" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 1.003
+anchor_bottom = 1.0
+offset_right = -0.456055
+offset_bottom = 3.0
+
+[node name="Start" type="Button" parent="StartScreenUI"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 422.0
+offset_top = 163.0
+offset_right = 672.0
+offset_bottom = 224.0
+text = "Start"
+
+[node name="Options" type="Button" parent="StartScreenUI"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 351.0
+offset_top = 292.0
+offset_right = 538.0
+offset_bottom = 345.0
+text = "Options"
+
+[node name="Quit" type="Button" parent="StartScreenUI"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 561.0
+offset_top = 365.0
+offset_right = 748.0
+offset_bottom = 418.0
+text = "Give Up"
+
+[connection signal="pressed" from="StartScreenUI/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IntIncreaseStrategy" load_steps=2 format=3 uid="uid://i762nxmbudps"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/IntIncreaseStrategy.gd" id="1_r4o11"]
+
+[resource]
+script = ExtResource("1_r4o11")
+additional_int = 2
+description = "Int Up +2"
+textname = "Int Up"
+chardef = "ALL"

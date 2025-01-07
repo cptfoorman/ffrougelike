@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="HealthIncreaseStrategy" load_steps=2 format=3 uid="uid://fegh102culhx"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/HealthIncreaseStrategy.gd" id="1_f2msn"]
+
+[resource]
+script = ExtResource("1_f2msn")
+additional_health = 15
+description = "HPUp +15"
+textname = "HPUp"
+chardef = "ALL"
