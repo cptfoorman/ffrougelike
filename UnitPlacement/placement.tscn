@@ -549,7 +549,7 @@ region = Rect2(438, 0, 146, 72)
 atlas = ExtResource("4_bmyyt")
 region = Rect2(584, 0, 146, 72)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_j8cwu"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_j7vuw"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -1043,7 +1043,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="Resource" id="Resource_22cg8"]
+[sub_resource type="Resource" id="Resource_8i81a"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Jumpshot"
@@ -1052,7 +1052,7 @@ attack_desc = "Bowman jumps and shoots "
 attack_anim_name = "attack1"
 attack_ofset = Vector2(-20, 0)
 
-[sub_resource type="Resource" id="Resource_7hl5n"]
+[sub_resource type="Resource" id="Resource_hxdpm"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Powershot"
@@ -1061,7 +1061,7 @@ attack_desc = "Charges up a powerfull shot"
 attack_anim_name = "attack2"
 attack_ofset = Vector2(-60, 0)
 
-[sub_resource type="Resource" id="Resource_wypuw"]
+[sub_resource type="Resource" id="Resource_0rkuh"]
 resource_local_to_scene = true
 script = ExtResource("6_yghe6")
 name = "Bowman"
@@ -1072,12 +1072,12 @@ strenght = 8
 inteligence = 5
 defense = 0.0
 
-[sub_resource type="Resource" id="Resource_cej0y"]
+[sub_resource type="Resource" id="Resource_addnp"]
 resource_local_to_scene = true
 script = ExtResource("3_pqkku")
-spriteFrames = SubResource("SpriteFrames_j8cwu")
-unitStats = SubResource("Resource_wypuw")
-unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_22cg8"), SubResource("Resource_7hl5n")])
+spriteFrames = SubResource("SpriteFrames_j7vuw")
+unitStats = SubResource("Resource_0rkuh")
+unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_8i81a"), SubResource("Resource_hxdpm")])
 anim_flip = true
 unitStrategies = Array[ExtResource("7_awdeh")]([])
 
@@ -1429,7 +1429,7 @@ region = Rect2(288, 97, 144, 97)
 atlas = ExtResource("8_fds31")
 region = Rect2(432, 97, 144, 97)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_scmsj"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_22e1d"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -1719,7 +1719,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Resource" id="Resource_qo6wv"]
+[sub_resource type="Resource" id="Resource_bkue4"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Ravenshade"
@@ -1728,7 +1728,7 @@ attack_desc = "Create Shade to Destroy Enemies"
 attack_anim_name = "attack2"
 attack_ofset = Vector2(-10, 0)
 
-[sub_resource type="Resource" id="Resource_8snns"]
+[sub_resource type="Resource" id="Resource_irb6b"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Ravenslice"
@@ -1737,7 +1737,7 @@ attack_desc = "Raven rushes the enemy and slices it"
 attack_anim_name = "attack1"
 attack_ofset = Vector2(-7, 0)
 
-[sub_resource type="Resource" id="Resource_2td4s"]
+[sub_resource type="Resource" id="Resource_ga2it"]
 resource_local_to_scene = true
 script = ExtResource("6_yghe6")
 name = "Raven"
@@ -1748,12 +1748,12 @@ strenght = 10
 inteligence = 2
 defense = 5.0
 
-[sub_resource type="Resource" id="Resource_6m6yn"]
+[sub_resource type="Resource" id="Resource_6t1tv"]
 resource_local_to_scene = true
 script = ExtResource("3_pqkku")
-spriteFrames = SubResource("SpriteFrames_scmsj")
-unitStats = SubResource("Resource_2td4s")
-unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_qo6wv"), SubResource("Resource_8snns")])
+spriteFrames = SubResource("SpriteFrames_22e1d")
+unitStats = SubResource("Resource_ga2it")
+unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_bkue4"), SubResource("Resource_irb6b")])
 anim_flip = false
 unitStrategies = Array[ExtResource("7_awdeh")]([])
 
@@ -1767,7 +1767,7 @@ unitHolder = NodePath("UnitHolder")
 row1 = NodePath("row1")
 row2 = NodePath("row2")
 row3 = NodePath("row3")
-availableEnemyUnitsArray = Array[ExtResource("3_pqkku")]([SubResource("Resource_cej0y"), SubResource("Resource_6m6yn")])
+availableEnemyUnitsArray = Array[ExtResource("3_pqkku")]([SubResource("Resource_addnp"), SubResource("Resource_6t1tv")])
 row4 = NodePath("row4")
 row5 = NodePath("row5")
 row6 = NodePath("row6")

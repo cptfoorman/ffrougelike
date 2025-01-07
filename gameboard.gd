@@ -7,9 +7,9 @@ class_name Gameboard
 @export var current_enemy_unit: Unit
 @export var mainUI: UI
 
-func initialize(units: Array[UnitData]):
+func initialize(units: Array[UnitData], unitcount: int):
 	var unitPlacer: UnitPlacer = get_tree().get_first_node_in_group("UnitPlacer")
-	unitPlacer.initialize(units)
+	unitPlacer.initialize(units, unitcount)
 
 func initialize_unit_signals() -> void:
 	connect_friendly_unit_signal()

@@ -31,7 +31,8 @@ signal EnemyUnitAdded(unit: Unit, unitPos: Vector2)
 
 
 
-func initialize(units: Array[UnitData]):
+func initialize(units: Array[UnitData], enemyCount: int):
+	enemy_count = enemyCount
 	initializeUnitHolder(units)
 func initializeUnitHolder(units: Array[UnitData]):
 	unitHolder.initialize(units)
