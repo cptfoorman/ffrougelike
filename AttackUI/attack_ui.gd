@@ -17,7 +17,15 @@ func clear_attack_buttons():
 	for child in attack_container.get_children():
 		child.queue_free()
 		
-
+func create_move_button(attackName: String, attackdmg: float, attackdesc: String, unitReference: Unit):
+	var new_move_button: Button = Button.new()
+	new_move_button.text = attackName
+	new_move_button.tooltip_text = attackdesc+" " + str(attackdmg) + " dmg"
+	new_move_button.unitReference = unitReference
+	#new_move_button.attackReference = attackReference
+	#attack_container.add_child(new_attack_button)
+	new_move_button.connect_signals()
+	new_move_button.connect("AttackPressed", _on_attack_button_attack_pressed)
 
 func _on_attack_button_attack_pressed(attack: UnitAttack) -> void:
 	AttackDecided.emit()

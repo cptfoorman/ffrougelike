@@ -45,10 +45,17 @@ func instance_unit_info(unit: UnitData):
 	instance_info("Defense: ",str(unit.get_unitstats().defense), stats)
 	for attack in unit.get_unitAttacks():
 		instance_info(attack.attack_name,str(attack.attackdmg), attacks)
+	for strategy in unit.unitStrategies:
+		if strategy.chardef != "ALL":
+			instance_info_strats(strategy.textname, strategy.description, attacks)
 func instance_info(displayName: String,displayText: String, node: VBoxContainer):
 	var new_label: Label = labelScene.instantiate()
 	node.add_child(new_label)
 	new_label.text = displayName + " " +displayText
-	
+func instance_info_strats(displayName: String,displayText: String, node: VBoxContainer):
+	var new_label: Label = labelScene.instantiate()
+	node.add_child(new_label)
+	new_label.text = displayName + " 
+	" +displayText
 func _on_button_upgrade_chosen(new_strategy: Base_Unit_Strategy) -> void:
 	UpgradePassed.emit(new_strategy)

@@ -14,6 +14,14 @@ func set_possible_target_units(unitArray: Array[Unit]):
 func set_active_units(unitArray: Array[Unit]):
 	possible_units_array.resize(0)
 	possible_units_array.append_array(unitArray)
+func get_by_row_unit()-> Unit:
+	var row_unit: Unit
+	for unit in possible_target_units:
+		if row_unit == null:
+			row_unit = unit
+		elif row_unit.row_position > unit.row_position:
+			row_unit = unit
+	return row_unit
 
 func get_random_unit()-> Unit:
 	var random_unit: Unit = possible_units_array.pick_random()
@@ -29,7 +37,7 @@ func get_random_unit_attack(unit: Unit)->UnitAttack:
 func enemy_attack():
 	if possible_units_array.is_empty() == false:
 		var attacker: Unit = get_random_unit()
-		var defender: Unit = get_random_opponent_unit()
+		var defender: Unit = get_by_row_unit()
 		var attack: UnitAttack = get_random_unit_attack(attacker)
 		attacker.currentAttack = attack
 		attacker.play_attack_anim(defender.global_position)

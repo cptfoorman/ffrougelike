@@ -53,12 +53,16 @@ func get_current_friendly_units()->Array[Unit]:
 		new_unit_array.append(child)
 	return new_unit_array
 func set_enemy_turn():
+	for unit in get_current_friendly_units():
+		unit.advance_attack_cooldowns()
 	mainUI.set_enemy_turn()
 	set_friendly_buttons_disabled()
 	enemyUnitsGroup.set_active_units(get_current_enemy_units())
 	enemyUnitsGroup.set_possible_target_units(get_current_friendly_units())
 	enemyUnitsGroup.enemy_attack()
 func set_friendly_turn():
+	for unit in get_current_enemy_units():
+		unit.advance_attack_cooldowns()
 	print("friendly TURN")
 	mainUI.set_friendly_turn()
 	set_friendly_buttons_enabled()
@@ -78,6 +82,7 @@ func _on_enemy_unit_selected(enemyUnit: Unit):
 	current_friendly_unit.play_attack_anim(enemyUnit.global_position)
 	current_friendly_unit.currentAttack.use_attack(enemyUnit, current_friendly_unit.get_main_attack_modifier())
 	await current_friendly_unit.animations.animation_finished
+	await get_tree().create_timer(0.5).timeout
 	set_enemy_turn()
 func _on_ui_attack_selected() -> void:
 	print("looking to kill")

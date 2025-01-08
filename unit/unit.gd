@@ -64,7 +64,11 @@ func set_as_enemy():
 func set_as_friendly():
 	Factionset = Faction.FRIENDLY
 func get_attacks()-> Array[UnitAttack]:
-	return unitattacks
+	var units_attacks: Array[UnitAttack]
+	for attack in unitattacks:
+		if attack.attack_on_cooldown == false:
+			units_attacks.append(attack)
+	return units_attacks
 func getName():
 	return unitsstats.name
 func take_damage(damage: float):
@@ -102,7 +106,9 @@ func unset_hover():
 	selectButton.self_modulate = Color(197, 177, 136, 0)
 func _on_select_button_mouse_entered() -> void:
 	set_hover()
-
+func advance_attack_cooldowns():
+	for attack in unitattacks:
+		attack.cooldown_attack()
 func set_button_disabled():
 	selectButton.hide()
 func set_button_enabled():

@@ -144,7 +144,10 @@ func instantiate_unit(unit_data: UnitData, globalpos: Vector2, unitRow: int):
 	new_unit.unitdata.set_local_to_scene(true)
 	new_unit.animationFrames = unit_data.get_spriteframes()
 	new_unit.unitsstats = unit_data.get_unitstats()
-	new_unit.unitattacks.append_array(unit_data.get_unitAttacks())
+	var new_unit_attacks: Array[UnitAttack]
+	for attack in unit_data.get_unitAttacks():
+		new_unit_attacks.append(attack.duplicate())
+	new_unit.unitattacks.append_array(new_unit_attacks)
 	new_unit.global_position = globalpos
 	new_unit.row_position = unitRow
 	add_child(new_unit)
