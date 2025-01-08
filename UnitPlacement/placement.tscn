@@ -549,7 +549,7 @@ region = Rect2(438, 0, 146, 72)
 atlas = ExtResource("4_bmyyt")
 region = Rect2(584, 0, 146, 72)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6vqgq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjoym"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -1043,7 +1043,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="Resource" id="Resource_uevon"]
+[sub_resource type="Resource" id="Resource_ubdxd"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Jumpshot"
@@ -1055,7 +1055,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_akuhq"]
+[sub_resource type="Resource" id="Resource_hymr2"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Powershot"
@@ -1067,7 +1067,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_5hw8o"]
+[sub_resource type="Resource" id="Resource_63xbm"]
 resource_local_to_scene = true
 script = ExtResource("6_yghe6")
 name = "Bowman"
@@ -1077,13 +1077,14 @@ mana = 20.0
 strenght = 8
 inteligence = 5
 defense = 0.0
+main_modifier = 0
 
-[sub_resource type="Resource" id="Resource_6ygsm"]
+[sub_resource type="Resource" id="Resource_f1g85"]
 resource_local_to_scene = true
 script = ExtResource("3_pqkku")
-spriteFrames = SubResource("SpriteFrames_6vqgq")
-unitStats = SubResource("Resource_5hw8o")
-unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_uevon"), SubResource("Resource_akuhq")])
+spriteFrames = SubResource("SpriteFrames_fjoym")
+unitStats = SubResource("Resource_63xbm")
+unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_ubdxd"), SubResource("Resource_hymr2")])
 anim_flip = true
 unitStrategies = Array[ExtResource("7_awdeh")]([])
 
@@ -1435,7 +1436,7 @@ region = Rect2(288, 97, 144, 97)
 atlas = ExtResource("8_fds31")
 region = Rect2(432, 97, 144, 97)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4jye4"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_63pk8"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -1725,7 +1726,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Resource" id="Resource_5ajf4"]
+[sub_resource type="Resource" id="Resource_2e4kv"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Ravenshade"
@@ -1737,7 +1738,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_6k1uf"]
+[sub_resource type="Resource" id="Resource_wgdns"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Ravenslice"
@@ -1749,7 +1750,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_jg2nl"]
+[sub_resource type="Resource" id="Resource_bptvg"]
 resource_local_to_scene = true
 script = ExtResource("6_yghe6")
 name = "Raven"
@@ -1759,13 +1760,14 @@ mana = 0.0
 strenght = 10
 inteligence = 2
 defense = 5.0
+main_modifier = 0
 
-[sub_resource type="Resource" id="Resource_xo81e"]
+[sub_resource type="Resource" id="Resource_43enw"]
 resource_local_to_scene = true
 script = ExtResource("3_pqkku")
-spriteFrames = SubResource("SpriteFrames_4jye4")
-unitStats = SubResource("Resource_jg2nl")
-unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_5ajf4"), SubResource("Resource_6k1uf")])
+spriteFrames = SubResource("SpriteFrames_63pk8")
+unitStats = SubResource("Resource_bptvg")
+unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_2e4kv"), SubResource("Resource_wgdns")])
 anim_flip = false
 unitStrategies = Array[ExtResource("7_awdeh")]([])
 
@@ -1779,7 +1781,7 @@ unitHolder = NodePath("UnitHolder")
 row1 = NodePath("row1")
 row2 = NodePath("row2")
 row3 = NodePath("row3")
-availableEnemyUnitsArray = Array[ExtResource("3_pqkku")]([SubResource("Resource_6ygsm"), SubResource("Resource_xo81e")])
+availableEnemyUnitsArray = Array[ExtResource("3_pqkku")]([SubResource("Resource_f1g85"), SubResource("Resource_43enw")])
 row4 = NodePath("row4")
 row5 = NodePath("row5")
 row6 = NodePath("row6")

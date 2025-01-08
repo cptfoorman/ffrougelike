@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=8 format=3 uid="uid://cnxwhgd1cuiga"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_htdku"]
+[ext_resource type="SpriteFrames" uid="uid://bu8p0r0jjuo8h" path="res://unit/UnitResouces/unitSpriteFrames/unitspriteframesMague.tres" id="2_71id1"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="3_j7uxf"]
+[ext_resource type="Resource" uid="uid://dbvowvsl762r4" path="res://unit/UnitResouces/UnitAttacks/magusslice.tres" id="4_5xequ"]
+[ext_resource type="Resource" uid="uid://be5mwmr130780" path="res://unit/UnitResouces/UnitAttacks/magusvortex.tres" id="5_ayfyq"]
+[ext_resource type="Resource" uid="uid://b1mm1wss6n3fr" path="res://unit/UnitResouces/stats/maguesEnemy.tres" id="6_wplw5"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="7_4ul1p"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_htdku")
+spriteFrames = ExtResource("2_71id1")
+unitStats = ExtResource("6_wplw5")
+unitAttacks = Array[ExtResource("3_j7uxf")]([ExtResource("4_5xequ"), ExtResource("5_ayfyq")])
+anim_flip = true
+unitStrategies = Array[ExtResource("7_4ul1p")]([])

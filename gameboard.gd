@@ -137,7 +137,9 @@ func _on_ui_added_to_party(newPartyUnit: UnitData) -> void:
 	for unit in get_current_friendly_units():
 		survivor_units.append(unit.get_unit_data())
 	survivor_units.append(newPartyUnit)
-	globalSceneLoader.instantiate_upgrader(survivor_units)
+	globalSceneLoader.set_current_party_array(survivor_units)
+	await get_tree().create_timer(0.5).timeout
+	globalSceneLoader.instantiate_gameboard()
 
 func _on_ui_upgrades_selected() -> void:
 	var survivor_units: Array[UnitData]

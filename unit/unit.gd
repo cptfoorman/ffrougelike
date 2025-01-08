@@ -34,6 +34,7 @@ func initialize() -> void:
 	unitsstats.initialize()
 	unitsstats.printstats()
 	animations.flip_h = flip_anim_h
+	
 	prints("initializing", unitsstats.name, health)
 	healthbar.max_value = health
 	healthbar.value = health

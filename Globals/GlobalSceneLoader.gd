@@ -22,7 +22,7 @@ var current_gameboard: Gameboard
 var current_start_screen: StartScreen
 var current_upgradescene: UnitUpgrader
 
-var currentdiff: int = 1
+var currentdiff: int = 0
 
 func _ready() -> void:
 	get_current_start_screen()
@@ -78,6 +78,7 @@ func set_current_party_array(unitArray: Array[UnitData]):
 
 
 func instantiate_gameboard():
+	currentdiff+= 1
 	get_tree().change_scene_to_packed(gameboard)
 	await get_tree().create_timer(0.5).timeout
 	get_current_gameboard()
@@ -90,7 +91,6 @@ func initialize_current_gameboard():
 	current_gameboard.initialize(get_current_party_array(), currentdiff)
 
 func instantiate_upgrader(new_unit_array: Array[UnitData]):
-	currentdiff+= 1
 	set_current_party_array(new_unit_array)
 	get_tree().change_scene_to_packed(upgradescene)
 	await get_tree().create_timer(0.5).timeout
@@ -105,7 +105,7 @@ func initialize_current_upgrader():
 
 
 func instantiate_start_screen():
-	currentdiff = 3
+	currentdiff = 0
 	get_tree().change_scene_to_packed(startscreen)
 	await get_tree().create_timer(0.5).timeout
 	get_current_start_screen()

@@ -12,12 +12,15 @@ class_name UnitStats
 
 var currentUnit: Unit
 
+@export var main_modifier: int
+
 func initialize() -> void:
 	currentUnit.health = health
 	currentUnit.speed = speed
 	currentUnit.inteligence = inteligence
 	currentUnit.mana = mana
 	currentUnit.strenght = strenght
+	currentUnit.attackModifier = main_modifier
 	
 func printstats():
 	prints(name, speed , health, mana, strenght, inteligence)
