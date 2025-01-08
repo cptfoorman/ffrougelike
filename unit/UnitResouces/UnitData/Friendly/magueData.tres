@@ -4,8 +4,8 @@
 [ext_resource type="SpriteFrames" uid="uid://bu8p0r0jjuo8h" path="res://unit/UnitResouces/unitSpriteFrames/unitspriteframesMague.tres" id="2_bp1hf"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_pkcho"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_8ktau"]
-[ext_resource type="Resource" uid="uid://dbvowvsl762r4" path="res://unit/UnitResouces/UnitAttacks/magusslice.tres" id="4_ygt4o"]
-[ext_resource type="Resource" uid="uid://be5mwmr130780" path="res://unit/UnitResouces/UnitAttacks/magusvortex.tres" id="5_msovn"]
+[ext_resource type="Resource" uid="uid://dbvowvsl762r4" path="res://unit/UnitResouces/UnitAttacks/magus/magusslice.tres" id="4_ygt4o"]
+[ext_resource type="Resource" uid="uid://be5mwmr130780" path="res://unit/UnitResouces/UnitAttacks/magus/magusvortex.tres" id="5_msovn"]
 [ext_resource type="Resource" uid="uid://b65ydhf57mal4" path="res://unit/UnitResouces/stats/magues.tres" id="6_leum7"]
 
 [resource]

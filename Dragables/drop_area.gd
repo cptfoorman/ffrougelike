@@ -33,6 +33,7 @@ func _on_dragable_taken_away(unit_data: UnitData) -> void:
 	for cur_conn in curr_cons:
 		cur_conn.signal.disconnect(cur_conn.callable)
 		print("signal disconected")
+		print(unit_data)
 	
 	
 	

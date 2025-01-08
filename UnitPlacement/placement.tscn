@@ -549,7 +549,7 @@ region = Rect2(438, 0, 146, 72)
 atlas = ExtResource("4_bmyyt")
 region = Rect2(584, 0, 146, 72)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fjoym"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_mxnco"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -1043,7 +1043,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="Resource" id="Resource_ubdxd"]
+[sub_resource type="Resource" id="Resource_5k4d2"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Jumpshot"
@@ -1055,7 +1055,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_hymr2"]
+[sub_resource type="Resource" id="Resource_vuqdx"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Powershot"
@@ -1067,7 +1067,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_63xbm"]
+[sub_resource type="Resource" id="Resource_t5jed"]
 resource_local_to_scene = true
 script = ExtResource("6_yghe6")
 name = "Bowman"
@@ -1079,12 +1079,12 @@ inteligence = 5
 defense = 0.0
 main_modifier = 0
 
-[sub_resource type="Resource" id="Resource_f1g85"]
+[sub_resource type="Resource" id="Resource_7xh78"]
 resource_local_to_scene = true
 script = ExtResource("3_pqkku")
-spriteFrames = SubResource("SpriteFrames_fjoym")
-unitStats = SubResource("Resource_63xbm")
-unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_ubdxd"), SubResource("Resource_hymr2")])
+spriteFrames = SubResource("SpriteFrames_mxnco")
+unitStats = SubResource("Resource_t5jed")
+unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_5k4d2"), SubResource("Resource_vuqdx")])
 anim_flip = true
 unitStrategies = Array[ExtResource("7_awdeh")]([])
 
@@ -1436,7 +1436,7 @@ region = Rect2(288, 97, 144, 97)
 atlas = ExtResource("8_fds31")
 region = Rect2(432, 97, 144, 97)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_63pk8"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_sqjne"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -1726,7 +1726,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Resource" id="Resource_2e4kv"]
+[sub_resource type="Resource" id="Resource_um4lh"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Ravenshade"
@@ -1738,7 +1738,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_wgdns"]
+[sub_resource type="Resource" id="Resource_d8css"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Ravenslice"
@@ -1750,7 +1750,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_bptvg"]
+[sub_resource type="Resource" id="Resource_o5fgf"]
 resource_local_to_scene = true
 script = ExtResource("6_yghe6")
 name = "Raven"
@@ -1762,12 +1762,12 @@ inteligence = 2
 defense = 5.0
 main_modifier = 0
 
-[sub_resource type="Resource" id="Resource_43enw"]
+[sub_resource type="Resource" id="Resource_myoxf"]
 resource_local_to_scene = true
 script = ExtResource("3_pqkku")
-spriteFrames = SubResource("SpriteFrames_63pk8")
-unitStats = SubResource("Resource_bptvg")
-unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_2e4kv"), SubResource("Resource_wgdns")])
+spriteFrames = SubResource("SpriteFrames_sqjne")
+unitStats = SubResource("Resource_o5fgf")
+unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_um4lh"), SubResource("Resource_d8css")])
 anim_flip = false
 unitStrategies = Array[ExtResource("7_awdeh")]([])
 
@@ -1781,7 +1781,7 @@ unitHolder = NodePath("UnitHolder")
 row1 = NodePath("row1")
 row2 = NodePath("row2")
 row3 = NodePath("row3")
-availableEnemyUnitsArray = Array[ExtResource("3_pqkku")]([SubResource("Resource_f1g85"), SubResource("Resource_43enw")])
+availableEnemyUnitsArray = Array[ExtResource("3_pqkku")]([SubResource("Resource_7xh78"), SubResource("Resource_myoxf")])
 row4 = NodePath("row4")
 row5 = NodePath("row5")
 row6 = NodePath("row6")
@@ -1789,19 +1789,19 @@ row6 = NodePath("row6")
 [node name="row1" type="Node2D" parent="."]
 
 [node name="DropArea" parent="row1" instance=ExtResource("3_sqto0")]
-position = Vector2(120, 105)
+position = Vector2(159, 109)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="row1/DropArea"]
 shape = SubResource("RectangleShape2D_nsiv7")
 
 [node name="DropArea2" parent="row1" instance=ExtResource("3_sqto0")]
-position = Vector2(132, 151)
+position = Vector2(162, 164)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="row1/DropArea2"]
 shape = SubResource("RectangleShape2D_nsiv7")
 
 [node name="DropArea3" parent="row1" instance=ExtResource("3_sqto0")]
-position = Vector2(127, 207)
+position = Vector2(161, 229)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="row1/DropArea3"]
 shape = SubResource("RectangleShape2D_nsiv7")
@@ -1809,19 +1809,19 @@ shape = SubResource("RectangleShape2D_nsiv7")
 [node name="row2" type="Node2D" parent="."]
 
 [node name="DropArea" parent="row2" instance=ExtResource("3_sqto0")]
-position = Vector2(71, 105)
+position = Vector2(95, 105)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="row2/DropArea"]
 shape = SubResource("RectangleShape2D_nsiv7")
 
 [node name="DropArea2" parent="row2" instance=ExtResource("3_sqto0")]
-position = Vector2(72, 152)
+position = Vector2(98, 171)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="row2/DropArea2"]
 shape = SubResource("RectangleShape2D_nsiv7")
 
 [node name="DropArea3" parent="row2" instance=ExtResource("3_sqto0")]
-position = Vector2(74, 207)
+position = Vector2(97, 234)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="row2/DropArea3"]
 shape = SubResource("RectangleShape2D_nsiv7")
@@ -1830,19 +1830,19 @@ shape = SubResource("RectangleShape2D_nsiv7")
 position = Vector2(1, 0)
 
 [node name="DropArea" parent="row3" instance=ExtResource("3_sqto0")]
-position = Vector2(18, 103)
+position = Vector2(36, 106)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="row3/DropArea"]
 shape = SubResource("RectangleShape2D_nsiv7")
 
 [node name="DropArea2" parent="row3" instance=ExtResource("3_sqto0")]
-position = Vector2(17, 153)
+position = Vector2(37, 169)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="row3/DropArea2"]
 shape = SubResource("RectangleShape2D_nsiv7")
 
 [node name="DropArea3" parent="row3" instance=ExtResource("3_sqto0")]
-position = Vector2(14, 208)
+position = Vector2(33, 236)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="row3/DropArea3"]
 shape = SubResource("RectangleShape2D_nsiv7")

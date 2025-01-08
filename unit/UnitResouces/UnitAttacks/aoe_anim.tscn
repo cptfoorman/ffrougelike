@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsmgndo3fc41i"]
+
+[ext_resource type="Script" path="res://aoe_anim.gd" id="1_f5mb7"]
+
+[node name="AOEAnim" type="AnimatedSprite2D"]
+position = Vector2(-35, 0)
+script = ExtResource("1_f5mb7")

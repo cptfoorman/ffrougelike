@@ -10,7 +10,8 @@ class_name SceneLoader
 var availableUnitsArray: Array[UnitData] = [
 	preload("res://unit/UnitResouces/UnitData/Friendly/BowmanData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/RavenData.tres"),
-	preload("res://unit/UnitResouces/UnitData/Friendly/magueData.tres")]
+	preload("res://unit/UnitResouces/UnitData/Friendly/magueData.tres"),
+	preload("res://unit/UnitResouces/UnitData/Friendly/Reader.tres")]
 var availableEnemyUnitsArray: Array[UnitData] =[
 	preload("res://unit/UnitResouces/UnitData/Enemy/BowmanDataEnemy.tres"),
 	preload("res://unit/UnitResouces/UnitData/Enemy/RavenDataEnemy.tres"),]

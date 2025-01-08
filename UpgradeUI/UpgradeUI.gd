@@ -7,16 +7,19 @@ class_name UpgradeUI
 @onready var stats: VBoxContainer = %stats
 @onready var attacks: VBoxContainer = %attacks
 @export var labelScene: PackedScene
+@export var currentUpgradeUnit: UnitData
 
 signal UpgradePassed(new_strategy: Base_Unit_Strategy)
 
 func show_upgradeUI(unit: UnitData):
 	animation_player.play("upgrade_slidein")
-	clear_upgradeUI()
-	clear_infoUI()
-	instance_unit_info(unit)
-	for i in 3:
-		instance_upgrades(get_parent().return_upgrade_strategies().pick_random())
+	if currentUpgradeUnit != unit:
+		currentUpgradeUnit = unit
+		clear_upgradeUI()
+		clear_infoUI()
+		instance_unit_info(unit)
+		for i in 3:
+			instance_upgrades(get_parent().return_upgrade_strategies().pick_random())
 func clear_upgradeUI():
 	for child in h_box_container.get_children():
 		child.queue_free()

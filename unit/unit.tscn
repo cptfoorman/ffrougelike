@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://be5cg4av3mk5x"]
+[gd_scene load_steps=4 format=3 uid="uid://be5cg4av3mk5x"]
 
 [ext_resource type="Script" path="res://unit/unit.gd" id="1_rnc5g"]
 [ext_resource type="Resource" uid="uid://dnksmpk0xyvyi" path="res://unit/UnitResouces/stats/ravenstats.tres" id="2_dnebs"]
+[ext_resource type="PackedScene" uid="uid://bsmgndo3fc41i" path="res://unit/UnitResouces/UnitAttacks/aoe_anim.tscn" id="3_2w8j6"]
 
 [node name="unit" type="Node2D" node_paths=PackedStringArray("animations", "selectButton")]
 script = ExtResource("1_rnc5g")
 animations = NodePath("AnimatedSprite2D")
 unitsstats = ExtResource("2_dnebs")
 selectButton = NodePath("selectButton")
+aoeanimScene = ExtResource("3_2w8j6")
 
 [node name="selectButton" type="Button" parent="."]
 anchors_preset = -1

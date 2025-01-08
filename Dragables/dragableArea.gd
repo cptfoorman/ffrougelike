@@ -30,6 +30,7 @@ func _process(delta: float) -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("click"):
 		is_dragging = true
+		TakenAway.emit(unitData)
 		
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("click") and is_dragging:
@@ -49,8 +50,8 @@ func _input(event: InputEvent) -> void:
 					Dropped.emit(unitData)
 					global_position = area.global_position
 				if area is Dragable:
-					area.TakenAway.emit(unitData)
+					area.TakenAway.emit(area.unitData)
 					area.reset_position()
-		
+				
 func reset_position():
 	global_position = initial_position

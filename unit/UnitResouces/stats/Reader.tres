@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://e38p7iwnsnep"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_7tuem"]
+
+[resource]
+script = ExtResource("1_7tuem")
+name = "Reader"
+speed = 30
+health = 80.0
+mana = 20.0
+strenght = 5
+inteligence = 12
+defense = 5.0
+main_modifier = 1

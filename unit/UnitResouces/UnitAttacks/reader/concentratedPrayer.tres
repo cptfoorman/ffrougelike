@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://t1k048x0r5pk"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_u4mm7"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_u4mm7")
+attack_name = "Concentrated Prayer"
+attackdmg = 90.0
+attack_desc = "concentrate a prayer on your enemy to break their spirit"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 8
+attack_on_cooldown = false
+attack_reach = 1

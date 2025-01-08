@@ -30,6 +30,8 @@ PartyBuilder=""
 UnitPlacer=""
 Gameboard=""
 UnitUpgrader=""
+FriendlyUnits=""
+EnemyUnits=""
 
 [input]
 

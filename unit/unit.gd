@@ -20,6 +20,8 @@ enum MainAttackModifier {strenght, inteligence}
 var currentAttack: UnitAttack
 @export var selectButton: Button
 @onready var healthbar: ProgressBar = %health
+@export var aoeanimScene: PackedScene
+
 
 var enemyTarget: Unit
 enum Faction {FRIENDLY, ENEMY}
@@ -34,7 +36,6 @@ func initialize() -> void:
 	unitsstats.initialize()
 	unitsstats.printstats()
 	animations.flip_h = flip_anim_h
-	
 	prints("initializing", unitsstats.name, health)
 	healthbar.max_value = health
 	healthbar.value = health
@@ -44,6 +45,7 @@ func initialize() -> void:
 	for attack in unitattacks:
 		selectButton.tooltip_text += attack.attack_name + " 
 		"
+	unset_hover()
 
 
 
@@ -116,3 +118,22 @@ func set_button_enabled():
 	selectButton.show()
 func _on_select_button_mouse_exited() -> void:
 	unset_hover()
+func return_current_friendly_units()->Array[Unit]:
+	var current_group_units: Array[Unit]
+	for child in get_tree().get_first_node_in_group("FriendlyUnits").get_children():
+		if child is Unit:
+			current_group_units.append(child)
+	return current_group_units
+	
+func return_current_enemy_units()->Array[Unit]:
+	var current_group_units: Array[Unit]
+	for child in get_tree().get_first_node_in_group("EnemyUnits").get_children():
+		if child is Unit:
+			current_group_units.append(child)
+	return current_group_units
+func spawn_aoe_sprite(spriteData: SpriteFrames):
+	var new_anim: AoeAnim = aoeanimScene.instantiate()
+	add_child(new_anim)
+	new_anim.global_position = self.global_position
+	new_anim.sprite_frames = spriteData
+	new_anim.initialize()

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://d1pd5son6jnsh"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_npmqy"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_npmqy")
+attack_name = "DoublejumpShot"
+attackdmg = 60.0
+attack_desc = "itsa mario"
+attack_anim_name = "attack4"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 0

@@ -5,7 +5,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_q3j8a")
-name = "Magus"
+name = "Mage"
 speed = 20
 health = 100.0
 mana = 20.0

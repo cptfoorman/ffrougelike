@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://cgip863x0trcq"]
 
-[ext_resource type="Resource" uid="uid://dacl34qfwj2k5" path="res://unit/UnitResouces/UnitAttacks/QuickAttackRaven.tres" id="1_0unlf"]
+[ext_resource type="Resource" uid="uid://dacl34qfwj2k5" path="res://unit/UnitResouces/UnitAttacks/raven/QuickAttackRaven.tres" id="1_ikmtc"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="2_htyox"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("2_htyox")
-new_attack = ExtResource("1_0unlf")
+new_attack = ExtResource("1_ikmtc")
 description = "quick attack with rush"
 textname = "quick attack "
 chardef = "Raven"

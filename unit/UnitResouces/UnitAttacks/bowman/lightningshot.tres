@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://b8hespfhdowvd"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_46rou"]
+
+[resource]
+script = ExtResource("1_46rou")
+attack_name = "LightningShot"
+attackdmg = 70.0
+attack_desc = "call upon the skies to imbue with lightning"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 0

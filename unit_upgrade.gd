@@ -12,8 +12,9 @@ func initialize(units: Array[UnitData]):
 	unitHolder.initialize(units)
 
 func _on_upgrade_drop_area_unit_taken(unit: UnitData) -> void:
-	current_unit = null
-	upgradeUI.hide_upgradeUI()
+	if current_unit != null:
+		current_unit = null
+		upgradeUI.hide_upgradeUI()
 	
 
 func _on_upgrade_drop_area_unit_data_counted(unitdata: UnitData) -> void:
