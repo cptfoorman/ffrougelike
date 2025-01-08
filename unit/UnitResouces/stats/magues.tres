@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://b65ydhf57mal4"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_q3j8a"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_q3j8a")
+name = "Magus"
+speed = 20
+health = 100.0
+mana = 20.0
+strenght = 5
+inteligence = 15
+defense = 2.0

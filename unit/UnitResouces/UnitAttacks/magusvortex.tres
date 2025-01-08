@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://be5mwmr130780"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_26fqf"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_26fqf")
+attack_name = "Vortex"
+attackdmg = 50.0
+attack_desc = "create a vortex  of energy"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 3
+attack_on_cooldown = false
+attack_reach = 1

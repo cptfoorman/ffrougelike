@@ -2,7 +2,7 @@ extends Control
 class_name AttackUI
 @onready var attack_container: VBoxContainer = %AttackContainer
 
-signal AttackDecided
+signal AttackDecided(unitattack: UnitAttack)
 
 func create_attack_button(attackName: String, attackdmg: float, attackdesc: String, attackReference:UnitAttack, unitReference: Unit):
 	var new_attack_button: AttackButton = AttackButton.new()
@@ -28,4 +28,4 @@ func create_move_button(attackName: String, attackdmg: float, attackdesc: String
 	new_move_button.connect("AttackPressed", _on_attack_button_attack_pressed)
 
 func _on_attack_button_attack_pressed(attack: UnitAttack) -> void:
-	AttackDecided.emit()
+	AttackDecided.emit(attack)

@@ -6,9 +6,10 @@ class_name Gameboard
 @export var current_friendly_unit: Unit
 @export var current_enemy_unit: Unit
 @export var mainUI: UI
+var unitPlacer: UnitPlacer
 
 func initialize(units: Array[UnitData], unitcount: int):
-	var unitPlacer: UnitPlacer = get_tree().get_first_node_in_group("UnitPlacer")
+	unitPlacer = get_tree().get_first_node_in_group("UnitPlacer")
 	unitPlacer.initialize(units, unitcount)
 
 func initialize_unit_signals() -> void:
@@ -22,7 +23,16 @@ func connect_enemy_unit_signals():
 	for child in enemyUnitsGroup.get_children():
 		if child is Unit:
 			child.connect("SELECTED", _on_enemy_unit_selected)
-func set_enemy_buttons_enabled():
+func set_enemy_buttons_enabled(attack_row: int):
+	var child_count: int = 0
+	for child in enemyUnitsGroup.get_children():
+		if child is Unit:
+			if child.row_position <= attack_row:
+				child.set_button_enabled()
+				child_count +=1
+	if child_count == 0:
+		set_all_enemy_buttons_enabled()
+func set_all_enemy_buttons_enabled():
 	for child in enemyUnitsGroup.get_children():
 		if child is Unit:
 			child.set_button_enabled()
@@ -84,9 +94,9 @@ func _on_enemy_unit_selected(enemyUnit: Unit):
 	await current_friendly_unit.animations.animation_finished
 	await get_tree().create_timer(0.5).timeout
 	set_enemy_turn()
-func _on_ui_attack_selected() -> void:
+func _on_ui_attack_selected(unitattack: UnitAttack) -> void:
 	print("looking to kill")
-	set_enemy_buttons_enabled()
+	set_enemy_buttons_enabled(unitattack.attack_reach)
 
 
 func _on_ui_attack_deselected() -> void:
@@ -119,6 +129,17 @@ func _on_placement_enemy_unit_added(unit: Unit, unitPos: Vector2) -> void:
 
 
 func _on_enemy_units_units_empty() -> void:
+	mainUI.initialize_rewards(globalSceneLoader.clone_random_unit())
+
+
+func _on_ui_added_to_party(newPartyUnit: UnitData) -> void:
+	var survivor_units: Array[UnitData]
+	for unit in get_current_friendly_units():
+		survivor_units.append(unit.get_unit_data())
+	survivor_units.append(newPartyUnit)
+	globalSceneLoader.instantiate_upgrader(survivor_units)
+
+func _on_ui_upgrades_selected() -> void:
 	var survivor_units: Array[UnitData]
 	for unit in get_current_friendly_units():
 		survivor_units.append(unit.get_unit_data())

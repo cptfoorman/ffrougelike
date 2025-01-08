@@ -8,6 +8,7 @@ class_name UnitAttack
 @export var attack_max_cooldown: int
 @export var attack_on_cooldown: bool
 var attack_cooldown: int
+@export var attack_reach: int
 
 func use_attack(target: Unit, strenght: int):
 	var new_damage = attackdmg+strenght

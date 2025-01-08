@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://k708pjaubi8r"]
+[gd_scene load_steps=12 format=3 uid="uid://k708pjaubi8r"]
 
 [ext_resource type="Script" path="res://AttackUI/attack_ui.gd" id="1_jjdch"]
 [ext_resource type="Script" path="res://AttackUI/MainUI.gd" id="1_viihh"]
+[ext_resource type="Script" path="res://AttackUI/reward_ui.gd" id="2_eci80"]
 
 [sub_resource type="Animation" id="Animation_08rsw"]
 resource_name = "attackselectReset"
@@ -167,9 +168,67 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_ekgwd"]
+resource_name = "reward_slidein"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RewardUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(170, 676), Vector2(172, 78)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RewardUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5own8"]
+resource_name = "reward_slideout"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RewardUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(172, 78), Vector2(170, 676)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RewardUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333334, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eosxs"]
 _data = {
 "attackselectReset": SubResource("Animation_08rsw"),
+"reward_slidein": SubResource("Animation_ekgwd"),
+"reward_slideout": SubResource("Animation_5own8"),
 "select_slideIn": SubResource("Animation_dt72r"),
 "select_slideOut": SubResource("Animation_qjhba"),
 "slide_in": SubResource("Animation_nqejt"),
@@ -181,6 +240,39 @@ follow_viewport_enabled = true
 script = ExtResource("1_viihh")
 attackUI = NodePath("AttackUI")
 animPlayer = NodePath("AnimationPlayer")
+
+[node name="RewardUI" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 170.0
+offset_top = 676.0
+offset_right = 978.0
+offset_bottom = 1102.0
+script = ExtResource("2_eci80")
+
+[node name="PanelContainer" type="PanelContainer" parent="RewardUI"]
+layout_mode = 0
+offset_right = 860.0
+offset_bottom = 396.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RewardUI/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="upgrade_party" type="Button" parent="RewardUI/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Upgrade party"
+
+[node name="add_to_party" type="Button" parent="RewardUI/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add unit to party"
+
+[node name="unitsprite" type="AnimatedSprite2D" parent="RewardUI/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+position = Vector2(421, 187)
 
 [node name="TurnLabels" type="Control" parent="."]
 layout_mode = 3
@@ -276,5 +368,7 @@ libraries = {
 "": SubResource("AnimationLibrary_eosxs")
 }
 
+[connection signal="pressed" from="RewardUI/PanelContainer/HBoxContainer/upgrade_party" to="." method="_on_upgrade_party_pressed"]
+[connection signal="pressed" from="RewardUI/PanelContainer/HBoxContainer/add_to_party" to="." method="_on_add_to_party_pressed"]
 [connection signal="pressed" from="SelectEnemyUI/backButton" to="." method="_on_back_button_pressed"]
 [connection signal="AttackDecided" from="AttackUI" to="." method="_on_attack_ui_attack_decided"]

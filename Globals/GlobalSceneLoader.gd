@@ -10,8 +10,7 @@ class_name SceneLoader
 var availableUnitsArray: Array[UnitData] = [
 	preload("res://unit/UnitResouces/UnitData/Friendly/BowmanData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/RavenData.tres"),
-	preload("res://unit/UnitResouces/UnitData/Friendly/BowmanData.tres"),
-	preload("res://unit/UnitResouces/UnitData/Friendly/RavenData.tres")]
+	preload("res://unit/UnitResouces/UnitData/Friendly/magueData.tres")]
 var availableEnemyUnitsArray: Array[UnitData] =[
 	preload("res://unit/UnitResouces/UnitData/Enemy/BowmanDataEnemy.tres"),
 	preload("res://unit/UnitResouces/UnitData/Enemy/RavenDataEnemy.tres"),]
@@ -23,7 +22,7 @@ var current_gameboard: Gameboard
 var current_start_screen: StartScreen
 var current_upgradescene: UnitUpgrader
 
-var currentdiff: int = 3
+var currentdiff: int = 1
 
 func _ready() -> void:
 	get_current_start_screen()
@@ -49,7 +48,12 @@ func instantiate_partyBuilder():
 	await get_tree().create_timer(0.5).timeout
 	initialize_partyBuilder()
 	connect_party_builder_buttons()
+
+func clone_random_unit()->UnitData:
+	var new_clone: UnitData = availableUnitsArray.pick_random().duplicate(true)
+	return new_clone
 	
+
 func clone_unit_data():
 	for data in availableUnitsArray:
 		var new_data = data.duplicate(true)

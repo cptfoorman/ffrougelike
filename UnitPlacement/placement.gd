@@ -104,11 +104,11 @@ func fill_enemy_units():
 		var random_num: int = randomRow.pick_random()
 		match random_num:
 			1:
-				instantiate_enemy_unit(availableEnemyUnitsArray.pick_random(),get_marker(markersRow4).global_position, 4)
+				instantiate_enemy_unit(availableEnemyUnitsArray.pick_random(),get_marker(markersRow4).global_position, 1)
 			2:
-				instantiate_enemy_unit(availableEnemyUnitsArray.pick_random(),get_marker(markersRow5).global_position, 5)
+				instantiate_enemy_unit(availableEnemyUnitsArray.pick_random(),get_marker(markersRow5).global_position, 2)
 			3:
-				instantiate_enemy_unit(availableEnemyUnitsArray.pick_random(),get_marker(markersRow6).global_position, 6)
+				instantiate_enemy_unit(availableEnemyUnitsArray.pick_random(),get_marker(markersRow6).global_position, 3)
 
 func fill_units():
 	for dropzone in dropzonesrow1:

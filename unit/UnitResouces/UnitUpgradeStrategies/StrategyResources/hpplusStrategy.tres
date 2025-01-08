@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_f2msn")
-additional_health = 15
-description = "HPUp +15"
+additional_health = 30
+description = "HPUp +30"
 textname = "HPUp"
 chardef = "ALL"
