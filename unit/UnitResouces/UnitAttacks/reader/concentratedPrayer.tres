@@ -12,4 +12,4 @@ attack_anim_name = "attack3"
 attack_ofset = Vector2(0, 0)
 attack_max_cooldown = 8
 attack_on_cooldown = false
-attack_reach = 1
+attack_reach = 3

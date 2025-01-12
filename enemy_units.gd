@@ -15,7 +15,7 @@ func set_active_units(unitArray: Array[Unit]):
 	possible_units_array.resize(0)
 	possible_units_array.append_array(unitArray)
 func get_by_row_unit(attack: UnitAttack)-> Unit:
-	var best_row: int
+	var best_row: int = attack.attack_reach
 	var mainRowUnits: Array[Unit]
 	var otherRowUnits: Array[Unit]
 	var row_unit: Unit
