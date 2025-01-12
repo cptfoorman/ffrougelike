@@ -549,7 +549,7 @@ region = Rect2(438, 0, 146, 72)
 atlas = ExtResource("4_bmyyt")
 region = Rect2(584, 0, 146, 72)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mxnco"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_rx40a"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -1043,7 +1043,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="Resource" id="Resource_5k4d2"]
+[sub_resource type="Resource" id="Resource_12hei"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Jumpshot"
@@ -1055,7 +1055,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_vuqdx"]
+[sub_resource type="Resource" id="Resource_rcn2n"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Powershot"
@@ -1067,7 +1067,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_t5jed"]
+[sub_resource type="Resource" id="Resource_7etwy"]
 resource_local_to_scene = true
 script = ExtResource("6_yghe6")
 name = "Bowman"
@@ -1079,12 +1079,12 @@ inteligence = 5
 defense = 0.0
 main_modifier = 0
 
-[sub_resource type="Resource" id="Resource_7xh78"]
+[sub_resource type="Resource" id="Resource_fnvq6"]
 resource_local_to_scene = true
 script = ExtResource("3_pqkku")
-spriteFrames = SubResource("SpriteFrames_mxnco")
-unitStats = SubResource("Resource_t5jed")
-unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_5k4d2"), SubResource("Resource_vuqdx")])
+spriteFrames = SubResource("SpriteFrames_rx40a")
+unitStats = SubResource("Resource_7etwy")
+unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_12hei"), SubResource("Resource_rcn2n")])
 anim_flip = true
 unitStrategies = Array[ExtResource("7_awdeh")]([])
 
@@ -1436,7 +1436,7 @@ region = Rect2(288, 97, 144, 97)
 atlas = ExtResource("8_fds31")
 region = Rect2(432, 97, 144, 97)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_sqjne"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3u420"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -1726,7 +1726,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Resource" id="Resource_um4lh"]
+[sub_resource type="Resource" id="Resource_cg3nl"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Ravenshade"
@@ -1738,7 +1738,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_d8css"]
+[sub_resource type="Resource" id="Resource_wievr"]
 resource_local_to_scene = true
 script = ExtResource("5_6ybw0")
 attack_name = "Ravenslice"
@@ -1750,7 +1750,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_o5fgf"]
+[sub_resource type="Resource" id="Resource_581jp"]
 resource_local_to_scene = true
 script = ExtResource("6_yghe6")
 name = "Raven"
@@ -1762,12 +1762,12 @@ inteligence = 2
 defense = 5.0
 main_modifier = 0
 
-[sub_resource type="Resource" id="Resource_myoxf"]
+[sub_resource type="Resource" id="Resource_8fnje"]
 resource_local_to_scene = true
 script = ExtResource("3_pqkku")
-spriteFrames = SubResource("SpriteFrames_sqjne")
-unitStats = SubResource("Resource_o5fgf")
-unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_um4lh"), SubResource("Resource_d8css")])
+spriteFrames = SubResource("SpriteFrames_3u420")
+unitStats = SubResource("Resource_581jp")
+unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_cg3nl"), SubResource("Resource_wievr")])
 anim_flip = false
 unitStrategies = Array[ExtResource("7_awdeh")]([])
 
@@ -1781,7 +1781,7 @@ unitHolder = NodePath("UnitHolder")
 row1 = NodePath("row1")
 row2 = NodePath("row2")
 row3 = NodePath("row3")
-availableEnemyUnitsArray = Array[ExtResource("3_pqkku")]([SubResource("Resource_7xh78"), SubResource("Resource_myoxf")])
+availableEnemyUnitsArray = Array[ExtResource("3_pqkku")]([SubResource("Resource_fnvq6"), SubResource("Resource_8fnje")])
 row4 = NodePath("row4")
 row5 = NodePath("row5")
 row6 = NodePath("row6")
@@ -1874,6 +1874,30 @@ script = ExtResource("7_2i6nd")
 position = Vector2(278, 228)
 script = ExtResource("7_2i6nd")
 
+[node name="Marker2D7" type="Marker2D" parent="row4"]
+position = Vector2(352, 94)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D8" type="Marker2D" parent="row4"]
+position = Vector2(369, 140)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D9" type="Marker2D" parent="row4"]
+position = Vector2(355, 200)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D10" type="Marker2D" parent="row4"]
+position = Vector2(308, 123)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D11" type="Marker2D" parent="row4"]
+position = Vector2(325, 169)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D12" type="Marker2D" parent="row4"]
+position = Vector2(311, 229)
+script = ExtResource("7_2i6nd")
+
 [node name="row5" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="row5"]
@@ -1900,6 +1924,30 @@ script = ExtResource("7_2i6nd")
 position = Vector2(460, 206)
 script = ExtResource("7_2i6nd")
 
+[node name="Marker2D7" type="Marker2D" parent="row5"]
+position = Vector2(432, 87)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D8" type="Marker2D" parent="row5"]
+position = Vector2(449, 133)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D9" type="Marker2D" parent="row5"]
+position = Vector2(435, 193)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D10" type="Marker2D" parent="row5"]
+position = Vector2(491, 100)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D11" type="Marker2D" parent="row5"]
+position = Vector2(508, 146)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D12" type="Marker2D" parent="row5"]
+position = Vector2(494, 206)
+script = ExtResource("7_2i6nd")
+
 [node name="row6" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="row6"]
@@ -1912,6 +1960,42 @@ script = ExtResource("7_2i6nd")
 
 [node name="Marker2D3" type="Marker2D" parent="row6"]
 position = Vector2(534, 203)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D4" type="Marker2D" parent="row6"]
+position = Vector2(536, 70)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D5" type="Marker2D" parent="row6"]
+position = Vector2(553, 116)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D6" type="Marker2D" parent="row6"]
+position = Vector2(539, 176)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D7" type="Marker2D" parent="row6"]
+position = Vector2(558, 93)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D8" type="Marker2D" parent="row6"]
+position = Vector2(575, 139)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D9" type="Marker2D" parent="row6"]
+position = Vector2(561, 199)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D10" type="Marker2D" parent="row6"]
+position = Vector2(563, 66)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D11" type="Marker2D" parent="row6"]
+position = Vector2(580, 112)
+script = ExtResource("7_2i6nd")
+
+[node name="Marker2D12" type="Marker2D" parent="row6"]
+position = Vector2(566, 172)
 script = ExtResource("7_2i6nd")
 
 [node name="UnitHolder" parent="." instance=ExtResource("3_jraic")]

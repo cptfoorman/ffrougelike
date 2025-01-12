@@ -28,7 +28,7 @@ func _on_dragable_dropped(unit_data: UnitData) -> void:
 func _on_dragable_taken_away(unit_data: UnitData) -> void:
 	red.hide()
 	yellow.show()
-	unit_data = null
+	self.unit_data = null
 	var curr_cons = get_incoming_connections()
 	for cur_conn in curr_cons:
 		cur_conn.signal.disconnect(cur_conn.callable)

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IntIncreaseStrategy" load_steps=2 format=3 uid="uid://drhm7511o3frl"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/IntIncreaseStrategy.gd" id="1_ncmg7"]
+
+[resource]
+script = ExtResource("1_ncmg7")
+additional_int = 5
+description = "Int Up +5"
+textname = "Int Up"
+chardef = "Reader"

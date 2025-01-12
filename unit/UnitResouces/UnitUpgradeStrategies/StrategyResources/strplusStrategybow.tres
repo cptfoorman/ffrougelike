@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StrenghtIncreaseStrategy" load_steps=2 format=3 uid="uid://c522i0g2sto8x"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrenghtIncreaseStrategy.gd" id="1_4nsad"]
+
+[resource]
+script = ExtResource("1_4nsad")
+additional_strenght = 5
+description = "Strenght Up+5"
+textname = "Strenght Up"
+chardef = "Bowman"

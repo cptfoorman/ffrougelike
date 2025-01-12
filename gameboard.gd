@@ -90,9 +90,9 @@ func _on_enemy_unit_selected(enemyUnit: Unit):
 	mainUI.reset_ui_anim()
 	set_enemy_buttons_disabled()
 	current_friendly_unit.play_attack_anim(enemyUnit.global_position)
-	current_friendly_unit.currentAttack.use_attack(enemyUnit, current_friendly_unit.get_main_attack_modifier())
 	await current_friendly_unit.animations.animation_finished
-	await get_tree().create_timer(0.5).timeout
+	current_friendly_unit.currentAttack.use_attack(enemyUnit, current_friendly_unit.get_main_attack_modifier())
+	await get_tree().create_timer(1).timeout
 	set_enemy_turn()
 func _on_ui_attack_selected(unitattack: UnitAttack) -> void:
 	print("looking to kill")

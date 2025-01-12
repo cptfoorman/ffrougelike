@@ -7,4 +7,4 @@ script = ExtResource("1_x32wr")
 additional_strenght = 5
 description = "Strenght Up+5"
 textname = "Strenght Up"
-chardef = "ALL"
+chardef = "Raven"

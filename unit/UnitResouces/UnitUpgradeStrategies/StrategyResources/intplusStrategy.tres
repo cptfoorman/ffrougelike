@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_r4o11")
-additional_int = 2
-description = "Int Up +2"
+additional_int = 5
+description = "Int Up +5"
 textname = "Int Up"
-chardef = "ALL"
+chardef = "Mage"

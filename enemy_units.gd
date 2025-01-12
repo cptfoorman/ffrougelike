@@ -14,13 +14,20 @@ func set_possible_target_units(unitArray: Array[Unit]):
 func set_active_units(unitArray: Array[Unit]):
 	possible_units_array.resize(0)
 	possible_units_array.append_array(unitArray)
-func get_by_row_unit()-> Unit:
+func get_by_row_unit(attack: UnitAttack)-> Unit:
+	var best_row: int
+	var mainRowUnits: Array[Unit]
+	var otherRowUnits: Array[Unit]
 	var row_unit: Unit
 	for unit in possible_target_units:
-		if row_unit == null:
-			row_unit = unit
-		elif row_unit.row_position > unit.row_position:
-			row_unit = unit
+		if best_row > unit.row_position:
+			mainRowUnits.append(unit)
+		else:
+			otherRowUnits.append(unit)
+	if mainRowUnits.is_empty():
+		row_unit = otherRowUnits.pick_random()
+	else:
+		row_unit = mainRowUnits.pick_random()
 	return row_unit
 
 func get_random_unit()-> Unit:
@@ -37,8 +44,8 @@ func get_random_unit_attack(unit: Unit)->UnitAttack:
 func enemy_attack():
 	if possible_units_array.is_empty() == false:
 		var attacker: Unit = get_random_unit()
-		var defender: Unit = get_by_row_unit()
 		var attack: UnitAttack = get_random_unit_attack(attacker)
+		var defender: Unit = get_by_row_unit(attack)
 		attacker.currentAttack = attack
 		attacker.play_attack_anim(defender.global_position)
 		await attacker.animations.animation_finished
