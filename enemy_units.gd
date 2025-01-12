@@ -20,7 +20,7 @@ func get_by_row_unit(attack: UnitAttack)-> Unit:
 	var otherRowUnits: Array[Unit]
 	var row_unit: Unit
 	for unit in possible_target_units:
-		if best_row > unit.row_position:
+		if best_row <= unit.row_position:
 			mainRowUnits.append(unit)
 		else:
 			otherRowUnits.append(unit)
