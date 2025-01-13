@@ -75,7 +75,20 @@ func get_attacks()-> Array[UnitAttack]:
 func getName():
 	return unitsstats.name
 func take_damage(damage: float):
-	health -= damage
+	var new_damage = damage
+	new_damage-= unitsstats.defense
+	if new_damage > 0:
+		health -= new_damage
+	prints(unitsstats.name, health)
+	healthbar.value = health
+	if health <= 0:
+		queue_free()
+		prints(unitsstats.name + " died")
+		
+func take_healing(healing: float):
+	var new_healing = healing
+	if new_healing > 0:
+		health += new_healing
 	prints(unitsstats.name, health)
 	healthbar.value = health
 	if health <= 0:

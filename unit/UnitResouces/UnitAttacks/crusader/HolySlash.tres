@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://p8adge5rq35w"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_nac3i"]
+
+[resource]
+script = ExtResource("1_nac3i")
+attack_name = "Holy Slash"
+attackdmg = 120.0
+attack_desc = "Holy Slash your enemy"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 3
+attack_on_cooldown = false
+attack_reach = 2

@@ -1,0 +1,2 @@
+extends UnitAttack
+class_name UnitHealAttack

@@ -1,25 +1,28 @@
-[gd_scene load_steps=24 format=3 uid="uid://bii43sbgtee12"]
+[gd_scene load_steps=27 format=3 uid="uid://bii43sbgtee12"]
 
 [ext_resource type="Script" path="res://unit_upgrade.gd" id="1_lv825"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="2_hf0j4"]
 [ext_resource type="PackedScene" uid="uid://bnkbulg51h351" path="res://UnitPlacement/unit_holder.tscn" id="2_pvsyo"]
 [ext_resource type="PackedScene" uid="uid://bw68cv3f6dpki" path="res://Dragables/upgrade_drop_area.tscn" id="2_qshov"]
-[ext_resource type="Resource" uid="uid://cgip863x0trcq" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addAttackStrategy2.tres" id="3_4ga8i"]
+[ext_resource type="Resource" uid="uid://cgip863x0trcq" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/addAttackStrategy2.tres" id="3_4ga8i"]
 [ext_resource type="Script" path="res://UpgradeUI/UpgradeUI.gd" id="3_jpprc"]
-[ext_resource type="Resource" uid="uid://8dipswnqxyah" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addAttackStrategy.tres" id="4_eu44o"]
+[ext_resource type="Resource" uid="uid://8dipswnqxyah" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/addAttackStrategy.tres" id="4_eu44o"]
 [ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="5_7ruev"]
-[ext_resource type="Resource" uid="uid://i762nxmbudps" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/intplusStrategy.tres" id="6_e037r"]
-[ext_resource type="Resource" uid="uid://dsoexpfy67n34" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/strplusStrategy.tres" id="7_tf6vs"]
-[ext_resource type="Resource" uid="uid://vibtadapnw4w" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addbowmanattack2.tres" id="8_lq5mi"]
-[ext_resource type="Resource" uid="uid://12nk7rsqls1m" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addbowmanattack.tres" id="9_dye4e"]
-[ext_resource type="Resource" uid="uid://dd5oaakwkfcyx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addmagusAttack2.tres" id="10_ph728"]
-[ext_resource type="Resource" uid="uid://mhsv1ven6b1b" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addmagusAttack.tres" id="11_e05lt"]
+[ext_resource type="Resource" uid="uid://i762nxmbudps" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/intplusStrategy.tres" id="6_e037r"]
+[ext_resource type="Resource" uid="uid://dsoexpfy67n34" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/strplusStrategy.tres" id="7_tf6vs"]
+[ext_resource type="Resource" uid="uid://vibtadapnw4w" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/addbowmanattack2.tres" id="8_lq5mi"]
+[ext_resource type="Resource" uid="uid://12nk7rsqls1m" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/addbowmanattack.tres" id="9_dye4e"]
+[ext_resource type="Resource" uid="uid://dd5oaakwkfcyx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/addmagusAttack2.tres" id="10_ph728"]
+[ext_resource type="Resource" uid="uid://mhsv1ven6b1b" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/addmagusAttack.tres" id="11_e05lt"]
 [ext_resource type="PackedScene" uid="uid://c0t63ipcmce5j" path="res://UpgradeUI/label.tscn" id="12_masci"]
 [ext_resource type="PackedScene" uid="uid://cgjl24d3gg3db" path="res://UpgradeUI/Upgradebutton.tscn" id="12_tlvu3"]
-[ext_resource type="Resource" uid="uid://br167hhg5wy26" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addreaderAttack2.tres" id="12_uk11x"]
-[ext_resource type="Resource" uid="uid://drhm7511o3frl" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/intplusStrategyReader.tres" id="13_0rj0j"]
-[ext_resource type="Resource" uid="uid://cdv2yo5o4cbgd" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/addReaderAttack.tres" id="13_gvwj3"]
-[ext_resource type="Resource" uid="uid://c522i0g2sto8x" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/strplusStrategybow.tres" id="15_p46ro"]
+[ext_resource type="Resource" uid="uid://br167hhg5wy26" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/reader/addreaderAttack2.tres" id="12_uk11x"]
+[ext_resource type="Resource" uid="uid://drhm7511o3frl" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/reader/intplusStrategyReader.tres" id="13_0rj0j"]
+[ext_resource type="Resource" uid="uid://cdv2yo5o4cbgd" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/reader/addReaderAttack.tres" id="13_gvwj3"]
+[ext_resource type="Resource" uid="uid://c522i0g2sto8x" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/strplusStrategybow.tres" id="15_p46ro"]
+[ext_resource type="Resource" uid="uid://pkenagngkkmy" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/crusader/addHolySlash.tres" id="16_6ehgt"]
+[ext_resource type="Resource" uid="uid://dnny3e83fffk6" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/crusader/addHolyWave.tres" id="17_l86nh"]
+[ext_resource type="Resource" uid="uid://b7tlns2rmjeqi" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/crusader/StrStrategyCrusader.tres" id="18_g7oug"]
 
 [sub_resource type="Animation" id="Animation_o6we6"]
 resource_name = "upgrade_slidein"
@@ -135,7 +138,7 @@ _data = {
 script = ExtResource("1_lv825")
 upgradeUI = NodePath("CanvasLayer")
 unitHolder = NodePath("UnitHolder")
-possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro")])
+possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro"), ExtResource("16_6ehgt"), ExtResource("17_l86nh"), ExtResource("18_g7oug")])
 
 [node name="UnitHolder" parent="." instance=ExtResource("2_pvsyo")]
 

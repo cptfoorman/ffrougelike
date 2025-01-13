@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://3jlhajhd7mfw"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_vcpu6"]
+
+[resource]
+script = ExtResource("1_vcpu6")
+name = "Crusader"
+speed = 10
+health = 150.0
+mana = 20.0
+strenght = 10
+inteligence = 2
+defense = 15.0
+main_modifier = 0

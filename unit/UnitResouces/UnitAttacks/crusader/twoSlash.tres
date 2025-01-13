@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://bt55yia78tcdn"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_ad7r4"]
+
+[resource]
+script = ExtResource("1_ad7r4")
+attack_name = "Two Slash"
+attackdmg = 80.0
+attack_desc = "Slash your enemy twice"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 3
+attack_on_cooldown = false
+attack_reach = 1
