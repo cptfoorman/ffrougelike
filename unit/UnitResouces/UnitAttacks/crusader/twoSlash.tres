@@ -6,7 +6,7 @@
 resource_local_to_scene = true
 script = ExtResource("1_ad7r4")
 attack_name = "Two Slash"
-attackdmg = 80.0
+attackdmg = 60.0
 attack_desc = "Slash your enemy twice"
 attack_anim_name = "attack2"
 attack_ofset = Vector2(0, 0)

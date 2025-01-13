@@ -6,7 +6,7 @@
 resource_local_to_scene = true
 script = ExtResource("1_avfju")
 attack_name = "Ravenslice"
-attackdmg = 20.0
+attackdmg = 35.0
 attack_desc = "Raven rushes the enemy and slices it"
 attack_anim_name = "attack1"
 attack_ofset = Vector2(-7, 0)

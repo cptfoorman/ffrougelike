@@ -6,7 +6,7 @@
 resource_local_to_scene = true
 script = ExtResource("1_gtuk5")
 attack_name = "Powershot"
-attackdmg = 50.0
+attackdmg = 60.0
 attack_desc = "Charges up a powerfull shot"
 attack_anim_name = "attack2"
 attack_ofset = Vector2(-60, 0)

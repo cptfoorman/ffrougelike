@@ -6,7 +6,7 @@
 resource_local_to_scene = true
 script = ExtResource("1_nac3i")
 attack_name = "Holy Slash"
-attackdmg = 100.0
+attackdmg = 80.0
 attack_desc = "Holy Slash your enemy"
 attack_anim_name = "attack3"
 attack_ofset = Vector2(0, 0)

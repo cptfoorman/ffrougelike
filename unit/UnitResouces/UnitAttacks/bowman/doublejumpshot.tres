@@ -6,7 +6,7 @@
 resource_local_to_scene = true
 script = ExtResource("1_npmqy")
 attack_name = "DoublejumpShot"
-attackdmg = 60.0
+attackdmg = 70.0
 attack_desc = "itsa mario"
 attack_anim_name = "attack4"
 attack_ofset = Vector2(0, 0)

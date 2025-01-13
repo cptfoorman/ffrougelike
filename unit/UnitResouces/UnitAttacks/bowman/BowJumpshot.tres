@@ -6,7 +6,7 @@
 resource_local_to_scene = true
 script = ExtResource("1_ufqja")
 attack_name = "Jumpshot"
-attackdmg = 30.0
+attackdmg = 35.0
 attack_desc = "Bowman jumps and shoots "
 attack_anim_name = "attack1"
 attack_ofset = Vector2(-20, 0)

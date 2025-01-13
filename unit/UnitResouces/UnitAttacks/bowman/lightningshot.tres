@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_46rou")
 attack_name = "LightningShot"
-attackdmg = 70.0
+attackdmg = 80.0
 attack_desc = "call upon the skies to imbue with lightning"
 attack_anim_name = "attack3"
 attack_ofset = Vector2(0, 0)
