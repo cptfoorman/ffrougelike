@@ -12,10 +12,12 @@ var availableUnitsArray: Array[UnitData] = [
 	preload("res://unit/UnitResouces/UnitData/Friendly/RavenData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/magueData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/Reader.tres"),
-	preload("res://unit/UnitResouces/UnitData/Friendly/CrusaderData.tres")]
+	preload("res://unit/UnitResouces/UnitData/Friendly/CrusaderData.tres"),
+	preload("res://unit/UnitResouces/UnitData/Friendly/WitchData.tres")]
 var availableEnemyUnitsArray: Array[UnitData] =[
 	preload("res://unit/UnitResouces/UnitData/Enemy/BowmanDataEnemy.tres"),
-	preload("res://unit/UnitResouces/UnitData/Enemy/RavenDataEnemy.tres"),]
+	preload("res://unit/UnitResouces/UnitData/Enemy/RavenDataEnemy.tres"),
+	preload("res://unit/UnitResouces/UnitData/Friendly/WitchData.tres")]
 var clonedUnitsArray: Array[UnitData]
 var currentUnitsArray: Array[UnitData]
 

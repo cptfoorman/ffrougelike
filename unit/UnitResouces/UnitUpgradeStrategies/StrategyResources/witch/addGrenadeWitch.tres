@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://bbsevbmro32l6"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_l52g3"]
+[ext_resource type="Resource" uid="uid://dvwxy5hcd1sp6" path="res://unit/UnitResouces/UnitAttacks/Witch/wandGrenade.tres" id="1_w643j"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_l52g3")
+new_attack = ExtResource("1_w643j")
+description = "blow the m UP"
+textname = "Wand Grenade"
+chardef = "Witch"

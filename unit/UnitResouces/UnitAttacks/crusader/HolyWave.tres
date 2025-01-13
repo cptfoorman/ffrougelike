@@ -4,6 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://bcw0v4pg6kaov" path="res://unit/UnitResouces/UnitAttacks/aoeattacksSpriteFrames/holywave.tres" id="1_rvmsu"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_6k72w")
 aoeanimFrames = ExtResource("1_rvmsu")
 attack_name = "Holy Wave"

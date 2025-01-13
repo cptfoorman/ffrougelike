@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bii43sbgtee12"]
+[gd_scene load_steps=30 format=3 uid="uid://bii43sbgtee12"]
 
 [ext_resource type="Script" path="res://unit_upgrade.gd" id="1_lv825"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="2_hf0j4"]
@@ -23,6 +23,9 @@
 [ext_resource type="Resource" uid="uid://pkenagngkkmy" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/crusader/addHolySlash.tres" id="16_6ehgt"]
 [ext_resource type="Resource" uid="uid://dnny3e83fffk6" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/crusader/addHolyWave.tres" id="17_l86nh"]
 [ext_resource type="Resource" uid="uid://b7tlns2rmjeqi" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/crusader/StrStrategyCrusader.tres" id="18_g7oug"]
+[ext_resource type="Resource" uid="uid://bbsevbmro32l6" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/witch/addGrenadeWitch.tres" id="19_wolto"]
+[ext_resource type="Resource" uid="uid://tnnscou52fh0" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/witch/addSnakeWitch.tres" id="20_athyt"]
+[ext_resource type="Resource" uid="uid://1pvnb2cmx32k" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/witch/IntincreaseWitch.tres" id="21_mrvc4"]
 
 [sub_resource type="Animation" id="Animation_o6we6"]
 resource_name = "upgrade_slidein"
@@ -138,7 +141,7 @@ _data = {
 script = ExtResource("1_lv825")
 upgradeUI = NodePath("CanvasLayer")
 unitHolder = NodePath("UnitHolder")
-possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro"), ExtResource("16_6ehgt"), ExtResource("17_l86nh"), ExtResource("18_g7oug")])
+possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro"), ExtResource("16_6ehgt"), ExtResource("17_l86nh"), ExtResource("18_g7oug"), ExtResource("19_wolto"), ExtResource("20_athyt"), ExtResource("21_mrvc4")])
 
 [node name="UnitHolder" parent="." instance=ExtResource("2_pvsyo")]
 

@@ -41,5 +41,6 @@ func return_upgrade_strategies()->Array[Base_Unit_Strategy]:
 	var new_array: Array[Base_Unit_Strategy]
 	for strategy in possibleUpgrades:
 		if strategy.chardef == "ALL" or strategy.chardef == current_unit.get_unitstats().name:
-			new_array.append(strategy)
+			if !new_array.has(strategy):
+				new_array.append(strategy)
 	return new_array

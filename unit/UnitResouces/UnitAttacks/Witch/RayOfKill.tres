@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://7kx55vufcs78"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_iqlcu"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_iqlcu")
+attack_name = "Sickening Ray"
+attackdmg = 70.0
+attack_desc = "cast a sickening ray making your enemies barf"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 3
+attack_on_cooldown = false
+attack_reach = 4

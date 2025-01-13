@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_e7eab"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_e7eab")
 attack_name = "One Slash"
 attackdmg = 40.0

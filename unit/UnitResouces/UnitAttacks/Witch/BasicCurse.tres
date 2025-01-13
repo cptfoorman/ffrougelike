@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://c2frc4whrcb5u"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_2xnu1"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_2xnu1")
+attack_name = "Basic Curse"
+attackdmg = 30.0
+attack_desc = "basic spell to curse the enemy"
+attack_anim_name = "attack1"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 4

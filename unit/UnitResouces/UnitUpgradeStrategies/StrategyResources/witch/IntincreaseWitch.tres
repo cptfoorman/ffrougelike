@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IntIncreaseStrategy" load_steps=2 format=3 uid="uid://1pvnb2cmx32k"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/IntIncreaseStrategy.gd" id="1_k4c6u"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_k4c6u")
+additional_int = 5
+description = "Int+5"
+textname = "Int+5"
+chardef = "Witch"

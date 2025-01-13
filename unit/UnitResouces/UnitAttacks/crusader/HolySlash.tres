@@ -3,9 +3,10 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_nac3i"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_nac3i")
 attack_name = "Holy Slash"
-attackdmg = 120.0
+attackdmg = 100.0
 attack_desc = "Holy Slash your enemy"
 attack_anim_name = "attack3"
 attack_ofset = Vector2(0, 0)

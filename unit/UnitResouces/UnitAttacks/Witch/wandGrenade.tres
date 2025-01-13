@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://dvwxy5hcd1sp6"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_nrgcp"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_nrgcp")
+attack_name = "Wand Grenade"
+attackdmg = 100.0
+attack_desc = "What do you think?"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 4
