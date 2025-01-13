@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=8 format=3 uid="uid://xojhwutx7nyq"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://xojhwutx7nyq"]
 
+[ext_resource type="PackedScene" uid="uid://jgxk6d158uu7" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/raven_collision_shape_2d.tscn" id="1_ipwkd"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_ocufu"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_hc4gk"]
 [ext_resource type="SpriteFrames" uid="uid://qucmm0ql78sn" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteframes.tres" id="2_saepe"]
@@ -16,3 +17,4 @@ unitStats = ExtResource("6_nnh0g")
 unitAttacks = Array[ExtResource("2_hc4gk")]([ExtResource("4_badvl"), ExtResource("5_hrwlp")])
 anim_flip = true
 unitStrategies = Array[ExtResource("7_2nh5p")]([])
+collisionForDragable = ExtResource("1_ipwkd")

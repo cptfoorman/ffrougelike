@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=8 format=3 uid="uid://be5alhmesehdh"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://be5alhmesehdh"]
 
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_5ffyb"]
+[ext_resource type="PackedScene" uid="uid://bjkt6fk7hjqbe" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/witch_collision_shape_2d.tscn" id="1_bshcp"]
 [ext_resource type="SpriteFrames" uid="uid://bvguqrmmk7ikg" path="res://unit/UnitResouces/unitSpriteFrames/Witch.tres" id="2_f33tn"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_y8thx"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_qhbno"]
@@ -16,3 +17,4 @@ unitStats = ExtResource("6_bsn13")
 unitAttacks = Array[ExtResource("2_y8thx")]([ExtResource("4_ecb0n"), ExtResource("5_68530")])
 anim_flip = false
 unitStrategies = Array[ExtResource("3_qhbno")]([])
+collisionForDragable = ExtResource("1_bshcp")

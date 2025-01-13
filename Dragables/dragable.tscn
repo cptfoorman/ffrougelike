@@ -1,25 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjemn32fc0t37"]
+[gd_scene load_steps=4 format=3 uid="uid://bjemn32fc0t37"]
 
 [ext_resource type="Script" path="res://Dragables/dragableArea.gd" id="1_mh6x2"]
 [ext_resource type="Resource" uid="uid://xojhwutx7nyq" path="res://unit/UnitResouces/UnitData/Friendly/RavenData.tres" id="2_pcvv8"]
-[ext_resource type="SpriteFrames" uid="uid://qucmm0ql78sn" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteframes.tres" id="3_cs15u"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lu0b"]
-size = Vector2(38, 38)
+[ext_resource type="SpriteFrames" uid="uid://duxjmlxyw801f" path="res://unit/UnitResouces/unitSpriteFrames/crusader.tres" id="3_k0vob"]
 
 [node name="Dragable" type="Area2D" node_paths=PackedStringArray("animation")]
 script = ExtResource("1_mh6x2")
 unitData = ExtResource("2_pcvv8")
 animation = NodePath("AnimatedSprite2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_5lu0b")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(7, -11)
 scale = Vector2(0.90411, 0.888889)
-sprite_frames = ExtResource("3_cs15u")
-animation = &"attack1"
+sprite_frames = ExtResource("3_k0vob")
+animation = &"idle"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

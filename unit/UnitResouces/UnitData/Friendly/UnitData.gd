@@ -7,6 +7,7 @@ class_name UnitData
 @export var unitAttacks: Array[UnitAttack]
 @export var anim_flip: bool
 @export var unitStrategies: Array[Base_Unit_Strategy]
+@export var collisionForDragable: PackedScene
 
 func get_spriteframes()->SpriteFrames:
 	return spriteFrames

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc4p66pu7svpa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1cd4"]
+radius = 12.0
+height = 32.0
+
+[node name="magueCollisionShape2D" type="CollisionShape2D"]
+position = Vector2(-10, -12)
+shape = SubResource("CapsuleShape2D_p1cd4")

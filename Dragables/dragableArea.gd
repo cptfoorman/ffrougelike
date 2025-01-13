@@ -18,6 +18,11 @@ func initialize() -> void:
 	initial_position = global_position
 	animation.sprite_frames = unitData.get_spriteframes()
 	animation.play("idle")
+	add_area_collision()
+	
+func add_area_collision():
+	var new_collision_scene: CollisionShape2D = unitData.collisionForDragable.instantiate()
+	add_child(new_collision_scene)
 
 func get_unit_data()-> UnitData:
 	return unitData
