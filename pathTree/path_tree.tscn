@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cyqra6bmhk6d"]
+
+[node name="pathTree" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(570, 321)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

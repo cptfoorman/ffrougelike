@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://cpd2c3t80ub6n"]
+
+[ext_resource type="Texture2D" uid="uid://budny0lfxdb1j" path="res://assets/MRBOWMANEDIT)-Sheet.png" id="1_7sskw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mbgj"]
+atlas = ExtResource("1_7sskw")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjhh2"]
+atlas = ExtResource("1_7sskw")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmdn4"]
+atlas = ExtResource("1_7sskw")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skx3j"]
+atlas = ExtResource("1_7sskw")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm3xn"]
+atlas = ExtResource("1_7sskw")
+region = Rect2(512, 0, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mbgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjhh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmdn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skx3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sm3xn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

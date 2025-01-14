@@ -128,7 +128,7 @@ func fill_units():
 ###these funcs instance just a blank unit which then gets data and initializes#
 func instantiate_enemy_unit(unit_data: UnitData, globalpos: Vector2, unitRow: int):
 	var new_unit: Unit = unitScene.instantiate()
-	new_unit.unitdata = unit_data
+	new_unit.unitdata = unit_data.duplicate(true)
 	new_unit.animationFrames = unit_data.get_spriteframes()
 	new_unit.unitsstats = unit_data.get_unitstats()
 	new_unit.unitattacks.append_array(unit_data.get_unitAttacks())

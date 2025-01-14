@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjy6cknv6hpi7"]
+[gd_scene load_steps=2 format=3 uid="uid://cv6co2k4u1e2"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_04nnu"]
-radius = 11.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6udws"]
+radius = 17.0
+height = 40.0
 
-[node name="crusaderCollisionShape2D" type="CollisionShape2D"]
-position = Vector2(-9, -11)
-shape = SubResource("CapsuleShape2D_04nnu")
+[node name="CrusaderCollisionShape2D" type="CollisionShape2D"]
+position = Vector2(-11, 1)
+shape = SubResource("CapsuleShape2D_6udws")

@@ -20,17 +20,17 @@ var availableEnemyUnitsArray: Array[UnitData] =[
 	preload("res://unit/UnitResouces/UnitData/Friendly/WitchData.tres")]
 var clonedUnitsArray: Array[UnitData]
 var currentUnitsArray: Array[UnitData]
-
+var currentunlockedUnitsArray: Array[UnitData]
 var current_party_builder: PartyBuilder
 var current_gameboard: Gameboard
 var current_start_screen: StartScreen
 var current_upgradescene: UnitUpgrader
 
 var currentdiff: int = 0
+var char_unlocked: int = 1
 
 func _ready() -> void:
 	get_current_start_screen()
-	clone_unit_data()
 	await get_tree().create_timer(0.5).timeout
 	connect_start_screen_buttons()
 
@@ -43,6 +43,8 @@ func connect_start_screen_buttons():
 	
 	
 func _on_start_button_pressed():
+	clone_unit_data()
+	await get_tree().create_timer(0.3).timeout
 	instantiate_partyBuilder()
 
 func instantiate_partyBuilder():
@@ -59,8 +61,9 @@ func clone_random_unit()->UnitData:
 	
 
 func clone_unit_data():
-	for data in availableUnitsArray:
-		var new_data = data.duplicate(true)
+	clonedUnitsArray.resize(0)
+	for i in char_unlocked:
+		var new_data = availableUnitsArray[i].duplicate(true)
 		clonedUnitsArray.append(new_data)
 func get_current_partyBuilder():
 	current_party_builder = get_tree().get_first_node_in_group("PartyBuilder")
@@ -83,6 +86,7 @@ func set_current_party_array(unitArray: Array[UnitData]):
 
 func instantiate_gameboard():
 	currentdiff+= 1
+	char_unlocked+= wrapi(1, 1, 6)
 	get_tree().change_scene_to_packed(gameboard)
 	await get_tree().create_timer(0.5).timeout
 	get_current_gameboard()

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://c7elcktxp2e5s"]
 
-[ext_resource type="PackedScene" uid="uid://cjy6cknv6hpi7" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/crusader_collision_shape_2d.tscn" id="1_3ywgx"]
+[ext_resource type="PackedScene" uid="uid://cv6co2k4u1e2" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/crusader_collision_shape_2d.tscn" id="1_3ywgx"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_gtq4i"]
 [ext_resource type="SpriteFrames" uid="uid://duxjmlxyw801f" path="res://unit/UnitResouces/unitSpriteFrames/crusader.tres" id="2_rlfhh"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_t4n8y"]

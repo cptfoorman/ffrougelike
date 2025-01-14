@@ -188,7 +188,8 @@ position = Vector2(293, 167)
 position = Vector2(404, 309)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(573, 321)
+position = Vector2(524, 287)
+zoom = Vector2(1.2, 1.2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("3_jpprc")
