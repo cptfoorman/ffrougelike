@@ -34,7 +34,7 @@ func _on_canvas_layer_upgrade_passed(new_strategy: Base_Unit_Strategy) -> void:
 	print("giving strategy")
 	globalSceneLoader.set_current_party_array(return_new_units())
 	await get_tree().create_timer(0.5).timeout
-	globalSceneLoader.instantiate_gameboard()
+	globalSceneLoader.instantiate_path_tree()
 	
 func return_upgrade_strategies()->Array[Base_Unit_Strategy]:
 	var chardef: String = current_unit.get_unitstats().name

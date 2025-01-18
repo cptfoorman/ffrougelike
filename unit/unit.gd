@@ -144,9 +144,11 @@ func return_current_enemy_units()->Array[Unit]:
 		if child is Unit:
 			current_group_units.append(child)
 	return current_group_units
-func spawn_aoe_sprite(spriteData: SpriteFrames):
+func spawn_aoe_sprite(spriteData: SpriteFrames, attackDamage: int):
 	var new_anim: AoeAnim = aoeanimScene.instantiate()
 	add_child(new_anim)
 	new_anim.global_position = self.global_position
 	new_anim.sprite_frames = spriteData
 	new_anim.initialize()
+	await new_anim.animation_finished
+	take_damage(attackDamage)

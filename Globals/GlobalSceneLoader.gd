@@ -6,6 +6,7 @@ class_name SceneLoader
 @export var partybuilder:= preload("res://PartyBuilder/party_builder.tscn")
 @export var upgradescene:= preload("res://UnitUpgrade.tscn")
 @export var startscreen:= preload("res://start_screen.tscn")
+@export var pathTree:= preload("res://pathTree/path_tree.tscn")
 #@export var startscreen:= preload()
 var availableUnitsArray: Array[UnitData] = [
 	preload("res://unit/UnitResouces/UnitData/Friendly/BowmanData.tres"),
@@ -17,19 +18,26 @@ var availableUnitsArray: Array[UnitData] = [
 var availableEnemyUnitsArray: Array[UnitData] =[
 	preload("res://unit/UnitResouces/UnitData/Enemy/BowmanDataEnemy.tres"),
 	preload("res://unit/UnitResouces/UnitData/Enemy/RavenDataEnemy.tres"),
-	preload("res://unit/UnitResouces/UnitData/Friendly/WitchData.tres")]
+	preload("res://unit/UnitResouces/UnitData/Enemy/magueEnemyData.tres")]
 var clonedUnitsArray: Array[UnitData]
 var currentUnitsArray: Array[UnitData]
 var currentunlockedUnitsArray: Array[UnitData]
+
+
 var current_party_builder: PartyBuilder
 var current_gameboard: Gameboard
 var current_start_screen: StartScreen
 var current_upgradescene: UnitUpgrader
+var current_path_tree: PathTree
 
-var currentdiff: int = 0
+var current_floor: int = -1
+var current_event_array: Array[int]
+
+var currentdiff: int
 var char_unlocked: int = 1
 
 func _ready() -> void:
+	set_new_event_array()
 	get_current_start_screen()
 	await get_tree().create_timer(0.5).timeout
 	connect_start_screen_buttons()
@@ -41,7 +49,12 @@ func connect_start_screen_buttons():
 	current_start_screen.start.connect("pressed", _on_start_button_pressed)
 	
 	
-	
+func set_new_event_array():
+	current_event_array.resize(0)
+	var possible_events_array: Array[int] = [0,0,1,2,2,1,1,1,2,1,1,1,1,1]
+	for i in 10:
+		current_event_array.append(possible_events_array.pick_random())
+
 func _on_start_button_pressed():
 	clone_unit_data()
 	await get_tree().create_timer(0.3).timeout
@@ -75,7 +88,7 @@ func _on_units_ready(units: Array[UnitData]):
 	currentUnitsArray.resize(0)
 	currentUnitsArray.append_array(units)
 	print("button2")
-	instantiate_gameboard()
+	instantiate_gameboard(false)
 	
 func get_current_party_array()->Array[UnitData]:
 	return currentUnitsArray
@@ -84,20 +97,24 @@ func set_current_party_array(unitArray: Array[UnitData]):
 	currentUnitsArray.append_array(unitArray)
 
 
-func instantiate_gameboard():
+func instantiate_gameboard(elite: bool):
 	currentdiff+= 1
 	char_unlocked+= wrapi(1, 1, 6)
 	get_tree().change_scene_to_packed(gameboard)
 	await get_tree().create_timer(0.5).timeout
 	get_current_gameboard()
 	await get_tree().create_timer(0.5).timeout
-	initialize_current_gameboard()
+	initialize_current_gameboard(elite)
 	
 func get_current_gameboard():
 	current_gameboard = get_tree().get_first_node_in_group("Gameboard")
-func initialize_current_gameboard():
-	current_gameboard.initialize(get_current_party_array(), currentdiff)
-
+func initialize_current_gameboard(elite: bool):
+	if elite == false:
+		current_gameboard.initialize(get_current_party_array(), currentdiff, get_current_enemy_array())
+	else:
+		current_gameboard.initialize(get_current_party_array(), currentdiff+2, get_current_enemy_array())
+func get_current_enemy_array()->Array[UnitData]:
+	return availableEnemyUnitsArray
 func instantiate_upgrader(new_unit_array: Array[UnitData]):
 	set_current_party_array(new_unit_array)
 	get_tree().change_scene_to_packed(upgradescene)
@@ -106,6 +123,12 @@ func instantiate_upgrader(new_unit_array: Array[UnitData]):
 	await get_tree().create_timer(0.5).timeout
 	initialize_current_upgrader()
 
+func instantiate_map_upgrader(new_unit_array: Array[UnitData]):
+	get_tree().change_scene_to_packed(upgradescene)
+	await get_tree().create_timer(0.5).timeout
+	get_current_party_upgrade_scene()
+	await get_tree().create_timer(0.5).timeout
+	initialize_current_upgrader()
 func get_current_party_upgrade_scene():
 	current_upgradescene = get_tree().get_first_node_in_group("UnitUpgrader")
 func initialize_current_upgrader():
@@ -113,9 +136,37 @@ func initialize_current_upgrader():
 
 
 func instantiate_start_screen():
+	current_floor = -1
 	currentdiff = 0
+	set_new_event_array()
 	get_tree().change_scene_to_packed(startscreen)
 	await get_tree().create_timer(0.5).timeout
 	get_current_start_screen()
 	await get_tree().create_timer(0.5).timeout
 	connect_start_screen_buttons()
+	
+	
+func instantiate_path_tree():
+	current_floor += 1
+	get_tree().change_scene_to_packed(pathTree)
+	await get_tree().create_timer(0.5).timeout
+	get_current_path_tree_scene()
+	await get_tree().create_timer(0.5).timeout
+	initialize_path_tree()
+	connect_path_tree_signal()
+	
+func get_current_path_tree_scene():
+	current_path_tree = get_tree().get_first_node_in_group("PathTree")
+func initialize_path_tree():
+	current_path_tree.initialize(current_floor, current_event_array)
+func connect_path_tree_signal():
+	current_path_tree.connect("EventSent", _on_event_sent)
+	
+func _on_event_sent(eventNum: int)-> void:
+	match eventNum:
+		0:
+			instantiate_gameboard(false)
+		1:
+			instantiate_map_upgrader(get_current_party_array())
+		2:
+			instantiate_gameboard(true)

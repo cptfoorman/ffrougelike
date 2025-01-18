@@ -1,8 +1,78 @@
-[gd_scene format=3 uid="uid://cyqra6bmhk6d"]
+[gd_scene load_steps=2 format=3 uid="uid://cyqra6bmhk6d"]
 
-[node name="pathTree" type="Node2D"]
+[ext_resource type="Script" path="res://pathTree/path_tree.gd" id="1_mmkbf"]
+
+[node name="pathTree" type="Node2D" groups=["PathTree"]]
+script = ExtResource("1_mmkbf")
+
+[node name="markerstash" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Marker2D" type="Marker2D" parent="markerstash"]
+position = Vector2(98, 210)
+
+[node name="Line2D" type="Line2D" parent="markerstash/Marker2D"]
+points = PackedVector2Array(90, 128, -1, 0)
+
+[node name="Marker2D2" type="Marker2D" parent="markerstash"]
+position = Vector2(188, 337)
+
+[node name="Line2D" type="Line2D" parent="markerstash/Marker2D2"]
+points = PackedVector2Array(0, 0, 109, -123)
+
+[node name="Marker2D3" type="Marker2D" parent="markerstash"]
+position = Vector2(296, 217)
+
+[node name="Line2D" type="Line2D" parent="markerstash/Marker2D3"]
+points = PackedVector2Array(0, 4, 94, 95)
+
+[node name="Marker2D4" type="Marker2D" parent="markerstash"]
+position = Vector2(388, 315)
+
+[node name="Line2D" type="Line2D" parent="markerstash/Marker2D4"]
+points = PackedVector2Array(2, -1, 77, -178)
+
+[node name="Marker2D5" type="Marker2D" parent="markerstash"]
+position = Vector2(465, 138)
+
+[node name="Line2D" type="Line2D" parent="markerstash/Marker2D5"]
+points = PackedVector2Array(1, 2, 143, 1)
+
+[node name="Marker2D6" type="Marker2D" parent="markerstash"]
+position = Vector2(610, 139)
+
+[node name="Line2D" type="Line2D" parent="markerstash/Marker2D6"]
+points = PackedVector2Array(0, -2, 50, 117)
+
+[node name="Marker2D7" type="Marker2D" parent="markerstash"]
+position = Vector2(659, 257)
+
+[node name="Line2D" type="Line2D" parent="markerstash/Marker2D7"]
+points = PackedVector2Array(-1, -1, 68, 110)
+
+[node name="Marker2D8" type="Marker2D" parent="markerstash"]
+position = Vector2(726, 366)
+
+[node name="Line2D" type="Line2D" parent="markerstash/Marker2D8"]
+points = PackedVector2Array(1, -1, 77, 93)
+
+[node name="Marker2D9" type="Marker2D" parent="markerstash"]
+position = Vector2(804, 461)
+
+[node name="Line2D" type="Line2D" parent="markerstash/Marker2D9"]
+points = PackedVector2Array(-1, -2, 181, 80)
+
+[node name="Marker2D10" type="Marker2D" parent="markerstash"]
+position = Vector2(986, 542)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(570, 321)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 649.0

@@ -11,6 +11,10 @@ func set_possible_target_units(unitArray: Array[Unit]):
 	possible_target_units.resize(0)
 	possible_target_units.append_array(unitArray)
 
+
+
+
+
 func set_active_units(unitArray: Array[Unit]):
 	possible_units_array.resize(0)
 	possible_units_array.append_array(unitArray)
@@ -50,7 +54,7 @@ func enemy_attack():
 		attacker.play_attack_anim(defender.global_position)
 		await attacker.animations.animation_finished
 		attacker.currentAttack.use_attack(defender, attacker.get_main_attack_modifier())
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.7).timeout
 		EnemyTurnOver.emit()
 	else:
 		UnitsEmpty.emit()

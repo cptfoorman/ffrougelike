@@ -8,9 +8,10 @@ class_name Gameboard
 @export var mainUI: UI
 var unitPlacer: UnitPlacer
 
-func initialize(units: Array[UnitData], unitcount: int):
+func initialize(units: Array[UnitData], unitcount: int, enemyUnitData: Array[UnitData]):
 	unitPlacer = get_tree().get_first_node_in_group("UnitPlacer")
-	unitPlacer.initialize(units, unitcount)
+	unitPlacer.initialize(units, unitcount, enemyUnitData)
+	
 
 func initialize_unit_signals() -> void:
 	connect_friendly_unit_signal()
@@ -92,7 +93,7 @@ func _on_enemy_unit_selected(enemyUnit: Unit):
 	current_friendly_unit.play_attack_anim(enemyUnit.global_position)
 	await current_friendly_unit.animations.animation_finished
 	current_friendly_unit.currentAttack.use_attack(enemyUnit, current_friendly_unit.get_main_attack_modifier())
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(1.2).timeout
 	set_enemy_turn()
 func _on_ui_attack_selected(unitattack: UnitAttack) -> void:
 	print("looking to kill")
@@ -139,7 +140,7 @@ func _on_ui_added_to_party(newPartyUnit: UnitData) -> void:
 	survivor_units.append(newPartyUnit)
 	globalSceneLoader.set_current_party_array(survivor_units)
 	await get_tree().create_timer(0.5).timeout
-	globalSceneLoader.instantiate_gameboard()
+	globalSceneLoader.instantiate_path_tree()
 
 func _on_ui_upgrades_selected() -> void:
 	var survivor_units: Array[UnitData]

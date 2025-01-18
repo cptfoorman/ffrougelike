@@ -1,63 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://ba87btxkl1a6"]
+[gd_scene load_steps=8 format=3 uid="uid://ba87btxkl1a6"]
 
 [ext_resource type="Script" path="res://UnitPlacement/placement.gd" id="1_gqrju"]
 [ext_resource type="PackedScene" uid="uid://be5cg4av3mk5x" path="res://unit/unit.tscn" id="2_kktaj"]
 [ext_resource type="Script" path="res://UnitPlacement/placement_ui.gd" id="2_oj8ei"]
 [ext_resource type="PackedScene" uid="uid://bnkbulg51h351" path="res://UnitPlacement/unit_holder.tscn" id="3_jraic"]
-[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="3_pqkku"]
 [ext_resource type="PackedScene" uid="uid://d12h27eryruqa" path="res://Dragables/drop_area.tscn" id="3_sqto0"]
-[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="5_6ybw0"]
-[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="6_yghe6"]
 [ext_resource type="Script" path="res://EnemyDropmarker.gd" id="7_2i6nd"]
-[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="7_awdeh"]
-[ext_resource type="PackedScene" uid="uid://cj445lakton70" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/bowman_collision_shape_2d.tscn" id="8_2214h"]
-[ext_resource type="SpriteFrames" uid="uid://cjs2tyf5pq18r" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteFramesBowman.tres" id="9_oes0d"]
-
-[sub_resource type="Resource" id="Resource_jxl15"]
-resource_local_to_scene = true
-script = ExtResource("5_6ybw0")
-attack_name = "Jumpshot"
-attackdmg = 35.0
-attack_desc = "Bowman jumps and shoots "
-attack_anim_name = "attack1"
-attack_ofset = Vector2(-20, 0)
-attack_max_cooldown = 1
-attack_on_cooldown = false
-attack_reach = 2
-
-[sub_resource type="Resource" id="Resource_77u6r"]
-resource_local_to_scene = true
-script = ExtResource("5_6ybw0")
-attack_name = "Powershot"
-attackdmg = 60.0
-attack_desc = "Charges up a powerfull shot"
-attack_anim_name = "attack2"
-attack_ofset = Vector2(-60, 0)
-attack_max_cooldown = 3
-attack_on_cooldown = false
-attack_reach = 3
-
-[sub_resource type="Resource" id="Resource_fwad3"]
-resource_local_to_scene = true
-script = ExtResource("6_yghe6")
-name = "Bowman"
-speed = 15
-health = 50.0
-mana = 20.0
-strenght = 8
-inteligence = 5
-defense = 0.0
-main_modifier = 0
-
-[sub_resource type="Resource" id="Resource_b2jmt"]
-resource_local_to_scene = true
-script = ExtResource("3_pqkku")
-spriteFrames = ExtResource("9_oes0d")
-unitStats = SubResource("Resource_fwad3")
-unitAttacks = Array[ExtResource("5_6ybw0")]([SubResource("Resource_jxl15"), SubResource("Resource_77u6r")])
-anim_flip = false
-unitStrategies = Array[ExtResource("7_awdeh")]([])
-collisionForDragable = ExtResource("8_2214h")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsiv7"]
 
@@ -69,7 +17,6 @@ unitHolder = NodePath("UnitHolder")
 row1 = NodePath("row1")
 row2 = NodePath("row2")
 row3 = NodePath("row3")
-availableEnemyUnitsArray = Array[ExtResource("3_pqkku")]([SubResource("Resource_b2jmt")])
 row4 = NodePath("row4")
 row5 = NodePath("row5")
 row6 = NodePath("row6")

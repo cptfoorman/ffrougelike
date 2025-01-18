@@ -31,9 +31,13 @@ signal EnemyUnitAdded(unit: Unit, unitPos: Vector2)
 
 
 
-func initialize(units: Array[UnitData], enemyCount: int):
+func initialize(units: Array[UnitData], enemyCount: int, enemyUnitData: Array[UnitData] = []):
 	enemy_count = enemyCount
 	initializeUnitHolder(units)
+	availableEnemyUnitsArray.resize(0)
+	availableEnemyUnitsArray.append_array(enemyUnitData)
+	for unit in availableEnemyUnitsArray:
+		unit.set_local_to_scene(true)
 func initializeUnitHolder(units: Array[UnitData]):
 	unitHolder.initialize(units)
 

@@ -10,7 +10,7 @@ func use_attack(target: Unit, strenght: int):
 	targetArray.append_array(target.return_current_friendly_units())
 	for unit in targetArray:
 		unit.take_healing(new_damage)
-		unit.spawn_aoe_sprite(anims)
+		unit.spawn_aoe_sprite(anims, 0)
 	set_on_cooldown()
 	cooldown_attack()
 	
