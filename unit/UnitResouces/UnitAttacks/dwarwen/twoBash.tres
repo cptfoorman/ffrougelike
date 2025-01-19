@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://7rwa4lr4kpb7"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_lufbh"]
+
+[resource]
+script = ExtResource("1_lufbh")
+attack_name = "Two Bash"
+attackdmg = 100.0
+attack_desc = "DING DING!"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 1

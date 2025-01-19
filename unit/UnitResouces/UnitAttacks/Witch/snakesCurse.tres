@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AoEAttack" load_steps=3 format=3 uid="uid://dymf2643dodml"]
 
 [ext_resource type="SpriteFrames" uid="uid://1qaun17dbtav" path="res://unit/UnitResouces/UnitAttacks/aoeattacksSpriteFrames/snakehead.tres" id="1_fqbxh"]
-[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitAoEAttack.gd" id="1_vgse7"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOEscripts/UnitAoEAttack.gd" id="1_vgse7"]
 
 [resource]
 resource_local_to_scene = true

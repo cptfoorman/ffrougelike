@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://cxijcuee718ho"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_3gd46"]
+[ext_resource type="Resource" uid="uid://7rwa4lr4kpb7" path="res://unit/UnitResouces/UnitAttacks/dwarwen/twoBash.tres" id="1_gun5f"]
+
+[resource]
+script = ExtResource("1_3gd46")
+new_attack = ExtResource("1_gun5f")
+description = "Bash enemy Twice"
+textname = "Two Bash"
+chardef = "Dwarwen"

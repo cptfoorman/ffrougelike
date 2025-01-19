@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AoEAttack" load_steps=3 format=3 uid="uid://b317kf1f5j1hq"]
 
 [ext_resource type="SpriteFrames" uid="uid://c165bl4gvrqoy" path="res://unit/UnitResouces/UnitAttacks/aoeattacksSpriteFrames/smite.tres" id="1_pgyk7"]
-[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitAoEAttack.gd" id="1_pyokj"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOEscripts/UnitAoEAttack.gd" id="1_pyokj"]
 
 [resource]
 resource_local_to_scene = true

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://clmupjuans0ch"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_3remv"]
+
+[resource]
+script = ExtResource("1_3remv")
+name = "Dwarwen Boss"
+speed = 10
+health = 200.0
+mana = 20.0
+strenght = 10
+inteligence = 5
+defense = 2.0
+main_modifier = 0

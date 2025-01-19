@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyAOEHeal" load_steps=3 format=3 uid="uid://08jg2wawtpf6"]
+
+[ext_resource type="SpriteFrames" uid="uid://d28y1elh4wout" path="res://unit/UnitResouces/UnitAttacks/aoeattacksSpriteFrames/heal.tres" id="1_1o7np"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOEscripts/EnemyHealAOE.gd" id="1_y78oo"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_y78oo")
+anims = ExtResource("1_1o7np")
+attack_name = "Heeeel"
+attackdmg = 15.0
+attack_desc = ""
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 1

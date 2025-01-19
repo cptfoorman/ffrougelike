@@ -6,6 +6,7 @@ var health: float
 var mana: float 
 var strenght: int
 var inteligence: int
+var defense: int
 @export var row_position: int
 enum MainAttackModifier {strenght, inteligence}
 @export var attackModifier: MainAttackModifier
@@ -19,22 +20,30 @@ enum MainAttackModifier {strenght, inteligence}
 @export var unitdata: UnitData
 var currentAttack: UnitAttack
 @export var selectButton: Button
+@export var friendlySelectButton: Button
 @onready var healthbar: ProgressBar = %health
-@export var aoeanimScene: PackedScene
+@onready var friendly_buff_holder: Node2D = %friendlyBuffHolder
+@onready var enemy_buff_holder: Node2D = %EnemyBuffHolder
 
+
+
+@export var aoeanimScene: PackedScene
+@export var buffScene: PackedScene
 
 var enemyTarget: Unit
 enum Faction {FRIENDLY, ENEMY}
 @export var Factionset: Faction
 
 signal SELECTED(unit: Unit)
-
+signal DAMAGED(damage: int)
+signal FRIENDLYSELECTED(unit: Unit)
 func initialize() -> void:
 	animations.sprite_frames = animationFrames
 	animations.play("idle")
 	unitsstats.currentUnit = self
 	unitsstats.initialize()
 	unitsstats.printstats()
+	defense = unitsstats.defense
 	animations.flip_h = flip_anim_h
 	prints("initializing", unitsstats.name, health)
 	healthbar.max_value = health
@@ -76,9 +85,10 @@ func getName():
 	return unitsstats.name
 func take_damage(damage: float):
 	var new_damage = damage
-	new_damage-= unitsstats.defense
+	new_damage-= defense
 	if new_damage > 0:
 		health -= new_damage
+		DAMAGED.emit(new_damage)
 	prints(unitsstats.name, health)
 	healthbar.value = health
 	if health <= 0:
@@ -125,6 +135,27 @@ func _on_select_button_mouse_entered() -> void:
 func advance_attack_cooldowns():
 	for attack in unitattacks:
 		attack.cooldown_attack()
+	for buff in friendly_buff_holder.get_children():
+		if buff is BuffHolder:
+			buff.reduce_duration()
+	for buff in enemy_buff_holder.get_children():
+		if buff is BuffHolder:
+			buff.reduce_duration()
+func instance_friendly_buff(buff: BuffData):
+	var new_buff: BuffHolder = buffScene.instantiate()
+	friendly_buff_holder.add_child(new_buff)
+	new_buff.global_position = friendly_buff_holder.global_position
+	new_buff.initialize(self, buff)
+func instance_enemy_buff(buff: BuffData):
+	var new_buff: BuffHolder = buffScene.instantiate()
+	enemy_buff_holder.add_child(new_buff)
+	new_buff.global_position = enemy_buff_holder.global_position
+	new_buff.initialize(self, buff)
+
+func set_friendly_select_disabled():
+	friendlySelectButton.hide()
+func set_friendly_select_enabled():
+	friendlySelectButton.show()
 func set_button_disabled():
 	selectButton.hide()
 func set_button_enabled():
@@ -137,7 +168,6 @@ func return_current_friendly_units()->Array[Unit]:
 		if child is Unit:
 			current_group_units.append(child)
 	return current_group_units
-	
 func return_current_enemy_units()->Array[Unit]:
 	var current_group_units: Array[Unit]
 	for child in get_tree().get_first_node_in_group("EnemyUnits").get_children():
@@ -152,3 +182,7 @@ func spawn_aoe_sprite(spriteData: SpriteFrames, attackDamage: int):
 	new_anim.initialize()
 	await new_anim.animation_finished
 	take_damage(attackDamage)
+
+
+func _on_friendly_select_button_pressed() -> void:
+	FRIENDLYSELECTED.emit(self)

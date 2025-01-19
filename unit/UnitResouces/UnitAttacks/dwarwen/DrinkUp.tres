@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitHealAttack" load_steps=2 format=3 uid="uid://rsarniwmi3gm"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitHealAttack.gd" id="1_xygr5"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_xygr5")
+attack_name = "Drinking Buddy"
+attackdmg = 30.0
+attack_desc = "Drink Up! it might be your last!"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 1

@@ -28,6 +28,7 @@ signal EnemyUnitAdded(unit: Unit, unitPos: Vector2)
 
 ##so this is the unit placer, its job is to instantiate units scenes, give them proper unit data and initialize them
 ## the rows and markers do violate DRY orinciples but its set up for a later mechanic
+@onready var button: Button = %Button
 
 
 
@@ -162,6 +163,7 @@ func instantiate_unit(unit_data: UnitData, globalpos: Vector2, unitRow: int):
 	
 	
 func _on_button_pressed() -> void:
+	button.set_deferred("disabled", true)
 	fill_marker_arrays()
 	await get_tree().create_timer(0.5).timeout
 	fill_enemy_units()

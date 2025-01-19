@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DefenseBuff" load_steps=3 format=3 uid="uid://dob7x140la3m3"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/buffAttackScripts/DefenseBuff.gd" id="1_2j37r"]
+[ext_resource type="SpriteFrames" uid="uid://dn2lrfskqcitn" path="res://unit/UnitResouces/UnitAttacks/aoeattacksSpriteFrames/LegionTurtle.tres" id="1_lnrkm"]
+
+[resource]
+script = ExtResource("1_2j37r")
+defenseIncrease = 20
+buffDuration = 6
+buffAnim = ExtResource("1_lnrkm")
+one_time_buff = false

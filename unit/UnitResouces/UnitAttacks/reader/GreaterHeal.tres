@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AoEHeal" load_steps=3 format=3 uid="uid://bixpoo4ep37oa"]
 
 [ext_resource type="SpriteFrames" uid="uid://d28y1elh4wout" path="res://unit/UnitResouces/UnitAttacks/aoeattacksSpriteFrames/heal.tres" id="1_3pxah"]
-[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitAoEHeal.gd" id="2_oqdis"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOEscripts/UnitAoEHeal.gd" id="2_oqdis"]
 
 [resource]
 resource_local_to_scene = true

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://4xt58jqq8j7b"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_dnul8"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_dnul8")
+name = "BossPriest"
+speed = 10
+health = 200.0
+mana = 20.0
+strenght = 5
+inteligence = 8
+defense = 5.0
+main_modifier = 1

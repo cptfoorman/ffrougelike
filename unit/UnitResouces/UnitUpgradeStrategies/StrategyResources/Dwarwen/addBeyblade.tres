@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://cw5x4ccci31hc"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_ohswh"]
+[ext_resource type="Resource" uid="uid://cishg1nabvtgg" path="res://unit/UnitResouces/UnitAttacks/dwarwen/Beyblade.tres" id="1_vvofa"]
+
+[resource]
+script = ExtResource("1_ohswh")
+new_attack = ExtResource("1_vvofa")
+description = "Spin away doing massive dmg"
+textname = "Let it RIP"
+chardef = "Dwarwen"

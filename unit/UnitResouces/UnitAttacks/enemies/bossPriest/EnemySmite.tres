@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyAoe" load_steps=3 format=3 uid="uid://bi4nbdc73vu8w"]
+
+[ext_resource type="SpriteFrames" uid="uid://c165bl4gvrqoy" path="res://unit/UnitResouces/UnitAttacks/aoeattacksSpriteFrames/smite.tres" id="1_h1vlg"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOEscripts/EnemyAoeAttack.gd" id="2_djt4y"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_djt4y")
+aoeanimFrames = ExtResource("1_h1vlg")
+attack_name = "Unholy Smite"
+attackdmg = 40.0
+attack_desc = ""
+attack_anim_name = "attack1"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 1

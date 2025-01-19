@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://b5bpshtxbir5c"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_xibp2"]
+[ext_resource type="SpriteFrames" uid="uid://bu8p0r0jjuo8h" path="res://unit/UnitResouces/unitSpriteFrames/unitspriteframesMague.tres" id="2_nhps7"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_vwlfk"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_mi1ee"]
+[ext_resource type="Resource" uid="uid://dul6ewp3gcvlx" path="res://unit/UnitResouces/UnitAttacks/enemies/mague/EnemyMagueFan.tres" id="4_gpvmy"]
+[ext_resource type="Resource" uid="uid://dbvowvsl762r4" path="res://unit/UnitResouces/UnitAttacks/magus/magusslice.tres" id="5_bebpy"]
+[ext_resource type="Resource" uid="uid://be5mwmr130780" path="res://unit/UnitResouces/UnitAttacks/magus/magusvortex.tres" id="6_c1ekf"]
+[ext_resource type="Resource" uid="uid://b1mm1wss6n3fr" path="res://unit/UnitResouces/stats/maguesEnemy.tres" id="7_5xs0a"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_xibp2")
+spriteFrames = ExtResource("2_nhps7")
+unitStats = ExtResource("7_5xs0a")
+unitAttacks = Array[ExtResource("2_vwlfk")]([ExtResource("4_gpvmy"), ExtResource("5_bebpy"), ExtResource("5_bebpy"), ExtResource("6_c1ekf"), ExtResource("6_c1ekf")])
+anim_flip = true
+unitStrategies = Array[ExtResource("3_mi1ee")]([])

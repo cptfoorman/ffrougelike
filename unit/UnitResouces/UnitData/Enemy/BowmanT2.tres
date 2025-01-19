@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://dkmg7le1swsts"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_h4nym"]
+[ext_resource type="SpriteFrames" uid="uid://cjs2tyf5pq18r" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteFramesBowman.tres" id="2_ja5li"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_ltk8q"]
+[ext_resource type="Resource" uid="uid://cf32324sq7awa" path="res://unit/UnitResouces/UnitAttacks/bowman/BowJumpshot.tres" id="3_uoihf"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_xqf2o"]
+[ext_resource type="Resource" uid="uid://d1pd5son6jnsh" path="res://unit/UnitResouces/UnitAttacks/bowman/doublejumpshot.tres" id="4_cvbtw"]
+[ext_resource type="Resource" uid="uid://b85kra5yr5j05" path="res://unit/UnitResouces/UnitAttacks/bowman/Bowpowershot.tres" id="5_dtft2"]
+[ext_resource type="Resource" uid="uid://cs1h45i55lvuf" path="res://unit/UnitResouces/stats/BowmanStats.tres" id="7_0ik6t"]
+
+[resource]
+script = ExtResource("1_h4nym")
+spriteFrames = ExtResource("2_ja5li")
+unitStats = ExtResource("7_0ik6t")
+unitAttacks = Array[ExtResource("2_ltk8q")]([ExtResource("3_uoihf"), ExtResource("4_cvbtw"), ExtResource("3_uoihf"), ExtResource("5_dtft2"), ExtResource("4_cvbtw")])
+anim_flip = true
+unitStrategies = Array[ExtResource("3_xqf2o")]([])

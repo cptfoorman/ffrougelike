@@ -39,4 +39,12 @@ offset_right = 748.0
 offset_bottom = 418.0
 text = "Give Up"
 
+[node name="topFloor" type="Label" parent="StartScreenUI"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 819.0
+offset_top = 32.0
+offset_right = 1069.0
+offset_bottom = 100.0
+
 [connection signal="pressed" from="StartScreenUI/Quit" to="." method="_on_quit_pressed"]

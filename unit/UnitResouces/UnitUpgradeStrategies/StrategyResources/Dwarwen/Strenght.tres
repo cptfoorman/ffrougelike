@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StrenghtIncreaseStrategy" load_steps=2 format=3 uid="uid://c1u8ucyb5wcyo"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrenghtIncreaseStrategy.gd" id="1_8bkgf"]
+
+[resource]
+script = ExtResource("1_8bkgf")
+additional_strenght = 5
+description = "increase strenght"
+textname = "Str+5"
+chardef = "Dwarwen"

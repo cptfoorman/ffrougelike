@@ -20,6 +20,7 @@ func initialize_unit_signals() -> void:
 func connect_friendly_unit_signal():
 	for child in friendlyUnitsGroup.get_children():
 		child.connect("SELECTED", _on_unit_selected)
+		child.connect("FRIENDLYSELECTED", _on_friendly_select)
 func connect_enemy_unit_signals():
 	for child in enemyUnitsGroup.get_children():
 		if child is Unit:
@@ -41,6 +42,7 @@ func set_enemy_buttons_disabled():
 	for child in enemyUnitsGroup.get_children():
 		if child is Unit:
 			child.set_button_disabled()
+			child.set_friendly_select_disabled()
 func set_friendly_buttons_enabled():
 	for child in friendlyUnitsGroup.get_children():
 		if child is Unit:
@@ -49,6 +51,14 @@ func set_friendly_buttons_disabled():
 	for child in friendlyUnitsGroup.get_children():
 		if child is Unit:
 			child.set_button_disabled()
+func set_select_friendly_buttons_enabled():
+	for child in friendlyUnitsGroup.get_children():
+		if child is Unit:
+			child.set_friendly_select_enabled()
+func set_select_friendly_buttons_disabled():
+	for child in friendlyUnitsGroup.get_children():
+		if child is Unit:
+			child.set_friendly_select_disabled()
 func _on_unit_selected(unit: Unit) -> void:
 	current_friendly_unit = unit
 	print("i selected "+ current_friendly_unit.getName())
@@ -68,6 +78,7 @@ func set_enemy_turn():
 		unit.advance_attack_cooldowns()
 	mainUI.set_enemy_turn()
 	set_friendly_buttons_disabled()
+	set_select_friendly_buttons_disabled()
 	enemyUnitsGroup.set_active_units(get_current_enemy_units())
 	enemyUnitsGroup.set_possible_target_units(get_current_friendly_units())
 	enemyUnitsGroup.enemy_attack()
@@ -92,12 +103,16 @@ func _on_enemy_unit_selected(enemyUnit: Unit):
 	set_enemy_buttons_disabled()
 	current_friendly_unit.play_attack_anim(enemyUnit.global_position)
 	await current_friendly_unit.animations.animation_finished
-	current_friendly_unit.currentAttack.use_attack(enemyUnit, current_friendly_unit.get_main_attack_modifier())
+	current_friendly_unit.currentAttack.use_attack(enemyUnit, current_friendly_unit.get_main_attack_modifier(), current_friendly_unit)
 	await get_tree().create_timer(1.2).timeout
 	set_enemy_turn()
 func _on_ui_attack_selected(unitattack: UnitAttack) -> void:
 	print("looking to kill")
-	set_enemy_buttons_enabled(unitattack.attack_reach)
+	if unitattack is UnitFriendlyBuffAttack:
+		set_friendly_buttons_disabled()
+		set_select_friendly_buttons_enabled()
+	else:
+		set_enemy_buttons_enabled(unitattack.attack_reach)
 
 
 func _on_ui_attack_deselected() -> void:
@@ -147,3 +162,11 @@ func _on_ui_upgrades_selected() -> void:
 	for unit in get_current_friendly_units():
 		survivor_units.append(unit.get_unit_data())
 	globalSceneLoader.instantiate_upgrader(survivor_units)
+func _on_friendly_select(friendlyUnit: Unit):
+	mainUI.reset_ui_anim()
+	set_enemy_buttons_disabled()
+	current_friendly_unit.play_attack_anim(friendlyUnit.global_position)
+	await current_friendly_unit.animations.animation_finished
+	current_friendly_unit.currentAttack.use_attack(friendlyUnit, current_friendly_unit.get_main_attack_modifier(), current_friendly_unit)
+	await get_tree().create_timer(1.2).timeout
+	set_enemy_turn()

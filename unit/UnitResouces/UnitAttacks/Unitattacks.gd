@@ -10,7 +10,7 @@ class_name UnitAttack
 var attack_cooldown: int
 @export var attack_reach: int
 
-func use_attack(target: Unit, strenght: int):
+func use_attack(target: Unit, strenght: int, attacker: Unit):
 	var new_damage = attackdmg+strenght
 	target.take_damage(new_damage)
 	set_on_cooldown()

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://cishg1nabvtgg"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_yx45j"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_yx45j")
+attack_name = "360 Hammer"
+attackdmg = 120.0
+attack_desc = "ITS SPINNING!"
+attack_anim_name = "attack4"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 1

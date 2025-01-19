@@ -34,6 +34,7 @@ func set_current_button():
 	var current_button: EventButton = leftPathArray[current_path_position]
 	current_button.set_deferred("disabled", false)
 	current_button.connect("EventChosen", _on_event_button_event_chosen)
+	current_button.instantiate_highlighter()
 
 func set_current_events(events: Array[int]):
 	current_events.append_array(events)
@@ -41,6 +42,7 @@ func set_current_events(events: Array[int]):
 func spawn_buttons():
 	for i in 10:
 		spawn_event_button(current_events[i], marker_array[i].global_position)
+	spawn_event_button(3, marker_array[10].global_position)
 
 
 func fill_marker_array():

@@ -24,7 +24,7 @@ func get_by_row_unit(attack: UnitAttack)-> Unit:
 	var otherRowUnits: Array[Unit]
 	var row_unit: Unit
 	for unit in possible_target_units:
-		if best_row <= unit.row_position:
+		if best_row >= unit.row_position:
 			mainRowUnits.append(unit)
 		else:
 			otherRowUnits.append(unit)
@@ -53,7 +53,7 @@ func enemy_attack():
 		attacker.currentAttack = attack
 		attacker.play_attack_anim(defender.global_position)
 		await attacker.animations.animation_finished
-		attacker.currentAttack.use_attack(defender, attacker.get_main_attack_modifier())
+		attacker.currentAttack.use_attack(defender, attacker.get_main_attack_modifier(), attacker)
 		await get_tree().create_timer(0.7).timeout
 		EnemyTurnOver.emit()
 	else:

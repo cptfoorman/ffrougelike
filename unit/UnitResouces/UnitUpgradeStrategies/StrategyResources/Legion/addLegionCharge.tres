@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://bj76oy7844tfc"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_5u8hc"]
+[ext_resource type="Resource" uid="uid://fy166s78tn64" path="res://unit/UnitResouces/UnitAttacks/legion/LegionCharge.tres" id="1_r1ll5"]
+
+[resource]
+script = ExtResource("1_5u8hc")
+new_attack = ExtResource("1_r1ll5")
+description = "Call in your Legion"
+textname = "Legion Charge"
+chardef = "Legion"

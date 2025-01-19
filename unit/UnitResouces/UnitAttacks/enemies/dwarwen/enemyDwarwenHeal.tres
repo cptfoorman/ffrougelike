@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitHealAttack" load_steps=2 format=3 uid="uid://ccynn5vcbo4b7"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitHealAttack.gd" id="1_0rrbj"]
+
+[resource]
+script = ExtResource("1_0rrbj")
+attack_name = "Drinky Winky"
+attackdmg = 15.0
+attack_desc = ""
+attack_anim_name = "attack2"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 1

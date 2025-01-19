@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=8 format=3 uid="uid://b7kgy6qxyqpxx"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_lx1lj"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_46bi8"]
+[ext_resource type="SpriteFrames" uid="uid://hspwp177qixh" path="res://unit/UnitResouces/unitSpriteFrames/Dwarwen.tres" id="2_rwjf7"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_1l2eb"]
+[ext_resource type="Resource" uid="uid://3316k8a0rd7y" path="res://unit/UnitResouces/UnitAttacks/dwarwen/oneBash.tres" id="4_rhl6u"]
+[ext_resource type="Resource" uid="uid://7rwa4lr4kpb7" path="res://unit/UnitResouces/UnitAttacks/dwarwen/twoBash.tres" id="5_aeu62"]
+[ext_resource type="Resource" uid="uid://cghfencxtjw4a" path="res://unit/UnitResouces/stats/EnemyDwarwen.tres" id="6_os3ul"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_lx1lj")
+spriteFrames = ExtResource("2_rwjf7")
+unitStats = ExtResource("6_os3ul")
+unitAttacks = Array[ExtResource("2_46bi8")]([ExtResource("4_rhl6u"), ExtResource("4_rhl6u"), ExtResource("5_aeu62")])
+anim_flip = true
+unitStrategies = Array[ExtResource("3_1l2eb")]([])
