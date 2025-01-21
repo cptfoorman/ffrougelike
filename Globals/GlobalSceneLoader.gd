@@ -10,14 +10,14 @@ class_name SceneLoader
 #@export var startscreen:= preload()
 var availableUnitsArray: Array[UnitData] = [
 	preload("res://unit/UnitResouces/UnitData/Friendly/BowmanData.tres"),
+	preload("res://unit/UnitResouces/UnitData/Friendly/LegionData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/Reader.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/WaterBowman.tres"),
-	preload("res://unit/UnitResouces/UnitData/Friendly/WitchData.tres"),
-	preload("res://unit/UnitResouces/UnitData/Friendly/LegionData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/RavenData.tres"),
+	preload("res://unit/UnitResouces/UnitData/Friendly/WitchData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/magueData.tres"),
-	preload("res://unit/UnitResouces/UnitData/Friendly/CrusaderData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/Dwarwen.tres"),
+	preload("res://unit/UnitResouces/UnitData/Friendly/CrusaderData.tres"),
 	]
 var availableEnemyUnitsArray: Array[UnitData] =[
 	preload("res://unit/UnitResouces/UnitData/Enemy/BowmanDataEnemy.tres"),
@@ -132,7 +132,7 @@ func get_boss_enemy_array()->Array[UnitData]:
 	
 
 func instantiate_gameboard(elite: bool):
-	char_unlocked+= wrapi(1, 1, 8)
+	char_unlocked+= wrapi(1, 1, 9)
 	get_tree().change_scene_to_packed(gameboard)
 	await get_tree().create_timer(0.5).timeout
 	get_current_gameboard()
@@ -150,7 +150,7 @@ func get_current_enemy_array()->Array[UnitData]:
 	return availableEnemyUnitsArray
 	
 func instantiate_boss_gameboard():
-	char_unlocked+= wrapi(1, 1, 8)
+	char_unlocked+= wrapi(1, 1, 9)
 	get_tree().change_scene_to_packed(gameboard)
 	await get_tree().create_timer(0.5).timeout
 	get_current_gameboard()
