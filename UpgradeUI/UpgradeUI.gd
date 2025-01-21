@@ -18,8 +18,14 @@ func show_upgradeUI(unit: UnitData):
 		clear_upgradeUI()
 		clear_infoUI()
 		instance_unit_info(unit)
+		var new_strategies: Array[Base_Unit_Strategy]
+		new_strategies = get_parent().return_upgrade_strategies()
 		for i in 3:
-			instance_upgrades(get_parent().return_upgrade_strategies().pick_random())
+			var new_strategy: Base_Unit_Strategy = new_strategies.pick_random()
+			instance_upgrades(new_strategy)
+			new_strategies.erase(new_strategy)
+			new_strategies.sort()
+			new_strategies.resize(new_strategies.size()-1)
 func clear_upgradeUI():
 	for child in h_box_container.get_children():
 		child.queue_free()

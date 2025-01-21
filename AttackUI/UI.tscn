@@ -363,6 +363,10 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 30
 
+[node name="ItemsContainer" type="VBoxContainer" parent="AttackUI/MainContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_eosxs")
@@ -372,3 +376,4 @@ libraries = {
 [connection signal="pressed" from="RewardUI/PanelContainer/HBoxContainer/add_to_party" to="." method="_on_add_to_party_pressed"]
 [connection signal="pressed" from="SelectEnemyUI/backButton" to="." method="_on_back_button_pressed"]
 [connection signal="AttackDecided" from="AttackUI" to="." method="_on_attack_ui_attack_decided"]
+[connection signal="ItemSelected" from="AttackUI" to="." method="_on_attack_ui_item_selected"]

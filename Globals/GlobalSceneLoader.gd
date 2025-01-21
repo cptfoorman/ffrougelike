@@ -34,10 +34,13 @@ var bossEnemyArray: Array[UnitData] = [
 	preload("res://unit/UnitResouces/UnitData/Enemy/bosses/BossMage.tres"),
 	preload("res://unit/UnitResouces/UnitData/Enemy/bosses/DwarwenBoss.tres")]
 	
-	
+var availableItemsArray: Array[Item] = [preload("res://Items/ItemsResources/PotionOfHeal.tres")]
+
+
 var clonedUnitsArray: Array[UnitData]
 var currentUnitsArray: Array[UnitData]
 var currentunlockedUnitsArray: Array[UnitData]
+var currentItemsArray: Array[Item]
 
 var current_party_builder: PartyBuilder
 var current_gameboard: Gameboard
@@ -56,6 +59,8 @@ func _ready() -> void:
 	get_current_start_screen()
 	await get_tree().create_timer(0.5).timeout
 	connect_start_screen_buttons()
+	clone_items()
+	
 
 func get_current_start_screen():
 	current_start_screen = get_tree().get_first_node_in_group("StartScreen")
@@ -69,6 +74,11 @@ func set_new_event_array():
 	var possible_events_array: Array[int] = [0,0,1,2,2,1,1,1,2,1,1,1,1,1,0,0,0,0]
 	for i in 10:
 		current_event_array.append(possible_events_array.pick_random())
+
+func clone_items():
+	for item in availableItemsArray:
+		currentItemsArray.append(item.duplicate(true))
+		currentItemsArray.append(item.duplicate(true))
 
 func _on_start_button_pressed():
 	clone_unit_data()
@@ -104,7 +114,12 @@ func _on_units_ready(units: Array[UnitData]):
 	currentUnitsArray.append_array(units)
 	print("button2")
 	instantiate_gameboard(false)
+func get_current_items_array()->Array[Item]:
+	return currentItemsArray
 	
+func set_current_items_array(itemArray: Array[Item]):
+	currentItemsArray.resize(0)
+	currentItemsArray.append_array(itemArray)
 func get_current_party_array()->Array[UnitData]:
 	return currentUnitsArray
 func set_current_party_array(unitArray: Array[UnitData]):
@@ -128,9 +143,9 @@ func get_current_gameboard():
 	current_gameboard = get_tree().get_first_node_in_group("Gameboard")
 func initialize_current_gameboard(elite: bool):
 	if elite == false:
-		current_gameboard.initialize(get_current_party_array(), currentdiff, get_current_enemy_array())
+		current_gameboard.initialize(get_current_party_array(), currentdiff, get_current_enemy_array(), get_current_items_array())
 	else:
-		current_gameboard.initialize(get_current_party_array(), currentdiff+2, get_current_enemy_array())
+		current_gameboard.initialize(get_current_party_array(), currentdiff+2, get_current_enemy_array(),get_current_items_array())
 func get_current_enemy_array()->Array[UnitData]:
 	return availableEnemyUnitsArray
 	
@@ -142,7 +157,7 @@ func instantiate_boss_gameboard():
 	await get_tree().create_timer(0.5).timeout
 	initialize_current_gameboard_for_boss()
 func initialize_current_gameboard_for_boss():
-	current_gameboard.initialize(get_current_party_array(), 5, get_boss_enemy_array())
+	current_gameboard.initialize(get_current_party_array(), 5, get_boss_enemy_array(), get_current_items_array())
 func instantiate_upgrader(new_unit_array: Array[UnitData]):
 	set_current_party_array(new_unit_array)
 	get_tree().change_scene_to_packed(upgradescene)

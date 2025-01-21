@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HealingItem" load_steps=5 format=3 uid="uid://d2cujbmigv32m"]
+
+[ext_resource type="SpriteFrames" uid="uid://kjl5yeyasl2g" path="res://Items/ItemsAnims/PotionOfHealthanims.tres" id="1_58cn1"]
+[ext_resource type="Script" path="res://Items/HealingItem.gd" id="1_lqk1o"]
+[ext_resource type="Texture2D" uid="uid://c1glqkhh4kdpi" path="res://assets/characters/items/potionitem-sprite.png" id="2_yk2rw"]
+[ext_resource type="SpriteFrames" uid="uid://d28y1elh4wout" path="res://unit/UnitResouces/UnitAttacks/AOE/aoeattacksSpriteFrames/heal.tres" id="3_bsmfr"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_lqk1o")
+healingPower = 80
+anims = ExtResource("1_58cn1")
+icon = ExtResource("2_yk2rw")
+itemfxanims = ExtResource("3_bsmfr")
+quantity = 1
+name = "Potion of Healing"

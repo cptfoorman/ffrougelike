@@ -14,12 +14,15 @@ signal AttackSelected(unitattack: UnitAttack)
 signal AttackDeselected
 signal AddedToParty(newPartyUnit: UnitData)
 signal UpgradesSelected
+signal ItemSelected(item: Item)
 
-func initialize_attack_ui(unit: Unit):
+func initialize_attack_ui(unit: Unit, newItems:Array[Item]):
 	attack_ui_slideIn()
 	attackUI.clear_attack_buttons()
 	for attack in unit.get_attacks():
 		attackUI.create_attack_button(attack.attack_name, attack.attackdmg, attack.attack_desc, attack, unit)
+	for item in newItems:
+		attackUI.create_item_button(item)
 	
 func attack_ui_slideIn():
 	animPlayer.play("slide_in")
@@ -33,6 +36,9 @@ func reward_ui_slidein():
 	animPlayer.play("reward_slidein")
 func reset_ui_anim():
 	animPlayer.play("attackselectReset")
+	
+	
+	
 func _on_attack_ui_attack_decided(unitattack: UnitAttack) -> void:
 	attack_ui_slideOut()
 	AttackSelected.emit(unitattack)
@@ -64,3 +70,7 @@ func _on_add_to_party_pressed() -> void:
 
 func _on_upgrade_party_pressed() -> void:
 	UpgradesSelected.emit()
+
+
+func _on_attack_ui_item_selected(item: Item) -> void:
+	ItemSelected.emit(item)

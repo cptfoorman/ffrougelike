@@ -5,13 +5,14 @@ class_name Gameboard
 @export var enemyUnitsGroup: EnemyController
 @export var current_friendly_unit: Unit
 @export var current_enemy_unit: Unit
+@export var itemBackpack: ItemBackpack
 @export var mainUI: UI
 var unitPlacer: UnitPlacer
 
-func initialize(units: Array[UnitData], unitcount: int, enemyUnitData: Array[UnitData]):
+func initialize(units: Array[UnitData], unitcount: int, enemyUnitData: Array[UnitData], items: Array[Item]):
 	unitPlacer = get_tree().get_first_node_in_group("UnitPlacer")
 	unitPlacer.initialize(units, unitcount, enemyUnitData)
-	
+	itemBackpack.initialize(items)
 
 func initialize_unit_signals() -> void:
 	connect_friendly_unit_signal()
@@ -62,7 +63,7 @@ func set_select_friendly_buttons_disabled():
 func _on_unit_selected(unit: Unit) -> void:
 	current_friendly_unit = unit
 	print("i selected "+ current_friendly_unit.getName())
-	mainUI.initialize_attack_ui(unit)
+	mainUI.initialize_attack_ui(unit, itemBackpack.get_current_items())
 func get_current_enemy_units()->Array[Unit]:
 	var new_unit_array: Array[Unit]
 	for child in enemyUnitsGroup.get_children():
@@ -168,5 +169,19 @@ func _on_friendly_select(friendlyUnit: Unit):
 	current_friendly_unit.play_attack_anim(friendlyUnit.global_position)
 	await current_friendly_unit.animations.animation_finished
 	current_friendly_unit.currentAttack.use_attack(friendlyUnit, current_friendly_unit.get_main_attack_modifier(), current_friendly_unit)
+	await get_tree().create_timer(1.2).timeout
+	set_enemy_turn()
+
+
+func _on_ui_item_selected(item: Item) -> void:
+	mainUI.reset_ui_anim()
+	set_enemy_buttons_disabled()
+	itemBackpack.instantiate_item_use(item)
+	await get_tree().create_timer(0.3).timeout
+	if item is DefenseItem:
+		item.use_item(get_current_friendly_units())
+	elif item is AttackItem:
+		item.use_item(get_current_enemy_units())
+	itemBackpack.remove_item(item)
 	await get_tree().create_timer(1.2).timeout
 	set_enemy_turn()
