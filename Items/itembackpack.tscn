@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://nsmcj5kyefej"]
+
+[ext_resource type="Script" path="res://Items/itembackpack.gd" id="1_m78xu"]
+
+[node name="Itembackpack" type="Node2D"]
+script = ExtResource("1_m78xu")
