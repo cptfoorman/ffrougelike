@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://08jg2wawtpf6" path="res://unit/UnitResouces/UnitAttacks/enemies/enemyHealer/EnemyAoeHeal.tres" id="4_gnbwy"]
 [ext_resource type="Resource" uid="uid://bi4nbdc73vu8w" path="res://unit/UnitResouces/UnitAttacks/enemies/bossPriest/EnemySmite.tres" id="5_2de51"]
 [ext_resource type="Resource" uid="uid://dw26svrifu73u" path="res://unit/UnitResouces/UnitAttacks/enemies/bossPriest/UnholyScript.tres" id="6_2pe11"]
-[ext_resource type="Resource" uid="uid://4uqphvwl0mdn" path="res://unit/UnitResouces/stats/HealerEnemyPriest.tres" id="6_2xhj0"]
+[ext_resource type="Resource" uid="uid://4uqphvwl0mdn" path="res://unit/UnitResouces/stats/enemy/HealerEnemyPriest.tres" id="6_2xhj0"]
 
 [resource]
 script = ExtResource("1_g4vah")

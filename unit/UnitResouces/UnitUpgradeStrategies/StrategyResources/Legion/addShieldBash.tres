@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://mmxnp68u4a22"]
 
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_1e6gx"]
-[ext_resource type="Resource" uid="uid://cjaxa6qxubtii" path="res://unit/UnitResouces/UnitAttacks/legion/ShieldBash.tres" id="1_w6024"]
+[ext_resource type="Resource" uid="uid://chvcppv8unweq" path="res://unit/UnitResouces/UnitAttacks/Friendly/legion/KnockShieldBash.tres" id="1_m888u"]
 
 [resource]
 script = ExtResource("1_1e6gx")
-new_attack = ExtResource("1_w6024")
+new_attack = ExtResource("1_m888u")
 description = "Bash your shield"
 textname = "Shield Bash"
 chardef = "Legion"

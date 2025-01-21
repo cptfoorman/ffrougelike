@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://cghfencxtjw4a"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_ds4io"]
+
+[resource]
+script = ExtResource("1_ds4io")
+name = ""
+speed = 10
+health = 80.0
+mana = 20.0
+strenght = 5
+inteligence = 5
+defense = -1.0
+main_modifier = 0

@@ -5,16 +5,16 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_sv3ll"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_6yrv1"]
 [ext_resource type="SpriteFrames" uid="uid://38tf7okpin03" path="res://unit/UnitResouces/unitSpriteFrames/Legion.tres" id="3_wajfc"]
-[ext_resource type="Resource" uid="uid://brdqa0ve54m2s" path="res://unit/UnitResouces/UnitAttacks/legion/FormationCut.tres" id="5_gjcyu"]
-[ext_resource type="Resource" uid="uid://dkl73tuddiy8d" path="res://unit/UnitResouces/stats/Legion.tres" id="5_kya8j"]
-[ext_resource type="Resource" uid="uid://c1r62k4tyku6s" path="res://unit/UnitResouces/UnitAttacks/legion/TurtleUp.tres" id="6_akj70"]
+[ext_resource type="Resource" uid="uid://brdqa0ve54m2s" path="res://unit/UnitResouces/UnitAttacks/Friendly/legion/FormationCut.tres" id="5_ylgdi"]
+[ext_resource type="Resource" uid="uid://c1r62k4tyku6s" path="res://unit/UnitResouces/UnitAttacks/Friendly/legion/TurtleUp.tres" id="6_y6yuw"]
+[ext_resource type="Resource" uid="uid://dkl73tuddiy8d" path="res://unit/UnitResouces/stats/friendly/Legion.tres" id="8_i4aa1"]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_kap8p")
 spriteFrames = ExtResource("3_wajfc")
-unitStats = ExtResource("5_kya8j")
-unitAttacks = Array[ExtResource("2_sv3ll")]([ExtResource("5_gjcyu"), ExtResource("6_akj70")])
+unitStats = ExtResource("8_i4aa1")
+unitAttacks = Array[ExtResource("2_sv3ll")]([ExtResource("5_ylgdi"), ExtResource("6_y6yuw")])
 anim_flip = false
 unitStrategies = Array[ExtResource("3_6yrv1")]([])
 collisionForDragable = ExtResource("1_j6qx7")

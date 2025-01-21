@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TieDownDeBuff" load_steps=3 format=3 uid="uid://cgtmvdwmehl2x"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/TieDownDebuff.gd" id="1_h0k75"]
+[ext_resource type="SpriteFrames" uid="uid://2uyyt7vsmr0n" path="res://unit/UnitResouces/UnitAttacks/Status/BuffAttackSpriteFrames/knockdownstars.tres" id="1_u03ra"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_h0k75")
+buffDuration = 2
+buffAnim = ExtResource("1_u03ra")
+one_time_buff = false

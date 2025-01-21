@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="EnemyAoe" load_steps=3 format=3 uid="uid://dul6ewp3gcvlx"]
 
-[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOEscripts/EnemyAoeAttack.gd" id="1_nxs0n"]
-[ext_resource type="SpriteFrames" uid="uid://c6qon3roctm1e" path="res://unit/UnitResouces/UnitAttacks/aoeattacksSpriteFrames/frostdagger.tres" id="1_yrqgx"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOE/AOEscripts/EnemyAoeAttack.gd" id="1_nxs0n"]
+[ext_resource type="SpriteFrames" uid="uid://c6qon3roctm1e" path="res://unit/UnitResouces/UnitAttacks/AOE/aoeattacksSpriteFrames/frostdagger.tres" id="1_yrqgx"]
 
 [resource]
 resource_local_to_scene = true

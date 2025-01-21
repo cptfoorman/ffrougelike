@@ -20,7 +20,6 @@ func _on_dragable_dropped(unit_data: UnitData) -> void:
 	yellow.hide()
 	red.show()
 	self.unit_data = unit_data
-	var newunitdata: UnitData = unit_data
 	var newunitstats: UnitStats = unit_data.get_unitstats()
 	print(newunitstats.name)
 

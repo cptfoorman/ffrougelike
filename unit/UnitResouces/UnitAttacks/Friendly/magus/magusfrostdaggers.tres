@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AoEAttack" load_steps=3 format=3 uid="uid://dsqtaglqbshv8"]
+
+[ext_resource type="SpriteFrames" uid="uid://c6qon3roctm1e" path="res://unit/UnitResouces/UnitAttacks/AOE/aoeattacksSpriteFrames/frostdagger.tres" id="1_ochec"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOE/AOEscripts/UnitAoEAttack.gd" id="1_vr7p8"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_vr7p8")
+aoeanimFrames = ExtResource("1_ochec")
+attack_name = "Frost fan"
+attackdmg = 50.0
+attack_desc = "fan of frost daggers attacks enemies"
+attack_anim_name = "attack4"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 6
+attack_on_cooldown = false
+attack_reach = 1

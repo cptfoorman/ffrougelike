@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://dn2lrfskqcitn"]
+
+[ext_resource type="Texture2D" uid="uid://1o84q2vgwnr6" path="res://assets/characters/statusfx/legionDefenseUp-Sheet.png" id="1_23wpe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8wca"]
+atlas = ExtResource("1_23wpe")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eav3f"]
+atlas = ExtResource("1_23wpe")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp8f8"]
+atlas = ExtResource("1_23wpe")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7jli"]
+atlas = ExtResource("1_23wpe")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqc72"]
+atlas = ExtResource("1_23wpe")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3242u"]
+atlas = ExtResource("1_23wpe")
+region = Rect2(640, 0, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8wca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eav3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp8f8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7jli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqc72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3242u")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]

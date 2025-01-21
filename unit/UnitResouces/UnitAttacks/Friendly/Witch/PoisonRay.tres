@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UnitDeBuffAttack" load_steps=3 format=3 uid="uid://mcgekhetya0k"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/UnitDebuff.gd" id="1_oo5jp"]
+[ext_resource type="Resource" uid="uid://dpqvsbjbmr33g" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/poisonOpponent.tres" id="1_ttebe"]
+
+[resource]
+script = ExtResource("1_oo5jp")
+buffData = ExtResource("1_ttebe")
+attack_name = "Poison Ray"
+attackdmg = 40.0
+attack_desc = "Must Have been something they ate!"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 4

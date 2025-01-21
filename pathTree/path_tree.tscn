@@ -12,34 +12,34 @@ unique_name_in_owner = true
 z_index = 2
 
 [node name="Marker2D" type="Marker2D" parent="markerstash"]
-position = Vector2(98, 210)
+position = Vector2(94, 207)
 
 [node name="Marker2D2" type="Marker2D" parent="markerstash"]
-position = Vector2(188, 337)
+position = Vector2(187, 333)
 
 [node name="Marker2D3" type="Marker2D" parent="markerstash"]
-position = Vector2(296, 217)
+position = Vector2(293, 209)
 
 [node name="Marker2D4" type="Marker2D" parent="markerstash"]
-position = Vector2(388, 315)
+position = Vector2(388, 305)
 
 [node name="Marker2D5" type="Marker2D" parent="markerstash"]
-position = Vector2(465, 138)
+position = Vector2(463, 139)
 
 [node name="Marker2D6" type="Marker2D" parent="markerstash"]
-position = Vector2(610, 139)
+position = Vector2(607, 136)
 
 [node name="Marker2D7" type="Marker2D" parent="markerstash"]
-position = Vector2(659, 257)
+position = Vector2(659, 255)
 
 [node name="Marker2D8" type="Marker2D" parent="markerstash"]
-position = Vector2(726, 366)
+position = Vector2(729, 364)
 
 [node name="Marker2D9" type="Marker2D" parent="markerstash"]
-position = Vector2(804, 461)
+position = Vector2(805, 455)
 
 [node name="Marker2D10" type="Marker2D" parent="markerstash"]
-position = Vector2(986, 542)
+position = Vector2(981, 530)
 
 [node name="Marker2D11" type="Marker2D" parent="markerstash"]
 position = Vector2(1034, 165)

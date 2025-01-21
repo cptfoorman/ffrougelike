@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://bkn0e440i85d5"]
+
+[ext_resource type="Texture2D" uid="uid://bs0ghlrywy80f" path="res://assets/characters/statusfx/poisonskullfx-Sheet.png" id="1_tn7ns"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icivj"]
+atlas = ExtResource("1_tn7ns")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5l15"]
+atlas = ExtResource("1_tn7ns")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd3je"]
+atlas = ExtResource("1_tn7ns")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmunk"]
+atlas = ExtResource("1_tn7ns")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smv8u"]
+atlas = ExtResource("1_tn7ns")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ik3j"]
+atlas = ExtResource("1_tn7ns")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uf5ps"]
+atlas = ExtResource("1_tn7ns")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jgi0"]
+atlas = ExtResource("1_tn7ns")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqskp"]
+atlas = ExtResource("1_tn7ns")
+region = Rect2(1024, 0, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icivj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5l15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd3je")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmunk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smv8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ik3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uf5ps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jgi0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqskp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]

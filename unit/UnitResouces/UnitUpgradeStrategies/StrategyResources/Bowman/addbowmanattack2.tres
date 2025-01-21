@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://vibtadapnw4w"]
 
-[ext_resource type="Resource" uid="uid://d1pd5son6jnsh" path="res://unit/UnitResouces/UnitAttacks/bowman/doublejumpshot.tres" id="1_jjv8t"]
+[ext_resource type="Resource" uid="uid://d1pd5son6jnsh" path="res://unit/UnitResouces/UnitAttacks/Friendly/bowman/doublejumpshot.tres" id="1_jjv8t"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_t1noi"]
 
 [resource]

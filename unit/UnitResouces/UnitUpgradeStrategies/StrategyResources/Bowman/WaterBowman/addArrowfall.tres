@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://b1jihm3qb1it2"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_8m7w1"]
+[ext_resource type="Resource" uid="uid://x5t7aepkd558" path="res://unit/UnitResouces/UnitAttacks/Friendly/bowman/ArrowShower.tres" id="1_8worw"]
+
+[resource]
+script = ExtResource("1_8m7w1")
+new_attack = ExtResource("1_8worw")
+description = "Rain arrows on enemies"
+textname = "Arrow Shower"
+chardef = "WaterBowman"

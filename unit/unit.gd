@@ -29,7 +29,7 @@ var currentAttack: UnitAttack
 
 @export var aoeanimScene: PackedScene
 @export var buffScene: PackedScene
-
+var isTiedDown: bool = false
 var enemyTarget: Unit
 enum Faction {FRIENDLY, ENEMY}
 @export var Factionset: Faction
@@ -86,9 +86,9 @@ func getName():
 func take_damage(damage: float):
 	var new_damage = damage
 	new_damage-= defense
+	DAMAGED.emit(new_damage)
 	if new_damage > 0:
 		health -= new_damage
-		DAMAGED.emit(new_damage)
 	prints(unitsstats.name, health)
 	healthbar.value = health
 	if health <= 0:

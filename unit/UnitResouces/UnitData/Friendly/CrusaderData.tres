@@ -5,9 +5,9 @@
 [ext_resource type="SpriteFrames" uid="uid://duxjmlxyw801f" path="res://unit/UnitResouces/unitSpriteFrames/crusader.tres" id="2_rlfhh"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_t4n8y"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_ug3ae"]
-[ext_resource type="Resource" uid="uid://3jlhajhd7mfw" path="res://unit/UnitResouces/stats/crusader.tres" id="4_0puoe"]
-[ext_resource type="Resource" uid="uid://dto1n5wcnbiuk" path="res://unit/UnitResouces/UnitAttacks/crusader/oneSlash.tres" id="4_wyu3y"]
-[ext_resource type="Resource" uid="uid://bt55yia78tcdn" path="res://unit/UnitResouces/UnitAttacks/crusader/twoSlash.tres" id="5_h7txr"]
+[ext_resource type="Resource" uid="uid://3jlhajhd7mfw" path="res://unit/UnitResouces/stats/friendly/crusader.tres" id="4_0puoe"]
+[ext_resource type="Resource" uid="uid://dto1n5wcnbiuk" path="res://unit/UnitResouces/UnitAttacks/Friendly/crusader/oneSlash.tres" id="4_wyu3y"]
+[ext_resource type="Resource" uid="uid://bt55yia78tcdn" path="res://unit/UnitResouces/UnitAttacks/Friendly/crusader/twoSlash.tres" id="5_h7txr"]
 
 [resource]
 script = ExtResource("1_gtq4i")

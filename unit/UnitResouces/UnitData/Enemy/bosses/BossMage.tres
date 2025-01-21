@@ -5,9 +5,9 @@
 [ext_resource type="SpriteFrames" uid="uid://bu8p0r0jjuo8h" path="res://unit/UnitResouces/unitSpriteFrames/unitspriteframesMague.tres" id="2_ptnwu"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_kmo0x"]
 [ext_resource type="Resource" uid="uid://dul6ewp3gcvlx" path="res://unit/UnitResouces/UnitAttacks/enemies/mague/EnemyMagueFan.tres" id="4_tdi3o"]
-[ext_resource type="Resource" uid="uid://juubmpktj0p0" path="res://unit/UnitResouces/UnitAttacks/magus/castedvortex.tres" id="5_rq4a7"]
-[ext_resource type="Resource" uid="uid://dbvowvsl762r4" path="res://unit/UnitResouces/UnitAttacks/magus/magusslice.tres" id="6_hxymm"]
-[ext_resource type="Resource" uid="uid://be5mwmr130780" path="res://unit/UnitResouces/UnitAttacks/magus/magusvortex.tres" id="7_afixq"]
+[ext_resource type="Resource" uid="uid://juubmpktj0p0" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/castedvortex.tres" id="5_rq4a7"]
+[ext_resource type="Resource" uid="uid://dbvowvsl762r4" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/magusslice.tres" id="6_hxymm"]
+[ext_resource type="Resource" uid="uid://be5mwmr130780" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/magusvortex.tres" id="7_afixq"]
 [ext_resource type="Resource" uid="uid://b0ox7x2gvhxko" path="res://unit/UnitResouces/stats/bosses/MagueBoss.tres" id="8_02ogt"]
 
 [resource]

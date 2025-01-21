@@ -359,7 +359,7 @@ region = Rect2(288, 97, 144, 97)
 atlas = SubResource("CompressedTexture2D_5wl3t")
 region = Rect2(432, 97, 144, 97)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_rhbj3"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_yjy4d"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -649,7 +649,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Resource" id="Resource_ici4p"]
+[sub_resource type="Resource" id="Resource_qijbq"]
 resource_local_to_scene = true
 script = ExtResource("5_bp718")
 attack_name = "Ravenshade"
@@ -661,7 +661,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_gk4m8"]
+[sub_resource type="Resource" id="Resource_o3b1a"]
 resource_local_to_scene = true
 script = ExtResource("5_bp718")
 attack_name = "Ravenslice"
@@ -673,7 +673,7 @@ attack_max_cooldown = 0
 attack_on_cooldown = false
 attack_reach = 0
 
-[sub_resource type="Resource" id="Resource_6w8xx"]
+[sub_resource type="Resource" id="Resource_rqrvb"]
 resource_local_to_scene = true
 script = ExtResource("6_18u10")
 name = "Raven"
@@ -685,12 +685,12 @@ inteligence = 2
 defense = 5.0
 main_modifier = 0
 
-[sub_resource type="Resource" id="Resource_wlihg"]
+[sub_resource type="Resource" id="Resource_mswdn"]
 resource_local_to_scene = true
 script = ExtResource("3_2l5r4")
-spriteFrames = SubResource("SpriteFrames_rhbj3")
-unitStats = SubResource("Resource_6w8xx")
-unitAttacks = Array[ExtResource("5_bp718")]([SubResource("Resource_ici4p"), SubResource("Resource_gk4m8")])
+spriteFrames = SubResource("SpriteFrames_yjy4d")
+unitStats = SubResource("Resource_rqrvb")
+unitAttacks = Array[ExtResource("5_bp718")]([SubResource("Resource_qijbq"), SubResource("Resource_o3b1a")])
 anim_flip = true
 unitStrategies = Array[ExtResource("7_oiy32")]([])
 
@@ -701,7 +701,7 @@ script = ExtResource("1_62rus")
 unitHolder = NodePath("UnitHolder")
 
 [node name="UnitHolder" parent="." instance=ExtResource("2_ojfww")]
-availableUnitsArray = Array[ExtResource("3_2l5r4")]([SubResource("Resource_wlihg"), SubResource("Resource_wlihg"), SubResource("Resource_wlihg")])
+availableUnitsArray = Array[ExtResource("3_2l5r4")]([SubResource("Resource_mswdn"), SubResource("Resource_mswdn"), SubResource("Resource_mswdn")])
 
 [node name="Marker2D" type="Marker2D" parent="UnitHolder"]
 position = Vector2(723, 323)

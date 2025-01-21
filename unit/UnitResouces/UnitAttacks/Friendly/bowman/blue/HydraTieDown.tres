@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UnitDeBuffAttack" load_steps=3 format=3 uid="uid://bd78j4bx2uv06"]
+
+[ext_resource type="Resource" uid="uid://cfi5wn4w40kc0" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/HydraTie.tres" id="1_b4ucb"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/UnitDebuff.gd" id="1_xr8lg"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_xr8lg")
+buffData = ExtResource("1_b4ucb")
+attack_name = "HydraTieDown"
+attackdmg = 30.0
+attack_desc = "summon a hydra snake to tie down an opponent"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(-100, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 2

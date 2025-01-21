@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UnitDeBuffAttack" load_steps=3 format=3 uid="uid://chvcppv8unweq"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/UnitDebuff.gd" id="1_af1h5"]
+[ext_resource type="Resource" uid="uid://cgtmvdwmehl2x" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/Knockdown.tres" id="1_whi3a"]
+
+[resource]
+script = ExtResource("1_af1h5")
+buffData = ExtResource("1_whi3a")
+attack_name = "Shield Bash"
+attackdmg = 50.0
+attack_desc = "Bash the enemy knocking them down"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 2
+attack_on_cooldown = false
+attack_reach = 1

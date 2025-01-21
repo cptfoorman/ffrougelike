@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://cdv2yo5o4cbgd"]
 
-[ext_resource type="Resource" uid="uid://bixpoo4ep37oa" path="res://unit/UnitResouces/UnitAttacks/reader/GreaterHeal.tres" id="1_4xsht"]
+[ext_resource type="Resource" uid="uid://bixpoo4ep37oa" path="res://unit/UnitResouces/UnitAttacks/Friendly/reader/GreaterHeal.tres" id="1_4xsht"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_rw3ar"]
 
 [resource]

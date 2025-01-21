@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://dhti5hyskqvxg"]
+
+[ext_resource type="Resource" uid="uid://bi881od6esabn" path="res://unit/UnitResouces/UnitAttacks/Friendly/reader/BubblePrayer.tres" id="1_0xeus"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_8liih"]
+
+[resource]
+script = ExtResource("1_8liih")
+new_attack = ExtResource("1_0xeus")
+description = "Pray for protection from dog"
+textname = "Bubble"
+chardef = "Reader"

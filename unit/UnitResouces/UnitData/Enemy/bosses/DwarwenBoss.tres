@@ -6,9 +6,9 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_r1jc2"]
 [ext_resource type="Resource" uid="uid://clmupjuans0ch" path="res://unit/UnitResouces/stats/bosses/EnemyDwarwenBoss.tres" id="4_arjq2"]
 [ext_resource type="Resource" uid="uid://ccynn5vcbo4b7" path="res://unit/UnitResouces/UnitAttacks/enemies/dwarwen/enemyDwarwenHeal.tres" id="4_fxvuo"]
-[ext_resource type="Resource" uid="uid://7rwa4lr4kpb7" path="res://unit/UnitResouces/UnitAttacks/dwarwen/twoBash.tres" id="5_xqqo1"]
-[ext_resource type="Resource" uid="uid://cishg1nabvtgg" path="res://unit/UnitResouces/UnitAttacks/dwarwen/Beyblade.tres" id="6_ig1p3"]
-[ext_resource type="Resource" uid="uid://3316k8a0rd7y" path="res://unit/UnitResouces/UnitAttacks/dwarwen/oneBash.tres" id="7_bt7e2"]
+[ext_resource type="Resource" uid="uid://7rwa4lr4kpb7" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/twoBash.tres" id="5_xqqo1"]
+[ext_resource type="Resource" uid="uid://cishg1nabvtgg" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/Beyblade.tres" id="6_ig1p3"]
+[ext_resource type="Resource" uid="uid://3316k8a0rd7y" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/oneBash.tres" id="7_bt7e2"]
 
 [resource]
 resource_local_to_scene = true

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://dnny3e83fffk6"]
 
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_spwsk"]
-[ext_resource type="Resource" uid="uid://vdpyikyxbkfh" path="res://unit/UnitResouces/UnitAttacks/crusader/HolyWave.tres" id="1_twlq0"]
+[ext_resource type="Resource" uid="uid://vdpyikyxbkfh" path="res://unit/UnitResouces/UnitAttacks/Friendly/crusader/HolyWave.tres" id="1_twlq0"]
 
 [resource]
 script = ExtResource("1_spwsk")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bii43sbgtee12"]
+[gd_scene load_steps=42 format=3 uid="uid://bii43sbgtee12"]
 
 [ext_resource type="Script" path="res://unit_upgrade.gd" id="1_lv825"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="2_hf0j4"]
@@ -32,6 +32,12 @@
 [ext_resource type="Resource" uid="uid://cw5x4ccci31hc" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addBeyblade.tres" id="25_vc768"]
 [ext_resource type="Resource" uid="uid://cxijcuee718ho" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addTwoBash.tres" id="26_s2q3e"]
 [ext_resource type="Resource" uid="uid://c1u8ucyb5wcyo" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/Strenght.tres" id="27_hyf52"]
+[ext_resource type="Resource" uid="uid://b1jihm3qb1it2" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/WaterBowman/addArrowfall.tres" id="28_2cff2"]
+[ext_resource type="Resource" uid="uid://b505gpfq1s2pf" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/WaterBowman/addbowmanattack2.tres" id="29_ba7dp"]
+[ext_resource type="Resource" uid="uid://dy2wkiwm7cqk8" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/WaterBowman/addbowmanattack.tres" id="30_7r72a"]
+[ext_resource type="Resource" uid="uid://bjujhg24pwcvy" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/WaterBowman/strplusStrategybow.tres" id="31_32hdy"]
+[ext_resource type="Resource" uid="uid://l8k5wxmy7do2" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/addArrowfallnormal.tres" id="32_i1088"]
+[ext_resource type="Resource" uid="uid://dhti5hyskqvxg" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/reader/addReaderBubble.tres" id="33_g75ln"]
 
 [sub_resource type="Animation" id="Animation_o6we6"]
 resource_name = "upgrade_slidein"
@@ -147,7 +153,7 @@ _data = {
 script = ExtResource("1_lv825")
 upgradeUI = NodePath("CanvasLayer")
 unitHolder = NodePath("UnitHolder")
-possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro"), ExtResource("16_6ehgt"), ExtResource("17_l86nh"), ExtResource("18_g7oug"), ExtResource("19_wolto"), ExtResource("20_athyt"), ExtResource("21_mrvc4"), ExtResource("22_0pvhp"), ExtResource("23_dc4p0"), ExtResource("24_p3mu5"), ExtResource("25_vc768"), ExtResource("26_s2q3e"), ExtResource("27_hyf52")])
+possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro"), ExtResource("16_6ehgt"), ExtResource("17_l86nh"), ExtResource("18_g7oug"), ExtResource("19_wolto"), ExtResource("20_athyt"), ExtResource("21_mrvc4"), ExtResource("22_0pvhp"), ExtResource("23_dc4p0"), ExtResource("24_p3mu5"), ExtResource("25_vc768"), ExtResource("26_s2q3e"), ExtResource("27_hyf52"), ExtResource("28_2cff2"), ExtResource("29_ba7dp"), ExtResource("30_7r72a"), ExtResource("31_32hdy"), ExtResource("32_i1088"), ExtResource("33_g75ln")])
 
 [node name="UnitHolder" parent="." instance=ExtResource("2_pvsyo")]
 

@@ -21,7 +21,16 @@ globalSceneLoader="*res://Globals/GlobalSceneLoader.gd"
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
+
+[file_customization]
+
+folder_colors={
+"res://unit/UnitResouces/UnitAttacks/AOE/": "teal",
+"res://unit/UnitResouces/UnitAttacks/Status/": "red",
+"res://unit/UnitResouces/UnitData/": "yellow",
+"res://unit/UnitResouces/UnitUpgradeStrategies/": "purple"
+}
 
 [global_group]
 

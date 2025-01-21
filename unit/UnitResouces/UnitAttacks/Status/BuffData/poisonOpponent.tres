@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PoisonDeBuff" load_steps=3 format=3 uid="uid://dpqvsbjbmr33g"]
+
+[ext_resource type="SpriteFrames" uid="uid://bkn0e440i85d5" path="res://unit/UnitResouces/UnitAttacks/Status/BuffAttackSpriteFrames/poisonenemy.tres" id="1_c783x"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/PoisonDebuff.gd" id="1_sy8in"]
+
+[resource]
+script = ExtResource("1_sy8in")
+damagePerTurn = 30
+buffDuration = 6
+buffAnim = ExtResource("1_c783x")
+one_time_buff = false

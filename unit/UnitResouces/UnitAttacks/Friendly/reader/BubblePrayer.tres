@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UnitFriendlyBuffAttack" load_steps=3 format=3 uid="uid://bi881od6esabn"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/UnitBuffFriendlyAttack.gd" id="1_1f3hg"]
+[ext_resource type="Resource" uid="uid://bdo1kk2jhafo8" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/Bubble.tres" id="1_r0ic8"]
+
+[resource]
+script = ExtResource("1_1f3hg")
+buffData = ExtResource("1_r0ic8")
+attack_name = "Bubble"
+attackdmg = 0.0
+attack_desc = "Pray for protection from dog"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 3

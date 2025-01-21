@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://dy2wkiwm7cqk8"]
+
+[ext_resource type="Resource" uid="uid://bd78j4bx2uv06" path="res://unit/UnitResouces/UnitAttacks/Friendly/bowman/blue/HydraTieDown.tres" id="1_qjq3b"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="2_uk44l"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_uk44l")
+new_attack = ExtResource("1_qjq3b")
+description = "call upon the hydra to tie enemies down"
+textname = "HydraShot"
+chardef = "WaterBowman"

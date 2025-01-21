@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://nsb1t01xetm1"]
-
-[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/buffAttackScripts/buff.gd" id="1_881sk"]
-
-[node name="buff" type="Node2D"]
-script = ExtResource("1_881sk")
-
-[node name="buffAnims" type="AnimatedSprite2D" parent="."]
-unique_name_in_owner = true

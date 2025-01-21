@@ -5,9 +5,9 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_m35rt"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_de2mp"]
 [ext_resource type="SpriteFrames" uid="uid://hspwp177qixh" path="res://unit/UnitResouces/unitSpriteFrames/Dwarwen.tres" id="3_fcf57"]
-[ext_resource type="Resource" uid="uid://3316k8a0rd7y" path="res://unit/UnitResouces/UnitAttacks/dwarwen/oneBash.tres" id="5_sbj5a"]
-[ext_resource type="Resource" uid="uid://rsarniwmi3gm" path="res://unit/UnitResouces/UnitAttacks/dwarwen/DrinkUp.tres" id="6_imss1"]
-[ext_resource type="Resource" uid="uid://bcw6f4wuj8gay" path="res://unit/UnitResouces/stats/Dwarwen.tres" id="7_30rg6"]
+[ext_resource type="Resource" uid="uid://3316k8a0rd7y" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/oneBash.tres" id="5_sbj5a"]
+[ext_resource type="Resource" uid="uid://rsarniwmi3gm" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/DrinkUp.tres" id="6_imss1"]
+[ext_resource type="Resource" uid="uid://bcw6f4wuj8gay" path="res://unit/UnitResouces/stats/friendly/Dwarwen.tres" id="7_30rg6"]
 
 [resource]
 resource_local_to_scene = true
