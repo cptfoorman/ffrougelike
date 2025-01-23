@@ -151,7 +151,6 @@ func instance_enemy_buff(buff: BuffData):
 	enemy_buff_holder.add_child(new_buff)
 	new_buff.global_position = enemy_buff_holder.global_position
 	new_buff.initialize(self, buff)
-
 func set_friendly_select_disabled():
 	friendlySelectButton.hide()
 func set_friendly_select_enabled():
@@ -182,7 +181,12 @@ func spawn_aoe_sprite(spriteData: SpriteFrames, attackDamage: int):
 	new_anim.initialize()
 	await new_anim.animation_finished
 	take_damage(attackDamage)
-
+func spawn_aoe_sprite_no_damage(spriteData: SpriteFrames):
+	var new_anim: AoeAnim = aoeanimScene.instantiate()
+	add_child(new_anim)
+	new_anim.global_position = self.global_position
+	new_anim.sprite_frames = spriteData
+	new_anim.initialize()
 
 func _on_friendly_select_button_pressed() -> void:
 	FRIENDLYSELECTED.emit(self)

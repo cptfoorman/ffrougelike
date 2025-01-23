@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=4 format=3 uid="uid://bmgb2oo6ynkhn"]
+
+[ext_resource type="Resource" uid="uid://d13uahc6nbncd" path="res://Items/ItemsResources/bubblePotion.tres" id="1_lgkhg"]
+[ext_resource type="Script" path="res://Items/Shop/shopItem.gd" id="1_lv18o"]
+[ext_resource type="Texture2D" uid="uid://bfcufdfiyhyab" path="res://assets/characters/items/bubblepotion.png" id="2_cokss"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_lv18o")
+item = ExtResource("1_lgkhg")
+itemCost = 200
+itemName = "Potion of Bubble"
+itemIcon = ExtResource("2_cokss")

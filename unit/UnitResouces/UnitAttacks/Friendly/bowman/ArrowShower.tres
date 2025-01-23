@@ -12,6 +12,6 @@ attackdmg = 40.0
 attack_desc = "rain some arrows on the enemy"
 attack_anim_name = "attack5"
 attack_ofset = Vector2(-200, 0)
-attack_max_cooldown = 0
+attack_max_cooldown = 4
 attack_on_cooldown = false
 attack_reach = 2

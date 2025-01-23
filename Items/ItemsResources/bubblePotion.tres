@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BuffGivingItem" load_steps=6 format=3 uid="uid://d13uahc6nbncd"]
+
+[ext_resource type="SpriteFrames" uid="uid://bn4ryh2eius5m" path="res://Items/ItemsAnims/PotionOfBubbleanims.tres" id="1_tl850"]
+[ext_resource type="Resource" uid="uid://bdo1kk2jhafo8" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/Bubble.tres" id="2_aobjc"]
+[ext_resource type="Texture2D" uid="uid://bfcufdfiyhyab" path="res://assets/characters/items/bubblepotion.png" id="3_8kcbg"]
+[ext_resource type="Script" path="res://Items/BuffAddingItem.gd" id="4_2m402"]
+[ext_resource type="SpriteFrames" uid="uid://kopi5r6254dj" path="res://Items/ItemsAnims/Bubblepower.tres" id="4_2pa3a"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("4_2m402")
+buff = ExtResource("2_aobjc")
+anims = ExtResource("1_tl850")
+icon = ExtResource("3_8kcbg")
+itemfxanims = ExtResource("4_2pa3a")
+quantity = 0
+name = "Potion of Bubble"

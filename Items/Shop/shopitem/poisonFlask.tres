@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=4 format=3 uid="uid://bfd7dnphw4sgh"]
+
+[ext_resource type="Resource" uid="uid://b35v4x5ypaxbx" path="res://Items/ItemsResources/PoisonFlask.tres" id="1_26wsq"]
+[ext_resource type="Script" path="res://Items/Shop/shopItem.gd" id="1_a8rpp"]
+[ext_resource type="Texture2D" uid="uid://cur4x7dinxldf" path="res://assets/characters/items/pisonitem.png" id="2_uyipf"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_a8rpp")
+item = ExtResource("1_26wsq")
+itemCost = 100
+itemName = "Poison Flask"
+itemIcon = ExtResource("2_uyipf")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DefenseBuffingItem" load_steps=5 format=3 uid="uid://d1mdn2ppk1xmi"]
+
+[ext_resource type="Script" path="res://Items/DefenseBuffingItem.gd" id="1_6765s"]
+[ext_resource type="SpriteFrames" uid="uid://cf7i713xjpva0" path="res://Items/ItemsAnims/PotionOfDefenseanims.tres" id="1_yg1ou"]
+[ext_resource type="Texture2D" uid="uid://bqsqeei8nou7h" path="res://assets/characters/items/bluepotionitem.png" id="2_r04l2"]
+[ext_resource type="SpriteFrames" uid="uid://m8vlte5aeky4" path="res://Items/ItemsAnims/defUPanimtres.tres" id="3_27gxj"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_6765s")
+defenseIncrease = 10
+anims = ExtResource("1_yg1ou")
+icon = ExtResource("2_r04l2")
+itemfxanims = ExtResource("3_27gxj")
+quantity = 0
+name = "Potion of Defense"

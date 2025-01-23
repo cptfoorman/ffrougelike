@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=4 format=3 uid="uid://gfvmm4frdcjt"]
+
+[ext_resource type="Script" path="res://Items/Shop/shopItem.gd" id="1_6pu4e"]
+[ext_resource type="Resource" uid="uid://d1mdn2ppk1xmi" path="res://Items/ItemsResources/PotionOfDefense.tres" id="1_71a8r"]
+[ext_resource type="Texture2D" uid="uid://bqsqeei8nou7h" path="res://assets/characters/items/bluepotionitem.png" id="2_nveam"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_6pu4e")
+item = ExtResource("1_71a8r")
+itemCost = 100
+itemName = "Defense Potion"
+itemIcon = ExtResource("2_nveam")

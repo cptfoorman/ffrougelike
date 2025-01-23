@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=4 format=3 uid="uid://dtdysw13862po"]
+
+[ext_resource type="Script" path="res://Items/Shop/shopItem.gd" id="1_17i7y"]
+[ext_resource type="Resource" uid="uid://d2cujbmigv32m" path="res://Items/ItemsResources/PotionOfHeal.tres" id="1_rtkkc"]
+[ext_resource type="Texture2D" uid="uid://c1glqkhh4kdpi" path="res://assets/characters/items/potionitem-sprite.png" id="2_x44tk"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_17i7y")
+item = ExtResource("1_rtkkc")
+itemCost = 100
+itemName = "Potion Of Heal"
+itemIcon = ExtResource("2_x44tk")

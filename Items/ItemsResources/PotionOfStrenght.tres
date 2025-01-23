@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StrenghtBuffItem" load_steps=5 format=3 uid="uid://i45f13uejoh7"]
+
+[ext_resource type="SpriteFrames" uid="uid://bdcx141u133r6" path="res://Items/ItemsAnims/PotionOfStrenght.tres" id="1_hf8rg"]
+[ext_resource type="Script" path="res://Items/StrenghtBuffItem.gd" id="1_kh4vx"]
+[ext_resource type="Texture2D" uid="uid://b8fht2ykqmdxu" path="res://assets/characters/items/strenght.png" id="2_8wcuv"]
+[ext_resource type="SpriteFrames" uid="uid://b6fvp7jou6kip" path="res://Items/ItemsAnims/strUPanim.tres" id="3_0kckq"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_kh4vx")
+strenghtIncrease = 10
+anims = ExtResource("1_hf8rg")
+icon = ExtResource("2_8wcuv")
+itemfxanims = ExtResource("3_0kckq")
+quantity = 0
+name = "Potion of Strenght"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=4 format=3 uid="uid://dqp3x4f7surdb"]
+
+[ext_resource type="Script" path="res://Items/Shop/shopItem.gd" id="1_g2k5h"]
+[ext_resource type="Resource" uid="uid://i45f13uejoh7" path="res://Items/ItemsResources/PotionOfStrenght.tres" id="1_q301u"]
+[ext_resource type="Texture2D" uid="uid://b8fht2ykqmdxu" path="res://assets/characters/items/strenght.png" id="2_80nu8"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_g2k5h")
+item = ExtResource("1_q301u")
+itemCost = 100
+itemName = "Strenght Potion"
+itemIcon = ExtResource("2_80nu8")

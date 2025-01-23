@@ -1,7 +1,7 @@
 extends Control
 class_name AttackUI
 @onready var attack_container: VBoxContainer = %AttackContainer
-@onready var items_container: VBoxContainer = %ItemsContainer
+@onready var items_container: HBoxContainer = %ItemsContainer
 
 signal AttackDecided(unitattack: UnitAttack)
 signal ItemSelected(item: Item)

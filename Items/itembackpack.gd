@@ -31,6 +31,7 @@ func get_current_items()->Array[Item]:
 
 
 func remove_item(item: Item):
+	globalSceneLoader.remove_item(item)
 	items.erase(item)
 	items.sort()
 	items.resize(items.size())

@@ -24,7 +24,7 @@ func _on_dragable_dropped(unit_data: UnitData) -> void:
 	print(newunitstats.name)
 
 
-func _on_dragable_taken_away(unit_data: UnitData) -> void:
+func _on_dragable_taken_away(units_data: UnitData) -> void:
 	red.hide()
 	yellow.show()
 	self.unit_data = null
@@ -32,7 +32,7 @@ func _on_dragable_taken_away(unit_data: UnitData) -> void:
 	for cur_conn in curr_cons:
 		cur_conn.signal.disconnect(cur_conn.callable)
 		print("signal disconected")
-		print(unit_data)
+		print(units_data)
 	
 	
 	

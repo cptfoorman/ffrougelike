@@ -6,6 +6,7 @@ class_name StartScreen
 @onready var options: Button = %Options
 @onready var quit: Button = %Quit
 @onready var top_floor: Label = %topFloor
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 var top_floor_num: int 
 
@@ -18,6 +19,19 @@ func initialize(top_floor_check: int):
 		top_floor.text = "top floor reached: " + str(top_floor_num)
 	else:
 		top_floor.text = "top floor reached: " + str(top_floor_num)
-
+	animation_player.play("mainMenuSlidein")
+	
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_options_pressed() -> void:
+	animation_player.play("mainMenuSlideOut")
+	await animation_player.animation_finished
+	animation_player.play("optionsSlidein")
+
+
+func _on_options_exit_pressed() -> void:
+	animation_player.play("optionsSlideout")
+	await animation_player.animation_finished
+	animation_player.play("mainMenuSlidein")

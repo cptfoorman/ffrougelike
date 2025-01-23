@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DebuffGivingItem" load_steps=6 format=3 uid="uid://b35v4x5ypaxbx"]
+
+[ext_resource type="SpriteFrames" uid="uid://q8khfn4e658p" path="res://Items/ItemsAnims/PoisonFlask.tres" id="1_1r147"]
+[ext_resource type="Script" path="res://Items/DebuffGivingItem.gd" id="1_c1rnr"]
+[ext_resource type="Resource" uid="uid://dpqvsbjbmr33g" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/poisonOpponent.tres" id="2_oxllf"]
+[ext_resource type="Texture2D" uid="uid://cur4x7dinxldf" path="res://assets/characters/items/pisonitem.png" id="3_a7fd6"]
+[ext_resource type="SpriteFrames" uid="uid://bkn0e440i85d5" path="res://unit/UnitResouces/UnitAttacks/Status/BuffAttackSpriteFrames/poisonenemy.tres" id="4_anc7j"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_c1rnr")
+debuff = ExtResource("2_oxllf")
+damage = 20
+anims = ExtResource("1_1r147")
+icon = ExtResource("3_a7fd6")
+itemfxanims = ExtResource("4_anc7j")
+quantity = 0
+name = "Poison Flask"

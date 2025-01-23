@@ -25,7 +25,7 @@ func show_upgradeUI(unit: UnitData):
 			instance_upgrades(new_strategy)
 			new_strategies.erase(new_strategy)
 			new_strategies.sort()
-			new_strategies.resize(new_strategies.size()-1)
+			new_strategies.resize(new_strategies.size())
 func clear_upgradeUI():
 	for child in h_box_container.get_children():
 		child.queue_free()

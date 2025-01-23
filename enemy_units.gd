@@ -12,9 +12,6 @@ func set_possible_target_units(unitArray: Array[Unit]):
 	possible_target_units.append_array(unitArray)
 
 
-
-
-
 func set_active_units(unitArray: Array[Unit]):
 	possible_units_array.resize(0)
 	possible_units_array.append_array(unitArray)
@@ -46,7 +43,8 @@ func get_random_opponent_unit()->Unit:
 	return random_unit
 	
 func get_random_unit_attack(unit: Unit)->UnitAttack:
-	var attack: UnitAttack = unit.unitattacks.pick_random()
+	var new_attack_array: Array[UnitAttack] = unit.get_attacks()
+	var attack: UnitAttack = new_attack_array.pick_random()
 	return attack
 	
 func enemy_attack():

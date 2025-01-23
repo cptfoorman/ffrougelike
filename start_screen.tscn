@@ -1,6 +1,79 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4dkg6md2uiyo"]
+[gd_scene load_steps=8 format=3 uid="uid://d4dkg6md2uiyo"]
 
 [ext_resource type="Script" path="res://start_screen.gd" id="1_4jhim"]
+[ext_resource type="Script" path="res://options_ui.gd" id="2_fv7ft"]
+
+[sub_resource type="Animation" id="Animation_0qrm5"]
+resource_name = "optionsSlideout"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("optionsUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1145, 17)]
+}
+
+[sub_resource type="Animation" id="Animation_cjwtt"]
+resource_name = "optionsSlidein"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("optionsUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1145, 17), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pq81t"]
+resource_name = "mainMenuSlideOut"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartScreenUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2, -662)]
+}
+
+[sub_resource type="Animation" id="Animation_i5cux"]
+resource_name = "mainMenuSlidein"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartScreenUI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, -662), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tbb2"]
+_data = {
+"mainMenuSlideOut": SubResource("Animation_pq81t"),
+"mainMenuSlidein": SubResource("Animation_i5cux"),
+"optionsSlidein": SubResource("Animation_cjwtt"),
+"optionsSlideout": SubResource("Animation_0qrm5")
+}
 
 [node name="StartScreen" type="CanvasLayer" groups=["StartScreen"]]
 script = ExtResource("1_4jhim")
@@ -47,4 +120,49 @@ offset_top = 32.0
 offset_right = 1069.0
 offset_bottom = 100.0
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_1tbb2")
+}
+
+[node name="optionsUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1145.0
+offset_top = 17.0
+offset_right = -10.0
+offset_bottom = 662.0
+script = ExtResource("2_fv7ft")
+
+[node name="PanelContainer" type="PanelContainer" parent="optionsUI"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 76.0
+offset_right = 1040.0
+offset_bottom = 533.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="optionsUI/PanelContainer"]
+layout_mode = 2
+
+[node name="optionsExit" type="Button" parent="optionsUI/PanelContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="optionsUI/PanelContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="optionsUI/PanelContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Unlocked Characters:"
+
+[node name="char_unlocked_slider" type="HSlider" parent="optionsUI/PanelContainer/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="StartScreenUI/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="StartScreenUI/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="optionsUI/PanelContainer/VBoxContainer2/optionsExit" to="." method="_on_options_exit_pressed"]
+[connection signal="value_changed" from="optionsUI/PanelContainer/VBoxContainer2/VBoxContainer/char_unlocked_slider" to="optionsUI" method="_on_char_unlocked_slider_value_changed"]

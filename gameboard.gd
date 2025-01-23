@@ -119,6 +119,7 @@ func _on_ui_attack_selected(unitattack: UnitAttack) -> void:
 func _on_ui_attack_deselected() -> void:
 	print("peacefull life")
 	set_enemy_buttons_disabled()
+	set_select_friendly_buttons_disabled()
 
 
 func _on_enemy_units_enemy_turn_over() -> void:
@@ -146,7 +147,9 @@ func _on_placement_enemy_unit_added(unit: Unit, unitPos: Vector2) -> void:
 
 
 func _on_enemy_units_units_empty() -> void:
+	globalSceneLoader.current_money += (20*globalSceneLoader.currentdiff)
 	mainUI.initialize_rewards(globalSceneLoader.clone_random_unit())
+	
 
 
 func _on_ui_added_to_party(newPartyUnit: UnitData) -> void:
@@ -166,6 +169,7 @@ func _on_ui_upgrades_selected() -> void:
 func _on_friendly_select(friendlyUnit: Unit):
 	mainUI.reset_ui_anim()
 	set_enemy_buttons_disabled()
+	set_friendly_buttons_disabled()
 	current_friendly_unit.play_attack_anim(friendlyUnit.global_position)
 	await current_friendly_unit.animations.animation_finished
 	current_friendly_unit.currentAttack.use_attack(friendlyUnit, current_friendly_unit.get_main_attack_modifier(), current_friendly_unit)
@@ -176,6 +180,8 @@ func _on_friendly_select(friendlyUnit: Unit):
 func _on_ui_item_selected(item: Item) -> void:
 	mainUI.reset_ui_anim()
 	set_enemy_buttons_disabled()
+	set_friendly_buttons_disabled()
+	set_select_friendly_buttons_disabled()
 	itemBackpack.instantiate_item_use(item)
 	await get_tree().create_timer(0.3).timeout
 	if item is DefenseItem:

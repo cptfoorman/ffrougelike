@@ -1,6 +1,21 @@
-[gd_scene format=3 uid="uid://ckk8vs005qpsf"]
+[gd_scene load_steps=7 format=3 uid="uid://ckk8vs005qpsf"]
 
-[node name="Shop" type="CanvasLayer"]
+[ext_resource type="Script" path="res://Items/Shop/shop.gd" id="1_ub0ar"]
+[ext_resource type="Script" path="res://Items/Shop/shopItem.gd" id="2_5mydk"]
+[ext_resource type="Resource" uid="uid://dtdysw13862po" path="res://Items/Shop/shopitem/potion.tres" id="3_jhljj"]
+[ext_resource type="Texture2D" uid="uid://dpcrp2hc57bbo" path="res://assets/icons/coin.png" id="4_xq7q8"]
+[ext_resource type="Script" path="res://Items/Shop/moneylabel.gd" id="5_78ms4"]
+[ext_resource type="Texture2D" uid="uid://cgqq4mo7y77x6" path="res://assets/icons/shop500.png" id="6_8wdxb"]
+
+[node name="Shop" type="CanvasLayer" groups=["Shop"]]
+script = ExtResource("1_ub0ar")
+shopItems = Array[ExtResource("2_5mydk")]([ExtResource("3_jhljj"), ExtResource("3_jhljj"), ExtResource("3_jhljj"), ExtResource("3_jhljj")])
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -10
+offset_right = 1147.0
+offset_bottom = 467.0
+texture = ExtResource("6_8wdxb")
 
 [node name="Shop" type="Control" parent="."]
 layout_mode = 3
@@ -14,3 +29,47 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 1148.0
 offset_bottom = 468.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Shop/PanelContainer"]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="Shop/PanelContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_columns = 4
+icon_scale = 0.5
+
+[node name="PanelContainer2" type="PanelContainer" parent="Shop"]
+offset_left = 3.0
+offset_top = 473.0
+offset_right = 322.0
+offset_bottom = 526.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Shop/PanelContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Shop/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_xq7q8")
+expand_mode = 3
+
+[node name="Label2" type="Label" parent="Shop/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "X"
+
+[node name="Label" type="Label" parent="Shop/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+script = ExtResource("5_78ms4")
+
+[node name="continue" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 853.0
+offset_top = 532.0
+offset_right = 861.0
+offset_bottom = 540.0
+text = "Continue"
+
+[connection signal="item_clicked" from="Shop/PanelContainer/PanelContainer/ItemList" to="." method="_on_item_list_item_clicked"]
+[connection signal="pressed" from="Shop/continue" to="." method="_on_continue_pressed"]

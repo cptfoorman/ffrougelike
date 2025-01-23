@@ -42,6 +42,7 @@ UnitUpgrader=""
 FriendlyUnits=""
 EnemyUnits=""
 PathTree=""
+Shop=""
 
 [input]
 
