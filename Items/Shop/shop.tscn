@@ -40,6 +40,7 @@ max_columns = 4
 icon_scale = 0.5
 
 [node name="PanelContainer2" type="PanelContainer" parent="Shop"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 473.0
 offset_right = 322.0
