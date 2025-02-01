@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UnitSelfFirendlyAoEHealAttack" load_steps=3 format=3 uid="uid://8srsjx7tfu5u"]
+
+[ext_resource type="SpriteFrames" uid="uid://d28y1elh4wout" path="res://unit/UnitResouces/UnitAttacks/AOE/aoeattacksSpriteFrames/heal.tres" id="1_8kiak"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitSelfAoeHeal.gd" id="1_c3ml0"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_c3ml0")
+healAnim = ExtResource("1_8kiak")
+attack_name = "Greater Heal"
+attackdmg = 50.0
+attack_desc = "Heal everyone greatly by the power of dog"
+attack_anim_name = "attack4"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 0

@@ -10,6 +10,8 @@ class_name SceneLoader
 @export var shop:= preload("res://Items/Shop/shop.tscn")
 #@export var startscreen:= preload()
 var availableUnitsArray: Array[UnitData] = [
+	preload("res://unit/UnitResouces/UnitData/Friendly/samuraiData.tres"),
+	preload("res://unit/UnitResouces/UnitData/Friendly/cowboyData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/BowmanData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/LegionData.tres"),
 	preload("res://unit/UnitResouces/UnitData/Friendly/Reader.tres"),

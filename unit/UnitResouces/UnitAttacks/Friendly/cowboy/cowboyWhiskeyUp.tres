@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UnitSelfBuffAttack" load_steps=3 format=3 uid="uid://tis01kr637eg"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitSelfBuffAttack.gd" id="1_f06s4"]
+[ext_resource type="Resource" uid="uid://wuclw7363cxi" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/strenghtCowboyUp.tres" id="1_uf75g"]
+
+[resource]
+script = ExtResource("1_f06s4")
+buff = ExtResource("1_uf75g")
+attack_name = "Bad Whiskey"
+attackdmg = 0.0
+attack_desc = "This bad whiskey makes you mad!"
+attack_anim_name = "attack6"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 0

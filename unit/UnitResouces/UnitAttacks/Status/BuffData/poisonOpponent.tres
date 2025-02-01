@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/PoisonDebuff.gd" id="1_sy8in"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_sy8in")
 damagePerTurn = 30
 buffDuration = 6

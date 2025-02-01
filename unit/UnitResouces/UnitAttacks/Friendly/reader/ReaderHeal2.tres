@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UnitSelfFirendlyAoEHealAttack" load_steps=3 format=3 uid="uid://cbkjbq5ve6nxp"]
+
+[ext_resource type="SpriteFrames" uid="uid://d28y1elh4wout" path="res://unit/UnitResouces/UnitAttacks/AOE/aoeattacksSpriteFrames/heal.tres" id="1_hifme"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitSelfAoeHeal.gd" id="1_msblu"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_msblu")
+healAnim = ExtResource("1_hifme")
+attack_name = "Healing Prayer"
+attackdmg = 30.0
+attack_desc = "Say a prayer to let dog heal you"
+attack_anim_name = "attack1"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 0

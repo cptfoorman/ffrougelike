@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://dhl0wbjgc544n"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_rqyyc"]
+
+[resource]
+script = ExtResource("1_rqyyc")
+name = "samurai"
+speed = 10
+health = 80.0
+mana = 20.0
+strenght = 10
+inteligence = 3
+defense = 10.0
+main_modifier = 0

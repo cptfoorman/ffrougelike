@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://fs2i6a048ixs"]
+
+[ext_resource type="Resource" uid="uid://c4dmlbqg5njpc" path="res://unit/UnitResouces/UnitAttacks/Friendly/samurai/SamuraiBowShot.tres" id="1_6emq3"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_ri0uc"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_ri0uc")
+new_attack = ExtResource("1_6emq3")
+description = "Use that bow!"
+textname = "Bowshot"
+chardef = "samurai"

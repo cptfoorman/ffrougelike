@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://b3k5s5tc6btpc"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_hqjlu"]
+
+[resource]
+script = ExtResource("1_hqjlu")
+attack_name = "Western Dynamite"
+attackdmg = 80.0
+attack_desc = "Show them the way of America"
+attack_anim_name = "attack4"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 5
+attack_on_cooldown = false
+attack_reach = 1

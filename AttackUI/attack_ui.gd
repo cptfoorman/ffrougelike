@@ -1,15 +1,16 @@
 extends Control
 class_name AttackUI
 @onready var attack_container: VBoxContainer = %AttackContainer
-@onready var items_container: HBoxContainer = %ItemsContainer
+@onready var items_container: HFlowContainer = %ItemsContainer
 
 signal AttackDecided(unitattack: UnitAttack)
 signal ItemSelected(item: Item)
+signal TurnPassed
 
 func create_attack_button(attackName: String, attackdmg: float, attackdesc: String, attackReference:UnitAttack, unitReference: Unit):
 	var new_attack_button: AttackButton = AttackButton.new()
-	new_attack_button.text = attackName
-	new_attack_button.tooltip_text = attackdesc+" " + str(attackdmg) + " dmg"
+	new_attack_button.text = attackName+" " + str(attackdmg) + " dmg"
+	new_attack_button.tooltip_text = attackdesc
 	new_attack_button.unitReference = unitReference
 	new_attack_button.attackReference = attackReference
 	attack_container.add_child(new_attack_button)
@@ -50,3 +51,7 @@ func create_item_button(item: Item):
 	
 func _on_item_selected(item: Item):
 	ItemSelected.emit(item)
+
+
+func _on_pass_pressed() -> void:
+	TurnPassed.emit()

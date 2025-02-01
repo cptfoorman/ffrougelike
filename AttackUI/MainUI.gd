@@ -15,6 +15,7 @@ signal AttackDeselected
 signal AddedToParty(newPartyUnit: UnitData)
 signal UpgradesSelected
 signal ItemSelected(item: Item)
+signal TurnPassed
 
 func initialize_attack_ui(unit: Unit, newItems:Array[Item]):
 	attack_ui_slideIn()
@@ -74,3 +75,7 @@ func _on_upgrade_party_pressed() -> void:
 
 func _on_attack_ui_item_selected(item: Item) -> void:
 	ItemSelected.emit(item)
+
+
+func _on_attack_ui_turn_passed() -> void:
+	TurnPassed.emit()

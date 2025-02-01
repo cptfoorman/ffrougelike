@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bii43sbgtee12"]
+[gd_scene load_steps=52 format=3 uid="uid://bii43sbgtee12"]
 
 [ext_resource type="Script" path="res://unit_upgrade.gd" id="1_lv825"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="2_hf0j4"]
@@ -38,6 +38,16 @@
 [ext_resource type="Resource" uid="uid://bjujhg24pwcvy" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/WaterBowman/strplusStrategybow.tres" id="31_32hdy"]
 [ext_resource type="Resource" uid="uid://l8k5wxmy7do2" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/addArrowfallnormal.tres" id="32_i1088"]
 [ext_resource type="Resource" uid="uid://dhti5hyskqvxg" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/reader/addReaderBubble.tres" id="33_g75ln"]
+[ext_resource type="Resource" uid="uid://mg3c0clleu4b" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/cowboy/addBadWhiskey.tres" id="34_7usus"]
+[ext_resource type="Resource" uid="uid://cpn2ndcqdgif" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/cowboy/addDynamite.tres" id="35_n250w"]
+[ext_resource type="Resource" uid="uid://u7mtelw0i0yl" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/cowboy/addTwoshot.tres" id="36_od5dd"]
+[ext_resource type="Resource" uid="uid://cw6llxnbu8a2k" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/cowboy/addWhiskey.tres" id="37_bsstx"]
+[ext_resource type="Resource" uid="uid://bei7o3ylbqp24" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/cowboy/StrStrategyCowboy.tres" id="38_uj0pq"]
+[ext_resource type="Resource" uid="uid://dmdwio6nv8jrw" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/samurai/StrStrategySamurai.tres" id="39_umq5d"]
+[ext_resource type="Resource" uid="uid://cxlquv4kq8or2" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/samurai/addOffensiveMeditate.tres" id="40_q8u88"]
+[ext_resource type="Resource" uid="uid://5m8o47ocv0pe" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/samurai/addDefenseMeditate.tres" id="41_q0r3r"]
+[ext_resource type="Resource" uid="uid://fs2i6a048ixs" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/samurai/addBowshot.tres" id="42_ecivu"]
+[ext_resource type="Resource" uid="uid://dw37fqmoatmny" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/samurai/addBladestorm.tres" id="43_nqiad"]
 
 [sub_resource type="Animation" id="Animation_o6we6"]
 resource_name = "upgrade_slidein"
@@ -153,7 +163,7 @@ _data = {
 script = ExtResource("1_lv825")
 upgradeUI = NodePath("CanvasLayer")
 unitHolder = NodePath("UnitHolder")
-possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro"), ExtResource("16_6ehgt"), ExtResource("17_l86nh"), ExtResource("18_g7oug"), ExtResource("19_wolto"), ExtResource("20_athyt"), ExtResource("21_mrvc4"), ExtResource("22_0pvhp"), ExtResource("23_dc4p0"), ExtResource("24_p3mu5"), ExtResource("25_vc768"), ExtResource("26_s2q3e"), ExtResource("27_hyf52"), ExtResource("28_2cff2"), ExtResource("29_ba7dp"), ExtResource("30_7r72a"), ExtResource("31_32hdy"), ExtResource("32_i1088"), ExtResource("33_g75ln")])
+possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro"), ExtResource("16_6ehgt"), ExtResource("17_l86nh"), ExtResource("18_g7oug"), ExtResource("19_wolto"), ExtResource("20_athyt"), ExtResource("21_mrvc4"), ExtResource("22_0pvhp"), ExtResource("23_dc4p0"), ExtResource("24_p3mu5"), ExtResource("25_vc768"), ExtResource("26_s2q3e"), ExtResource("27_hyf52"), ExtResource("28_2cff2"), ExtResource("29_ba7dp"), ExtResource("30_7r72a"), ExtResource("31_32hdy"), ExtResource("32_i1088"), ExtResource("33_g75ln"), ExtResource("34_7usus"), ExtResource("35_n250w"), ExtResource("36_od5dd"), ExtResource("37_bsstx"), ExtResource("38_uj0pq"), ExtResource("39_umq5d"), ExtResource("39_umq5d"), ExtResource("40_q8u88"), ExtResource("41_q0r3r"), ExtResource("42_ecivu"), ExtResource("43_nqiad")])
 
 [node name="UnitHolder" parent="." instance=ExtResource("2_pvsyo")]
 

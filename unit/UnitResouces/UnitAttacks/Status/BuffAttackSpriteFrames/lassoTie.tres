@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://b86kka60dv5xg"]
+
+[ext_resource type="Texture2D" uid="uid://dvxc1ivm5b3e7" path="res://assets/characters/statusfx/lassofxanim-Sheet.png" id="1_0yrut"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xv66"]
+atlas = ExtResource("1_0yrut")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7etyk"]
+atlas = ExtResource("1_0yrut")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xogqq"]
+atlas = ExtResource("1_0yrut")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrd0h"]
+atlas = ExtResource("1_0yrut")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5am7"]
+atlas = ExtResource("1_0yrut")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohg2w"]
+atlas = ExtResource("1_0yrut")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tac8f"]
+atlas = ExtResource("1_0yrut")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgpkx"]
+atlas = ExtResource("1_0yrut")
+region = Rect2(896, 0, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xv66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7etyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xogqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrd0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5am7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohg2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tac8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgpkx")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]

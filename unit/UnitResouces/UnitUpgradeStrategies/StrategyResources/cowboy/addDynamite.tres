@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://cpn2ndcqdgif"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_2o143"]
+[ext_resource type="Resource" uid="uid://b3k5s5tc6btpc" path="res://unit/UnitResouces/UnitAttacks/Friendly/cowboy/cowboyDynamite.tres" id="1_40ijx"]
+
+[resource]
+script = ExtResource("1_2o143")
+new_attack = ExtResource("1_40ijx")
+description = "This has got to be Italian!"
+textname = "Dynamite"
+chardef = "cowboy"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StrenghtIncreaseStrategy" load_steps=2 format=3 uid="uid://bei7o3ylbqp24"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrenghtIncreaseStrategy.gd" id="1_6afbu"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_6afbu")
+additional_strenght = 5
+description = "increase strenght by 5"
+textname = "Str+5"
+chardef = "cowboy"

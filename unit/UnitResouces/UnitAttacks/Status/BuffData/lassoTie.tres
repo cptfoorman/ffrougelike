@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TieDownDeBuff" load_steps=3 format=3 uid="uid://ka8f1hpn67f1"]
+
+[ext_resource type="SpriteFrames" uid="uid://b86kka60dv5xg" path="res://unit/UnitResouces/UnitAttacks/Status/BuffAttackSpriteFrames/lassoTie.tres" id="1_oivlb"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/TieDownDebuff.gd" id="1_ripjf"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_ripjf")
+buffDuration = 2
+buffAnim = ExtResource("1_oivlb")
+one_time_buff = false

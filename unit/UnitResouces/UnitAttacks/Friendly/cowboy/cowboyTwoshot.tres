@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://cs8to4snwif0c"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_8y4w3"]
+
+[resource]
+script = ExtResource("1_8y4w3")
+attack_name = "Two shot"
+attackdmg = 70.0
+attack_desc = "Shoot yo volver Twice"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(-50, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 2

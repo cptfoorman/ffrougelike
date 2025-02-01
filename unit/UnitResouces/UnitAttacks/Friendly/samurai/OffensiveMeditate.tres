@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="AoEDebuffAttack" load_steps=4 format=3 uid="uid://xdl8kmsgtvei"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOE/AOEscripts/FriendlyAoeDebuff.gd" id="1_j1o1d"]
+[ext_resource type="SpriteFrames" uid="uid://nkbbgao7x6qq" path="res://unit/UnitResouces/UnitAttacks/Status/BuffAttackSpriteFrames/DefenseDeBuff.tres" id="1_taps3"]
+[ext_resource type="Resource" uid="uid://cxreebwpm12ux" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/DefenseDeBuff.tres" id="2_fr8w1"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_j1o1d")
+aoeanimFrames = ExtResource("1_taps3")
+deBuff = ExtResource("2_fr8w1")
+attack_name = "Offensive Meditate"
+attackdmg = 0.0
+attack_desc = "Meditate on enemies to break their spirit"
+attack_anim_name = "attack6"
+attack_ofset = Vector2(-100, 0)
+attack_max_cooldown = 3
+attack_on_cooldown = false
+attack_reach = 1

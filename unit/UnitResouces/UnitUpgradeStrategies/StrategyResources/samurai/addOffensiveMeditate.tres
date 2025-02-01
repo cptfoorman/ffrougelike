@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://cxlquv4kq8or2"]
+
+[ext_resource type="Resource" uid="uid://xdl8kmsgtvei" path="res://unit/UnitResouces/UnitAttacks/Friendly/samurai/OffensiveMeditate.tres" id="1_7jqfj"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_wso04"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_wso04")
+new_attack = ExtResource("1_7jqfj")
+description = "Meditate on enemies to break their spirit"
+textname = "Offensive Meditate"
+chardef = "samurai"

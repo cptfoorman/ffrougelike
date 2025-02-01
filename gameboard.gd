@@ -109,7 +109,11 @@ func _on_enemy_unit_selected(enemyUnit: Unit):
 	set_enemy_turn()
 func _on_ui_attack_selected(unitattack: UnitAttack) -> void:
 	print("looking to kill")
-	if unitattack is UnitFriendlyBuffAttack:
+	if unitattack is UnitSelfHealAttack:
+		_on_friendly_select(current_friendly_unit)
+		await get_tree().create_timer(0.2).timeout
+		mainUI.reset_ui_anim()
+	elif unitattack is UnitFriendlyBuffAttack:
 		set_friendly_buttons_disabled()
 		set_select_friendly_buttons_enabled()
 	else:
@@ -170,6 +174,7 @@ func _on_friendly_select(friendlyUnit: Unit):
 	mainUI.reset_ui_anim()
 	set_enemy_buttons_disabled()
 	set_friendly_buttons_disabled()
+	set_select_friendly_buttons_disabled()
 	current_friendly_unit.play_attack_anim(friendlyUnit.global_position)
 	await current_friendly_unit.animations.animation_finished
 	current_friendly_unit.currentAttack.use_attack(friendlyUnit, current_friendly_unit.get_main_attack_modifier(), current_friendly_unit)
@@ -189,5 +194,14 @@ func _on_ui_item_selected(item: Item) -> void:
 	elif item is AttackItem:
 		item.use_item(get_current_enemy_units())
 	itemBackpack.remove_item(item)
+	await get_tree().create_timer(1.2).timeout
+	set_enemy_turn()
+
+
+func _on_ui_turn_passed() -> void:
+	mainUI.reset_ui_anim()
+	set_enemy_buttons_disabled()
+	set_friendly_buttons_disabled()
+	set_select_friendly_buttons_disabled()
 	await get_tree().create_timer(1.2).timeout
 	set_enemy_turn()

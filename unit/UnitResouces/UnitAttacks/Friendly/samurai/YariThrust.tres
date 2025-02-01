@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UnitDeBuffAttack" load_steps=3 format=3 uid="uid://bbo508ec88osa"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/UnitDebuff.gd" id="1_chn3g"]
+[ext_resource type="Resource" uid="uid://cxreebwpm12ux" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/DefenseDeBuff.tres" id="1_m5kpc"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_chn3g")
+buffData = ExtResource("1_m5kpc")
+attack_name = "Yari Thrust"
+attackdmg = 30.0
+attack_desc = "Break their Defenses!"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 2

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=2 format=3 uid="uid://cpo8kd7fyv832"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/stats/UnitStats.gd" id="1_wdc1q"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_wdc1q")
+name = "cowboy"
+speed = 10
+health = 60.0
+mana = 20.0
+strenght = 8
+inteligence = 3
+defense = 0.0
+main_modifier = 0

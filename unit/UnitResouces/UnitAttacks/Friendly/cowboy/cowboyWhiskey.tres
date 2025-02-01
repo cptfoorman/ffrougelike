@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UnitSelfHealAttack" load_steps=3 format=3 uid="uid://cib7sndtuyja4"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitSelfHeal.gd" id="1_g3i4d"]
+[ext_resource type="SpriteFrames" uid="uid://d28y1elh4wout" path="res://unit/UnitResouces/UnitAttacks/AOE/aoeattacksSpriteFrames/heal.tres" id="1_qanth"]
+
+[resource]
+script = ExtResource("1_g3i4d")
+healAnim = ExtResource("1_qanth")
+attack_name = "Whiskey"
+attackdmg = 30.0
+attack_desc = "Drink Up Pardner"
+attack_anim_name = "attack5"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 0

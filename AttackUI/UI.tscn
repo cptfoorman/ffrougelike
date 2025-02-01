@@ -363,9 +363,15 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="ItemsContainer" type="HBoxContainer" parent="AttackUI/MainContainer/HBoxContainer"]
+[node name="pass" type="Button" parent="AttackUI/MainContainer/HBoxContainer/MovementContainer"]
+layout_mode = 2
+text = "Pass"
+
+[node name="ItemsContainer" type="HFlowContainer" parent="AttackUI/MainContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+alignment = 1
+last_wrap_alignment = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -377,3 +383,5 @@ libraries = {
 [connection signal="pressed" from="SelectEnemyUI/backButton" to="." method="_on_back_button_pressed"]
 [connection signal="AttackDecided" from="AttackUI" to="." method="_on_attack_ui_attack_decided"]
 [connection signal="ItemSelected" from="AttackUI" to="." method="_on_attack_ui_item_selected"]
+[connection signal="TurnPassed" from="AttackUI" to="." method="_on_attack_ui_turn_passed"]
+[connection signal="pressed" from="AttackUI/MainContainer/HBoxContainer/MovementContainer/pass" to="AttackUI" method="_on_pass_pressed"]

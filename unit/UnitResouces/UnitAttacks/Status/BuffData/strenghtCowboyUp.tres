@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StrenghtBuff" load_steps=3 format=3 uid="uid://wuclw7363cxi"]
+
+[ext_resource type="SpriteFrames" uid="uid://b6fvp7jou6kip" path="res://Items/ItemsAnims/strUPanim.tres" id="1_14g65"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/StrenghtBuff.gd" id="1_dpglf"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_dpglf")
+strenghtIncrease = 3
+buffDuration = 5
+buffAnim = ExtResource("1_14g65")
+one_time_buff = false

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitAttack" load_steps=2 format=3 uid="uid://bveuhi0iw3tor"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="1_1k436"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_1k436")
+attack_name = "Bladestorm"
+attackdmg = 80.0
+attack_desc = "Show them your true power"
+attack_anim_name = "attack4"
+attack_ofset = Vector2(-10, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 1

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://5m8o47ocv0pe"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_13xqy"]
+[ext_resource type="Resource" uid="uid://cu00gcamy5nfy" path="res://unit/UnitResouces/UnitAttacks/Friendly/samurai/DefensiveMeditate.tres" id="1_s8w8w"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_13xqy")
+new_attack = ExtResource("1_s8w8w")
+description = "Focus your Ki on yourself"
+textname = "Defensive Meditate"
+chardef = "samurai"

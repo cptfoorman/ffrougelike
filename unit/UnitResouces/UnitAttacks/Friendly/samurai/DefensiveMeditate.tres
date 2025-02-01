@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitSelfBuffAttack" load_steps=2 format=3 uid="uid://cu00gcamy5nfy"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitSelfBuffAttack.gd" id="1_nnpsx"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_nnpsx")
+attack_name = "Defensive Meditate"
+attackdmg = 0.0
+attack_desc = "Meditate on your defenses"
+attack_anim_name = "attack5"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 0
+attack_on_cooldown = false
+attack_reach = 0

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://dw37fqmoatmny"]
+
+[ext_resource type="Resource" uid="uid://bveuhi0iw3tor" path="res://unit/UnitResouces/UnitAttacks/Friendly/samurai/Bladestorm.tres" id="1_jq8il"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_kdqf4"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_kdqf4")
+new_attack = ExtResource("1_jq8il")
+description = "Let it rip!"
+textname = "Bladestorm"
+chardef = "samurai"
