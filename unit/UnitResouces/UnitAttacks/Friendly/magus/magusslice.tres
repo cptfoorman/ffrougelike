@@ -10,6 +10,6 @@ attackdmg = 30.0
 attack_desc = "slice with a blade of ice"
 attack_anim_name = "attack1"
 attack_ofset = Vector2(0, 0)
-attack_max_cooldown = 1
+attack_max_cooldown = 2
 attack_on_cooldown = false
 attack_reach = 1

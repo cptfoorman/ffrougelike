@@ -2,6 +2,7 @@ extends Area2D
 class_name DropArea
 
 var unit_data: UnitData
+@export var collision: CollisionShape2D
 	
 signal unitDataCounted(unitdata: UnitData)
 

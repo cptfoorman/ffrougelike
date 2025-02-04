@@ -1,20 +1,30 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://bqu8kw4fdhjxa"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=16 format=3 uid="uid://bqu8kw4fdhjxa"]
 
 [ext_resource type="PackedScene" uid="uid://cj445lakton70" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/bowman_collision_shape_2d.tscn" id="1_ljgr0"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_quc57"]
+[ext_resource type="Resource" uid="uid://b35v4x5ypaxbx" path="res://Items/ItemsResources/PoisonFlask.tres" id="2_5v4am"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_rhayw"]
 [ext_resource type="SpriteFrames" uid="uid://d4lx1tkfkstsw" path="res://unit/UnitResouces/unitSpriteFrames/MrBowmanBlue.tres" id="2_rqvdq"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_uvcla"]
+[ext_resource type="Resource" uid="uid://b1jihm3qb1it2" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/WaterBowman/addArrowfall.tres" id="4_8unvx"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="5_e8pjw"]
 [ext_resource type="Resource" uid="uid://cf32324sq7awa" path="res://unit/UnitResouces/UnitAttacks/Friendly/bowman/BowJumpshot.tres" id="5_f17bj"]
+[ext_resource type="Resource" uid="uid://dy2wkiwm7cqk8" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/WaterBowman/addbowmanattack.tres" id="6_j43ag"]
 [ext_resource type="Resource" uid="uid://djrrwl6g473p8" path="res://unit/UnitResouces/stats/friendly/WaterBowman.tres" id="6_rjx8w"]
 [ext_resource type="Resource" uid="uid://b85kra5yr5j05" path="res://unit/UnitResouces/UnitAttacks/Friendly/bowman/Bowpowershot.tres" id="6_wqitn"]
+[ext_resource type="Resource" uid="uid://bjujhg24pwcvy" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/WaterBowman/strplusStrategybow.tres" id="7_8p4ui"]
+[ext_resource type="Resource" uid="uid://b505gpfq1s2pf" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/WaterBowman/addbowmanattack2.tres" id="8_gglr6"]
+[ext_resource type="Resource" uid="uid://c522i0g2sto8x" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Bowman/strplusStrategybow.tres" id="9_okgcy"]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_quc57")
 spriteFrames = ExtResource("2_rqvdq")
+level = 0
 unitStats = ExtResource("6_rjx8w")
 unitAttacks = Array[ExtResource("2_rhayw")]([ExtResource("5_f17bj"), ExtResource("6_wqitn")])
 anim_flip = false
 unitStrategies = Array[ExtResource("3_uvcla")]([])
+levelUpUnitStrategies = Array[ExtResource("3_uvcla")]([ExtResource("4_8unvx"), ExtResource("5_e8pjw"), ExtResource("5_e8pjw"), ExtResource("6_j43ag"), ExtResource("7_8p4ui"), ExtResource("7_8p4ui"), ExtResource("5_e8pjw"), ExtResource("8_gglr6"), ExtResource("7_8p4ui"), ExtResource("4_8unvx"), ExtResource("5_e8pjw"), ExtResource("5_e8pjw"), ExtResource("9_okgcy"), ExtResource("9_okgcy"), ExtResource("4_8unvx"), ExtResource("4_8unvx")])
 collisionForDragable = ExtResource("1_ljgr0")
+craftable_item = ExtResource("2_5v4am")

@@ -14,6 +14,7 @@
 resource_local_to_scene = true
 script = ExtResource("1_pxvhd")
 spriteFrames = ExtResource("2_6fctv")
+level = 0
 unitStats = ExtResource("4_arjq2")
 unitAttacks = Array[ExtResource("2_yhn83")]([ExtResource("4_fxvuo"), ExtResource("5_xqqo1"), ExtResource("6_ig1p3"), ExtResource("5_xqqo1"), ExtResource("7_bt7e2")])
 anim_flip = true

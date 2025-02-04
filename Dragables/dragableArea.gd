@@ -8,6 +8,7 @@ var drag_speed: float = 50
 
 @export var unitData: UnitData
 @export var animation: AnimatedSprite2D
+@export var label: Label
 var current_area: DropArea = null
 
 signal Dropped(unit_data: UnitData)
@@ -19,6 +20,8 @@ func initialize() -> void:
 	animation.sprite_frames = unitData.get_spriteframes()
 	animation.play("idle")
 	add_area_collision()
+	label.text = "Lvl "+str(unitData.level)
+	
 	
 func add_area_collision():
 	var new_collision_scene: CollisionShape2D = unitData.collisionForDragable.instantiate()

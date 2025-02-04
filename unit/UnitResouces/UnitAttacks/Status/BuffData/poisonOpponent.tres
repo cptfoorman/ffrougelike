@@ -6,7 +6,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_sy8in")
-damagePerTurn = 30
+damagePerTurn = 15
 buffDuration = 6
 buffAnim = ExtResource("1_c783x")
 one_time_buff = false

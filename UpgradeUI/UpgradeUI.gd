@@ -8,9 +8,19 @@ class_name UpgradeUI
 @onready var attacks: VBoxContainer = %attacks
 @export var labelScene: PackedScene
 @export var currentUpgradeUnit: UnitData
+@onready var itemlabel: Label = %itemlabel
+@onready var craft_button: Button = %craftButton
+@onready var item_texture: TextureRect = %itemTexture
+@export var current_craft_item: Item
+
 
 signal UpgradePassed(new_strategy: Base_Unit_Strategy)
+signal ItemCrafted(new_item: Item)
 
+func show_main_choice_menu():
+	animation_player.play("main_menu_slidein")
+func hide_main_choice_menu():
+	animation_player.play("main_menu_slideout")
 func show_upgradeUI(unit: UnitData):
 	animation_player.play("upgrade_slidein")
 	if currentUpgradeUnit != unit:
@@ -68,3 +78,16 @@ func instance_info_strats(displayName: String,displayText: String, node: VBoxCon
 	" +displayText
 func _on_button_upgrade_chosen(new_strategy: Base_Unit_Strategy) -> void:
 	UpgradePassed.emit(new_strategy)
+	
+func instance_craft_item(craftItem: Item):
+	itemlabel.text = craftItem.name
+	item_texture.texture = craftItem.icon
+	current_craft_item = craftItem
+	
+func show_craft_item_ui(unit: UnitData):
+	animation_player.play("craft_item_slidein")
+	instance_craft_item(unit.craftable_item)
+func hide_crafting_ui():
+	animation_player.play("craft_item_slideout")
+func _on_craft_button_pressed() -> void:
+	ItemCrafted.emit(current_craft_item)

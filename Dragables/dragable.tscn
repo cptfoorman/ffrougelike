@@ -4,16 +4,25 @@
 [ext_resource type="Resource" uid="uid://xojhwutx7nyq" path="res://unit/UnitResouces/UnitData/Friendly/RavenData.tres" id="2_pcvv8"]
 [ext_resource type="SpriteFrames" uid="uid://cjs2tyf5pq18r" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteFramesBowman.tres" id="3_bjh0h"]
 
-[node name="Dragable" type="Area2D" node_paths=PackedStringArray("animation")]
+[node name="Dragable" type="Area2D" node_paths=PackedStringArray("animation", "label")]
 script = ExtResource("1_mh6x2")
 unitData = ExtResource("2_pcvv8")
 animation = NodePath("AnimatedSprite2D")
+label = NodePath("Label")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(7, -11)
 scale = Vector2(0.90411, 0.888889)
 sprite_frames = ExtResource("3_bjh0h")
 animation = &"idle"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -43.0
+offset_right = 21.0
+offset_bottom = -20.0
+theme_override_font_sizes/font_size = 15
+text = "Lvl 1"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

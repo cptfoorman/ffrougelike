@@ -1,11 +1,17 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://be5alhmesehdh"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=15 format=3 uid="uid://be5alhmesehdh"]
 
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_5ffyb"]
 [ext_resource type="PackedScene" uid="uid://bjkt6fk7hjqbe" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/witch_collision_shape_2d.tscn" id="1_bshcp"]
 [ext_resource type="SpriteFrames" uid="uid://bvguqrmmk7ikg" path="res://unit/UnitResouces/unitSpriteFrames/Witch.tres" id="2_f33tn"]
+[ext_resource type="Resource" uid="uid://b35v4x5ypaxbx" path="res://Items/ItemsResources/PoisonFlask.tres" id="2_uxuny"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_y8thx"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_qhbno"]
+[ext_resource type="Resource" uid="uid://1pvnb2cmx32k" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/witch/IntincreaseWitch.tres" id="4_cleld"]
+[ext_resource type="Resource" uid="uid://bbsevbmro32l6" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/witch/addGrenadeWitch.tres" id="5_bt4sg"]
 [ext_resource type="Resource" uid="uid://c2frc4whrcb5u" path="res://unit/UnitResouces/UnitAttacks/Friendly/Witch/BasicCurse.tres" id="5_dxr77"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="6_8rkuv"]
+[ext_resource type="Resource" uid="uid://cba3cye5rslr0" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/witch/addRayofKill.tres" id="7_1482c"]
+[ext_resource type="Resource" uid="uid://tnnscou52fh0" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/witch/addSnakeWitch.tres" id="7_lm0m0"]
 [ext_resource type="Resource" uid="uid://mcgekhetya0k" path="res://unit/UnitResouces/UnitAttacks/Friendly/Witch/PoisonRay.tres" id="7_pcxnh"]
 [ext_resource type="Resource" uid="uid://p2nexsrte882" path="res://unit/UnitResouces/stats/friendly/Witch.tres" id="8_cysda"]
 
@@ -13,8 +19,11 @@
 resource_local_to_scene = true
 script = ExtResource("1_5ffyb")
 spriteFrames = ExtResource("2_f33tn")
+level = 0
 unitStats = ExtResource("8_cysda")
 unitAttacks = Array[ExtResource("2_y8thx")]([ExtResource("5_dxr77"), ExtResource("7_pcxnh")])
 anim_flip = false
 unitStrategies = Array[ExtResource("3_qhbno")]([])
+levelUpUnitStrategies = Array[ExtResource("3_qhbno")]([ExtResource("4_cleld"), ExtResource("5_bt4sg"), ExtResource("4_cleld"), ExtResource("6_8rkuv"), ExtResource("7_1482c"), ExtResource("7_lm0m0"), ExtResource("4_cleld"), ExtResource("7_lm0m0"), ExtResource("5_bt4sg"), ExtResource("6_8rkuv"), ExtResource("4_cleld"), ExtResource("4_cleld"), ExtResource("5_bt4sg"), ExtResource("5_bt4sg"), ExtResource("4_cleld"), ExtResource("7_lm0m0")])
 collisionForDragable = ExtResource("1_bshcp")
+craftable_item = ExtResource("2_uxuny")

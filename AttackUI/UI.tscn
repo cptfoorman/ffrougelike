@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://k708pjaubi8r"]
+[gd_scene load_steps=13 format=3 uid="uid://k708pjaubi8r"]
 
 [ext_resource type="Script" path="res://AttackUI/attack_ui.gd" id="1_jjdch"]
 [ext_resource type="Script" path="res://AttackUI/MainUI.gd" id="1_viihh"]
+[ext_resource type="PackedScene" uid="uid://cyqra6bmhk6d" path="res://pathTree/path_tree.tscn" id="2_05u1x"]
 [ext_resource type="Script" path="res://AttackUI/reward_ui.gd" id="2_eci80"]
 
 [sub_resource type="Animation" id="Animation_08rsw"]
@@ -240,6 +241,10 @@ follow_viewport_enabled = true
 script = ExtResource("1_viihh")
 attackUI = NodePath("AttackUI")
 animPlayer = NodePath("AnimationPlayer")
+path_tree_scene = ExtResource("2_05u1x")
+
+[node name="fake_path_tree_slot" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [node name="RewardUI" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -298,6 +303,19 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "ENEMY TURN"
 
+[node name="map" type="Button" parent="TurnLabels"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.135
+anchor_right = 5.719
+anchor_bottom = 1.0
+offset_left = 0.039978
+offset_top = 3.0
+offset_right = -0.0240479
+offset_bottom = -17.0
+text = "Map"
+
 [node name="SelectEnemyUI" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
@@ -336,12 +354,11 @@ script = ExtResource("1_jjdch")
 [node name="MainContainer" type="PanelContainer" parent="AttackUI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.008
-anchor_top = -0.045
+anchor_top = -0.035
 anchor_right = 0.99
 anchor_bottom = 0.97
-offset_left = -13.984
-offset_top = 1.91
+offset_left = -5.0
+offset_top = -0.0700002
 offset_right = -13.77
 offset_bottom = 1.93999
 
@@ -356,7 +373,22 @@ theme_override_constants/separation = 30
 [node name="AttackContainer" type="VBoxContainer" parent="AttackUI/MainContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 15
+
+[node name="AttackContainer2" type="VBoxContainer" parent="AttackUI/MainContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="AttackContainer3" type="VBoxContainer" parent="AttackUI/MainContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="AttackContainer4" type="VBoxContainer" parent="AttackUI/MainContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
 
 [node name="MovementContainer" type="VBoxContainer" parent="AttackUI/MainContainer/HBoxContainer"]
 unique_name_in_owner = true
@@ -367,21 +399,67 @@ theme_override_constants/separation = 30
 layout_mode = 2
 text = "Pass"
 
-[node name="ItemsContainer" type="HFlowContainer" parent="AttackUI/MainContainer/HBoxContainer"]
+[node name="ScrollBar" type="ScrollContainer" parent="AttackUI/MainContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
+
+[node name="ItemsContainer" type="HBoxContainer" parent="AttackUI/MainContainer/HBoxContainer/ScrollBar"]
 unique_name_in_owner = true
 layout_mode = 2
-alignment = 1
-last_wrap_alignment = 2
+
+[node name="MainControllPanel" type="VBoxContainer" parent="AttackUI/MainContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="attacks" type="Button" parent="AttackUI/MainContainer/MainControllPanel"]
+layout_mode = 2
+text = "Attacks"
+
+[node name="items" type="Button" parent="AttackUI/MainContainer/MainControllPanel"]
+layout_mode = 2
+text = "Items"
+
+[node name="mainPanelback" type="Button" parent="AttackUI"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -1.515
+anchor_right = 0.097
+anchor_bottom = -1.243
+offset_left = 5.0
+offset_top = 248.97
+offset_right = -58.931
+offset_bottom = 229.114
+text = "BACK"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_eosxs")
 }
 
+[node name="mapBackButton" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+top_level = true
+offset_left = 1047.0
+offset_top = 10.0
+offset_right = 1104.0
+offset_bottom = 41.0
+text = "Back"
+
 [connection signal="pressed" from="RewardUI/PanelContainer/HBoxContainer/upgrade_party" to="." method="_on_upgrade_party_pressed"]
 [connection signal="pressed" from="RewardUI/PanelContainer/HBoxContainer/add_to_party" to="." method="_on_add_to_party_pressed"]
+[connection signal="pressed" from="TurnLabels/map" to="." method="_on_map_pressed"]
 [connection signal="pressed" from="SelectEnemyUI/backButton" to="." method="_on_back_button_pressed"]
 [connection signal="AttackDecided" from="AttackUI" to="." method="_on_attack_ui_attack_decided"]
 [connection signal="ItemSelected" from="AttackUI" to="." method="_on_attack_ui_item_selected"]
 [connection signal="TurnPassed" from="AttackUI" to="." method="_on_attack_ui_turn_passed"]
 [connection signal="pressed" from="AttackUI/MainContainer/HBoxContainer/MovementContainer/pass" to="AttackUI" method="_on_pass_pressed"]
+[connection signal="pressed" from="AttackUI/MainContainer/MainControllPanel/attacks" to="AttackUI" method="_on_attacks_pressed"]
+[connection signal="pressed" from="AttackUI/MainContainer/MainControllPanel/items" to="AttackUI" method="_on_items_pressed"]
+[connection signal="pressed" from="AttackUI/mainPanelback" to="AttackUI" method="_on_main_panelback_pressed"]
+[connection signal="pressed" from="mapBackButton" to="." method="_on_map_back_button_pressed"]

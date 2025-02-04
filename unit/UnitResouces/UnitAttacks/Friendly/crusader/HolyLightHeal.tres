@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UnitSelfHealAttack" load_steps=3 format=3 uid="uid://cuded15aujowu"]
+
+[ext_resource type="SpriteFrames" uid="uid://kopi5r6254dj" path="res://Items/ItemsAnims/Bubblepower.tres" id="1_k7xj6"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitSelfHeal.gd" id="1_wjjwn"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_wjjwn")
+healAnim = ExtResource("1_k7xj6")
+attack_name = "Holy Light"
+attackdmg = 40.0
+attack_desc = "Bring the holy light to your soul"
+attack_anim_name = "attack5"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 1

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="IntBuffItem" load_steps=5 format=3 uid="uid://cj7201xq1cl8"]
+
+[ext_resource type="SpriteFrames" uid="uid://cf7i713xjpva0" path="res://Items/ItemsAnims/PotionOfDefenseanims.tres" id="1_xmsng"]
+[ext_resource type="Script" path="res://Items/IntBuffItem.gd" id="1_yofya"]
+[ext_resource type="Texture2D" uid="uid://bqsqeei8nou7h" path="res://assets/characters/items/bluepotionitem.png" id="2_jfipu"]
+[ext_resource type="SpriteFrames" uid="uid://co6chkw50m6l6" path="res://Items/ItemsAnims/intUpanim.tres" id="3_v3g2d"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_yofya")
+intIncrease = 8
+anims = ExtResource("1_xmsng")
+icon = ExtResource("2_jfipu")
+itemfxanims = ExtResource("3_v3g2d")
+quantity = 0
+name = "Potion of Intelligence"

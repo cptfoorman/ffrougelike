@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TieDownDeBuff" load_steps=3 format=3 uid="uid://odpl6if1ivc8"]
+
+[ext_resource type="SpriteFrames" uid="uid://dbjqqyxxd2rgy" path="res://unit/UnitResouces/UnitAttacks/AOE/aoeattacksSpriteFrames/icePrison.tres" id="1_iuqg7"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/TieDownDebuff.gd" id="2_w65ar"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_w65ar")
+buffDuration = 4
+buffAnim = ExtResource("1_iuqg7")
+one_time_buff = false

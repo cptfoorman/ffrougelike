@@ -1,0 +1,60 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://dbjqqyxxd2rgy"]
+
+[ext_resource type="Texture2D" uid="uid://coaxgr8gm1fqf" path="res://assets/characters/statusfx/ice Prison-Sheet.png" id="1_q81it"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h1fa"]
+atlas = ExtResource("1_q81it")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpkab"]
+atlas = ExtResource("1_q81it")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg37w"]
+atlas = ExtResource("1_q81it")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eewj"]
+atlas = ExtResource("1_q81it")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dyg4"]
+atlas = ExtResource("1_q81it")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf1cs"]
+atlas = ExtResource("1_q81it")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k065o"]
+atlas = ExtResource("1_q81it")
+region = Rect2(768, 0, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1h1fa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpkab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg37w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8eewj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dyg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rf1cs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k065o")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]

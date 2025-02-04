@@ -8,4 +8,5 @@ class_name StrenghtBuffItem
 func use_item(targets: Array[Unit]):
 	for unit in targets:
 		unit.strenght += strenghtIncrease
+		unit.spawn_aoe_sprite_no_damage(itemfxanims)
 	

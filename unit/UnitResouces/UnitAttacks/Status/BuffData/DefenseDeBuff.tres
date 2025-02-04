@@ -6,7 +6,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_mpvsl")
-defenseDeBuff = 5
-buffDuration = 1
+defenseDeBuff = 8
+buffDuration = 4
 buffAnim = ExtResource("1_i6fne")
 one_time_buff = false

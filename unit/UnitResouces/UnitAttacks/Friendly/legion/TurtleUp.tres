@@ -11,6 +11,6 @@ attackdmg = 0.0
 attack_desc = "Summon your Legion to buff defense"
 attack_anim_name = "attack2"
 attack_ofset = Vector2(0, 0)
-attack_max_cooldown = 3
+attack_max_cooldown = 5
 attack_on_cooldown = false
 attack_reach = 1

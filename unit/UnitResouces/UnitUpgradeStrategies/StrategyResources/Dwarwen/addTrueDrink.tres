@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://bm1vjhwnv6mos"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_5dou0"]
+[ext_resource type="Resource" uid="uid://butigby36fy1d" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/DrinkUp2.tres" id="1_7u43d"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_5dou0")
+new_attack = ExtResource("1_7u43d")
+description = "Now THIS is a Drink!"
+textname = "True Drink"
+chardef = "Dwarwen"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UnitSelfBuffAttack" load_steps=3 format=3 uid="uid://fbp1ydqx3t5u"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitSelfBuffAttack.gd" id="1_q3sqs"]
+[ext_resource type="Resource" uid="uid://ced7qt0guu6ag" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/DwarwenWine.tres" id="1_yew7f"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_q3sqs")
+buff = ExtResource("1_yew7f")
+attack_name = "Defensive Drinking"
+attackdmg = 0.0
+attack_desc = "No YOU have a problem"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 3
+attack_on_cooldown = false
+attack_reach = 0

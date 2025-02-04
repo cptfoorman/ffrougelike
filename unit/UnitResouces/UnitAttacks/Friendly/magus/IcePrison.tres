@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UnitDeBuffAttack" load_steps=3 format=3 uid="uid://cu48g3xgfaear"]
+
+[ext_resource type="Resource" uid="uid://odpl6if1ivc8" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/IcePrison.tres" id="1_f7sp0"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/UnitDebuff.gd" id="1_lbim4"]
+
+[resource]
+script = ExtResource("1_lbim4")
+buffData = ExtResource("1_f7sp0")
+attack_name = "Ice Prison"
+attackdmg = 0.0
+attack_desc = "Freeze one enemy"
+attack_anim_name = "attack4"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 2

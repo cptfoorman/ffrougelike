@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DefenseBuff" load_steps=3 format=3 uid="uid://ced7qt0guu6ag"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/DefenseBuff.gd" id="1_7ueii"]
+[ext_resource type="SpriteFrames" uid="uid://m8vlte5aeky4" path="res://Items/ItemsAnims/defUPanimtres.tres" id="1_ycbxs"]
+
+[resource]
+script = ExtResource("1_7ueii")
+defenseIncrease = 20
+buffDuration = 5
+buffAnim = ExtResource("1_ycbxs")
+one_time_buff = false

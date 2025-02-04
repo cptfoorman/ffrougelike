@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://bbfs1w113sv2x"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_3tejw"]
+[ext_resource type="Resource" uid="uid://ba5ugx42ivkci" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/MassIcePrison.tres" id="1_32x72"]
+
+[resource]
+script = ExtResource("1_3tejw")
+new_attack = ExtResource("1_32x72")
+description = "Freeze them all"
+textname = "Mass Ice Prison"
+chardef = "Mage"

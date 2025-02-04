@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AoEDebuffAttack" load_steps=4 format=3 uid="uid://ucndhyxlwubg"]
+
+[ext_resource type="SpriteFrames" uid="uid://b6gw3dqdl3dm2" path="res://Items/ItemsAnims/PotionofFire.tres" id="1_08dti"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOE/AOEscripts/FriendlyAoeDebuff.gd" id="1_dggxj"]
+[ext_resource type="Resource" uid="uid://b1cs41gfac0ue" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/FireDamage.tres" id="1_rtoqu"]
+
+[resource]
+script = ExtResource("1_dggxj")
+aoeanimFrames = ExtResource("1_08dti")
+deBuff = ExtResource("1_rtoqu")
+attack_name = "Fire Wine"
+attackdmg = 40.0
+attack_desc = "Let them have a taste!"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 1

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PoisonDeBuff" load_steps=3 format=3 uid="uid://b1cs41gfac0ue"]
+
+[ext_resource type="SpriteFrames" uid="uid://cblf12b63h048" path="res://unit/UnitResouces/UnitAttacks/Status/BuffAttackSpriteFrames/FireDebuff.tres" id="1_4ko1f"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/PoisonDebuff.gd" id="1_6uoil"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_6uoil")
+damagePerTurn = 40
+buffDuration = 1
+buffAnim = ExtResource("1_4ko1f")
+one_time_buff = false

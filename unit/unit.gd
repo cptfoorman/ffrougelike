@@ -21,6 +21,7 @@ enum MainAttackModifier {strenght, inteligence}
 var currentAttack: UnitAttack
 @export var selectButton: Button
 @export var friendlySelectButton: Button
+@onready var health_value_label: Label = $health/healthValueLabel
 @onready var healthbar: ProgressBar = %health
 @onready var friendly_buff_holder: Node2D = %friendlyBuffHolder
 @onready var enemy_buff_holder: Node2D = %EnemyBuffHolder
@@ -31,7 +32,7 @@ var currentAttack: UnitAttack
 @export var buffScene: PackedScene
 var isTiedDown: bool = false
 var enemyTarget: Unit
-enum Faction {FRIENDLY, ENEMY}
+enum Faction {FRIENDLY, ENEMY, SUMMONED}
 @export var Factionset: Faction
 
 signal SELECTED(unit: Unit)
@@ -48,15 +49,17 @@ func initialize() -> void:
 	prints("initializing", unitsstats.name, health)
 	healthbar.max_value = health
 	healthbar.value = health
+	health_value_label.text = str(healthbar.value) + "HP"
 	if Factionset == Faction.ENEMY:
 		set_button_disabled()
 	apply_unit_strategies()
-	for attack in unitattacks:
-		selectButton.tooltip_text += attack.attack_name + " 
-		"
+	apply_level_up_strategies()
+	selectButton.tooltip_text = "defense " +str(defense)
 	unset_hover()
 
-
+func apply_level_up_strategies():
+	for i in unitdata.level:
+		unitdata.levelUpUnitStrategies[i].apply_strategy(self)
 
 func apply_unit_strategies():
 	for strategy in unitdata.unitStrategies:
@@ -72,7 +75,8 @@ func get_main_attack_modifier()->int:
 	return 0
 func set_as_enemy():
 	Factionset = Faction.ENEMY
-	
+func set_as_summoned():
+	Factionset = Faction.SUMMONED
 func set_as_friendly():
 	Factionset = Faction.FRIENDLY
 func get_attacks()-> Array[UnitAttack]:
@@ -91,6 +95,7 @@ func take_damage(damage: float):
 		health -= new_damage
 	prints(unitsstats.name, health)
 	healthbar.value = health
+	health_value_label.text = str(healthbar.value) + "HP"
 	if health <= 0:
 		queue_free()
 		prints(unitsstats.name + " died")
@@ -101,6 +106,7 @@ func take_healing(healing: float):
 		health += new_healing
 	prints(unitsstats.name, health)
 	healthbar.value = health
+	health_value_label.text = str(healthbar.value) + "HP"
 	if health <= 0:
 		queue_free()
 		prints(unitsstats.name + " died")

@@ -8,7 +8,7 @@ class_name StartScreen
 @onready var top_floor: Label = %topFloor
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 
-var top_floor_num: int 
+var top_floor_num: int =1
 
 
 #connect("pressed", Callable(get_root(), "_on_start_pressed"))
@@ -20,7 +20,10 @@ func initialize(top_floor_check: int):
 	else:
 		top_floor.text = "top floor reached: " + str(top_floor_num)
 	animation_player.play("mainMenuSlidein")
-	
+
+
+func play_slidein():
+	animation_player.play("mainMenuSlidein")
 func _on_quit_pressed() -> void:
 	get_tree().quit()
 

@@ -1,20 +1,31 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://ci7i1qru048vd"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=17 format=3 uid="uid://ci7i1qru048vd"]
 
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_04a80"]
 [ext_resource type="PackedScene" uid="uid://cdc0trbxcfs07" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/dwarwen_collision_shape_2d.tscn" id="1_yipmd"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_m35rt"]
+[ext_resource type="Resource" uid="uid://d1mdn2ppk1xmi" path="res://Items/ItemsResources/PotionOfDefense.tres" id="2_pf31j"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_de2mp"]
 [ext_resource type="SpriteFrames" uid="uid://hspwp177qixh" path="res://unit/UnitResouces/unitSpriteFrames/Dwarwen.tres" id="3_fcf57"]
+[ext_resource type="Resource" uid="uid://c1u8ucyb5wcyo" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/Strenght.tres" id="4_3nrot"]
+[ext_resource type="Resource" uid="uid://nhjtujdvtyu6" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addFireWine.tres" id="5_gj8go"]
 [ext_resource type="Resource" uid="uid://3316k8a0rd7y" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/oneBash.tres" id="5_sbj5a"]
 [ext_resource type="Resource" uid="uid://rsarniwmi3gm" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/DrinkUp.tres" id="6_imss1"]
+[ext_resource type="Resource" uid="uid://bm1vjhwnv6mos" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addTrueDrink.tres" id="6_it3r7"]
 [ext_resource type="Resource" uid="uid://bcw6f4wuj8gay" path="res://unit/UnitResouces/stats/friendly/Dwarwen.tres" id="7_30rg6"]
+[ext_resource type="Resource" uid="uid://cxijcuee718ho" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addTwoBash.tres" id="7_ijni0"]
+[ext_resource type="Resource" uid="uid://crq6oji07wdu1" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addDefensiveDrink.tres" id="8_4ie42"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="9_r6442"]
+[ext_resource type="Resource" uid="uid://cw5x4ccci31hc" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addBeyblade.tres" id="10_lujfd"]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_04a80")
 spriteFrames = ExtResource("3_fcf57")
+level = 0
 unitStats = ExtResource("7_30rg6")
 unitAttacks = Array[ExtResource("2_m35rt")]([ExtResource("5_sbj5a"), ExtResource("6_imss1")])
 anim_flip = false
 unitStrategies = Array[ExtResource("3_de2mp")]([])
+levelUpUnitStrategies = Array[ExtResource("3_de2mp")]([ExtResource("4_3nrot"), ExtResource("5_gj8go"), ExtResource("6_it3r7"), ExtResource("7_ijni0"), ExtResource("4_3nrot"), ExtResource("4_3nrot"), ExtResource("8_4ie42"), ExtResource("9_r6442"), ExtResource("10_lujfd"), ExtResource("4_3nrot"), ExtResource("7_ijni0"), ExtResource("4_3nrot"), ExtResource("6_it3r7"), ExtResource("5_gj8go"), ExtResource("8_4ie42"), ExtResource("9_r6442")])
 collisionForDragable = ExtResource("1_yipmd")
+craftable_item = ExtResource("2_pf31j")

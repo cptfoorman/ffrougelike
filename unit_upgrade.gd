@@ -5,11 +5,14 @@ class_name UnitUpgrader
 @export var unitHolder: UnitHolder
 @export var possibleUpgrades: Array[Base_Unit_Strategy]
 var current_unit: UnitData
+@onready var craft_item_drop_area: CraftItemDropArea = %CraftItemDropArea
+@onready var upgrade_drop_area: UpgradeDropArea = %UpgradeDropArea
 
 
 
 func initialize(units: Array[UnitData]):
 	unitHolder.initialize(units)
+	upgradeUI.show_main_choice_menu()
 
 func _on_upgrade_drop_area_unit_taken(unit: UnitData) -> void:
 	if current_unit != null:
@@ -44,3 +47,39 @@ func return_upgrade_strategies()->Array[Base_Unit_Strategy]:
 			if !new_array.has(strategy):
 				new_array.append(strategy)
 	return new_array
+
+
+func _on_craft_item_drop_area_unit_taken(unit: UnitData) -> void:
+	upgradeUI.hide_crafting_ui()
+
+
+func _on_craft_item_drop_area_unit_data_counted(unitdata: UnitData) -> void:
+	upgradeUI.show_craft_item_ui(unitdata)
+
+
+func _on_rest_pressed() -> void:
+	upgradeUI.hide_main_choice_menu()
+	globalSceneLoader.lvlUpMultiplier += 1
+	globalSceneLoader.set_current_party_array(return_new_units())
+	await get_tree().create_timer(0.5).timeout
+	globalSceneLoader.instantiate_path_tree()
+
+
+func _on_upgrade_pressed() -> void:
+	upgradeUI.hide_main_choice_menu()
+	upgrade_drop_area.show()
+	craft_item_drop_area.collision.set_deferred("disabled", true)
+
+
+func _on_craft_pressed() -> void:
+	upgradeUI.hide_main_choice_menu()
+	craft_item_drop_area.show()
+	upgrade_drop_area.collision.set_deferred("disabled", true)
+
+
+func _on_canvas_layer_item_crafted(new_item: Item) -> void:
+	globalSceneLoader.currentItemsArray.append(new_item.duplicate(true))
+	print("giving item")
+	globalSceneLoader.set_current_party_array(return_new_units())
+	await get_tree().create_timer(0.5).timeout
+	globalSceneLoader.instantiate_path_tree()

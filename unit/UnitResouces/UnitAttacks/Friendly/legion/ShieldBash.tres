@@ -5,10 +5,10 @@
 [resource]
 script = ExtResource("1_tuouf")
 attack_name = "ShieldBash"
-attackdmg = 70.0
+attackdmg = 50.0
 attack_desc = "Bash the enemy With your shield"
 attack_anim_name = "attack3"
 attack_ofset = Vector2(0, 0)
-attack_max_cooldown = 3
+attack_max_cooldown = 5
 attack_on_cooldown = false
 attack_reach = 1

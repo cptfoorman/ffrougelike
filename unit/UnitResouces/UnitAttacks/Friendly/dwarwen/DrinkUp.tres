@@ -10,6 +10,6 @@ attackdmg = 30.0
 attack_desc = "Drink Up! it might be your last!"
 attack_anim_name = "attack3"
 attack_ofset = Vector2(0, 0)
-attack_max_cooldown = 0
+attack_max_cooldown = 4
 attack_on_cooldown = false
 attack_reach = 1

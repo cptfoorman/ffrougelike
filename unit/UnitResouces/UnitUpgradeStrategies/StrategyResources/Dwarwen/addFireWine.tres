@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://nhjtujdvtyu6"]
+
+[ext_resource type="Resource" uid="uid://ucndhyxlwubg" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/FireWine.tres" id="1_0cfv7"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_7boyi"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_7boyi")
+new_attack = ExtResource("1_0cfv7")
+description = "Let them have a taste!"
+textname = "Fire Wine"
+chardef = "Dwarwen"

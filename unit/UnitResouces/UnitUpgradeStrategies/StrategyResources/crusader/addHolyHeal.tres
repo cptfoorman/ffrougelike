@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://xxbjbninvkh"]
+
+[ext_resource type="Resource" uid="uid://cuded15aujowu" path="res://unit/UnitResouces/UnitAttacks/Friendly/crusader/HolyLightHeal.tres" id="1_m56hf"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_qsnhf"]
+
+[resource]
+script = ExtResource("1_qsnhf")
+new_attack = ExtResource("1_m56hf")
+description = "Bring the holy light to your soul"
+textname = "Holy Light"
+chardef = "Crusader"

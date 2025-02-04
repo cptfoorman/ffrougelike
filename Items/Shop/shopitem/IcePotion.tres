@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=4 format=3 uid="uid://rvitxh06gqs0"]
+
+[ext_resource type="Script" path="res://Items/Shop/shopItem.gd" id="1_ghn04"]
+[ext_resource type="Resource" uid="uid://ck143lfjdfowh" path="res://Items/ItemsResources/IceFlask.tres" id="1_j8li8"]
+[ext_resource type="Texture2D" uid="uid://bqsqeei8nou7h" path="res://assets/characters/items/bluepotionitem.png" id="2_uh556"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_ghn04")
+item = ExtResource("1_j8li8")
+itemCost = 150
+itemName = "Ice Potion"
+itemIcon = ExtResource("2_uh556")

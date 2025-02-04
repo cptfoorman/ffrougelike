@@ -1,20 +1,30 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://ckcdjhwq0vtnr"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=16 format=3 uid="uid://ckcdjhwq0vtnr"]
 
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_1lefn"]
 [ext_resource type="PackedScene" uid="uid://bhux2bfo026ih" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/mague_collision_shape_2d.tscn" id="1_om7sp"]
+[ext_resource type="Resource" uid="uid://ck143lfjdfowh" path="res://Items/ItemsResources/IceFlask.tres" id="2_7bp5o"]
 [ext_resource type="SpriteFrames" uid="uid://bu8p0r0jjuo8h" path="res://unit/UnitResouces/unitSpriteFrames/unitspriteframesMague.tres" id="2_bp1hf"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_pkcho"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_8ktau"]
+[ext_resource type="Resource" uid="uid://d4iorda3gxafq" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/IcePrison.tres" id="4_wwgsm"]
 [ext_resource type="Resource" uid="uid://dbvowvsl762r4" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/magusslice.tres" id="4_ygt4o"]
+[ext_resource type="Resource" uid="uid://i762nxmbudps" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/intplusStrategy.tres" id="5_hjkph"]
 [ext_resource type="Resource" uid="uid://be5mwmr130780" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/magusvortex.tres" id="5_msovn"]
+[ext_resource type="Resource" uid="uid://dd5oaakwkfcyx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/addmagusAttack2.tres" id="6_a2bb7"]
 [ext_resource type="Resource" uid="uid://b65ydhf57mal4" path="res://unit/UnitResouces/stats/friendly/magues.tres" id="6_leum7"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="7_5q72h"]
+[ext_resource type="Resource" uid="uid://mhsv1ven6b1b" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/addmagusAttack.tres" id="8_gr2uj"]
+[ext_resource type="Resource" uid="uid://bbfs1w113sv2x" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/massIcePrison.tres" id="9_rn0qa"]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_1lefn")
 spriteFrames = ExtResource("2_bp1hf")
+level = 0
 unitStats = ExtResource("6_leum7")
 unitAttacks = Array[ExtResource("2_pkcho")]([ExtResource("4_ygt4o"), ExtResource("5_msovn")])
 anim_flip = false
 unitStrategies = Array[ExtResource("3_8ktau")]([])
+levelUpUnitStrategies = Array[ExtResource("3_8ktau")]([ExtResource("4_wwgsm"), ExtResource("5_hjkph"), ExtResource("6_a2bb7"), ExtResource("5_hjkph"), ExtResource("5_hjkph"), ExtResource("7_5q72h"), ExtResource("8_gr2uj"), ExtResource("9_rn0qa"), ExtResource("5_hjkph"), ExtResource("7_5q72h"), ExtResource("8_gr2uj"), ExtResource("6_a2bb7"), ExtResource("7_5q72h"), ExtResource("5_hjkph"), ExtResource("5_hjkph"), ExtResource("9_rn0qa")])
 collisionForDragable = ExtResource("1_om7sp")
+craftable_item = ExtResource("2_7bp5o")

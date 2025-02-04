@@ -14,6 +14,6 @@ attackdmg = 0.0
 attack_desc = "Meditate on enemies to break their spirit"
 attack_anim_name = "attack6"
 attack_ofset = Vector2(-100, 0)
-attack_max_cooldown = 3
+attack_max_cooldown = 7
 attack_on_cooldown = false
 attack_reach = 1

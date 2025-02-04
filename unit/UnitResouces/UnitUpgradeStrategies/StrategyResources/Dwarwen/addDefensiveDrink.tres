@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://crq6oji07wdu1"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_d1glh"]
+[ext_resource type="Resource" uid="uid://fbp1ydqx3t5u" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/DefensiveDrink.tres" id="1_vi0xf"]
+
+[resource]
+script = ExtResource("1_d1glh")
+new_attack = ExtResource("1_vi0xf")
+description = "No YOU have a problem"
+textname = "Defensive Drinking"
+chardef = "Dwarwen"

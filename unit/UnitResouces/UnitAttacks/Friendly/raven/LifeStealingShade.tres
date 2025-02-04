@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitLifeStealAttack" load_steps=2 format=3 uid="uid://dfm7eg0feeloi"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitLifestealAttack.gd" id="1_faxn5"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_faxn5")
+attack_name = "Vampiric Shade"
+attackdmg = 60.0
+attack_desc = "Create Shade to steal enemies life"
+attack_anim_name = "attack2"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 1

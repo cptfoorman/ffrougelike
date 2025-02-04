@@ -159,7 +159,8 @@ func _on_enemy_units_units_empty() -> void:
 func _on_ui_added_to_party(newPartyUnit: UnitData) -> void:
 	var survivor_units: Array[UnitData]
 	for unit in get_current_friendly_units():
-		survivor_units.append(unit.get_unit_data())
+		if unit.Factionset == unit.Faction.FRIENDLY:
+			survivor_units.append(unit.get_unit_data())
 	survivor_units.append(newPartyUnit)
 	globalSceneLoader.set_current_party_array(survivor_units)
 	await get_tree().create_timer(0.5).timeout
@@ -168,8 +169,12 @@ func _on_ui_added_to_party(newPartyUnit: UnitData) -> void:
 func _on_ui_upgrades_selected() -> void:
 	var survivor_units: Array[UnitData]
 	for unit in get_current_friendly_units():
-		survivor_units.append(unit.get_unit_data())
-	globalSceneLoader.instantiate_upgrader(survivor_units)
+		if unit.Factionset == unit.Faction.FRIENDLY:
+			survivor_units.append(unit.get_unit_data())
+	await get_tree().create_timer(0.3).timeout
+	for unit in survivor_units:
+		unit.gain_level()
+	globalSceneLoader.instantiate_path_tree()
 func _on_friendly_select(friendlyUnit: Unit):
 	mainUI.reset_ui_anim()
 	set_enemy_buttons_disabled()

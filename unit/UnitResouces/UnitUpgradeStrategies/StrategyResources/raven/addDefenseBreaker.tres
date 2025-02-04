@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://grvshaciu2f2"]
+
+[ext_resource type="Resource" uid="uid://jhr4lcf764li" path="res://unit/UnitResouces/UnitAttacks/Friendly/raven/DefenseBreaker.tres" id="1_fpw42"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_tfqao"]
+
+[resource]
+script = ExtResource("1_tfqao")
+new_attack = ExtResource("1_fpw42")
+description = "Break defense with quick footwork"
+textname = "Defense Breaker"
+chardef = "Raven"

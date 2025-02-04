@@ -9,6 +9,6 @@ attackdmg = 70.0
 attack_desc = "Shoot yo volver Twice"
 attack_anim_name = "attack3"
 attack_ofset = Vector2(-50, 0)
-attack_max_cooldown = 4
+attack_max_cooldown = 6
 attack_on_cooldown = false
 attack_reach = 2

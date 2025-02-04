@@ -26,6 +26,7 @@ window/stretch/mode="canvas_items"
 [file_customization]
 
 folder_colors={
+"res://Items/": "teal",
 "res://unit/UnitResouces/UnitAttacks/AOE/": "teal",
 "res://unit/UnitResouces/UnitAttacks/Status/": "red",
 "res://unit/UnitResouces/UnitData/": "yellow",

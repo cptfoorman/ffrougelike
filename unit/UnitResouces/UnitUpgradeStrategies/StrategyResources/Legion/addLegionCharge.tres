@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://fy166s78tn64" path="res://unit/UnitResouces/UnitAttacks/Friendly/legion/LegionCharge.tres" id="1_r1ll5"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_5u8hc")
 new_attack = ExtResource("1_r1ll5")
 description = "Call in your Legion"

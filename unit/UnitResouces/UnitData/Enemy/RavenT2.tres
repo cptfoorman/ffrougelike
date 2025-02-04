@@ -13,6 +13,7 @@
 [resource]
 script = ExtResource("1_lwgmx")
 spriteFrames = ExtResource("2_qof0a")
+level = 0
 unitStats = ExtResource("8_cw6gr")
 unitAttacks = Array[ExtResource("2_ox4pq")]([ExtResource("4_yqcb7"), ExtResource("5_ghlxf"), ExtResource("5_ghlxf"), ExtResource("6_vmmjs"), ExtResource("7_w8g43")])
 anim_flip = false

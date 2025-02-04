@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AttackItem" load_steps=5 format=3 uid="uid://loq46tlkqb24"]
+
+[ext_resource type="SpriteFrames" uid="uid://b6gw3dqdl3dm2" path="res://Items/ItemsAnims/PotionofFire.tres" id="1_jpbw2"]
+[ext_resource type="Script" path="res://Items/AttackItem.gd" id="1_rw2ds"]
+[ext_resource type="Texture2D" uid="uid://7xfslp2ou88g" path="res://assets/characters/items/firepotionitem.png" id="2_cxjaw"]
+[ext_resource type="SpriteFrames" uid="uid://cblf12b63h048" path="res://unit/UnitResouces/UnitAttacks/Status/BuffAttackSpriteFrames/FireDebuff.tres" id="3_2ul3b"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_rw2ds")
+damage = 40
+anims = ExtResource("1_jpbw2")
+icon = ExtResource("2_cxjaw")
+itemfxanims = ExtResource("3_2ul3b")
+quantity = 0
+name = "Fire Potion"

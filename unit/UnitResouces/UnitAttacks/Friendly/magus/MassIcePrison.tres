@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="AoEDebuffAttack" load_steps=4 format=3 uid="uid://ba5ugx42ivkci"]
+
+[ext_resource type="SpriteFrames" uid="uid://dbjqqyxxd2rgy" path="res://unit/UnitResouces/UnitAttacks/AOE/aoeattacksSpriteFrames/icePrison.tres" id="1_ape87"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/AOE/AOEscripts/FriendlyAoeDebuff.gd" id="1_o7i64"]
+[ext_resource type="Resource" uid="uid://odpl6if1ivc8" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/IcePrison.tres" id="2_re02s"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_o7i64")
+aoeanimFrames = ExtResource("1_ape87")
+deBuff = ExtResource("2_re02s")
+attack_name = "Mass Ice Prison"
+attackdmg = 0.0
+attack_desc = "Freeze them all"
+attack_anim_name = "attack4"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 6
+attack_on_cooldown = false
+attack_reach = 1

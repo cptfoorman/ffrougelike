@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitHealAttack" load_steps=2 format=3 uid="uid://butigby36fy1d"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitHealAttack.gd" id="1_tp1ej"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_tp1ej")
+attack_name = "True Drink"
+attackdmg = 50.0
+attack_desc = "Now THIS is a Drink!"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 3
+attack_on_cooldown = false
+attack_reach = 1

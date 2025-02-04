@@ -11,6 +11,6 @@ attackdmg = 0.0
 attack_desc = "This bad whiskey makes you mad!"
 attack_anim_name = "attack6"
 attack_ofset = Vector2(0, 0)
-attack_max_cooldown = 0
+attack_max_cooldown = 2
 attack_on_cooldown = false
 attack_reach = 0

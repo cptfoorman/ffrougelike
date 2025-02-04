@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=4 format=3 uid="uid://db4ptdxjaglye"]
+
+[ext_resource type="Resource" uid="uid://cj7201xq1cl8" path="res://Items/ItemsResources/IntPotion.tres" id="1_j35tt"]
+[ext_resource type="Script" path="res://Items/Shop/shopItem.gd" id="1_x0lyh"]
+[ext_resource type="Texture2D" uid="uid://bqsqeei8nou7h" path="res://assets/characters/items/bluepotionitem.png" id="2_tbabm"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_x0lyh")
+item = ExtResource("1_j35tt")
+itemCost = 100
+itemName = "Int Potion"
+itemIcon = ExtResource("2_tbabm")

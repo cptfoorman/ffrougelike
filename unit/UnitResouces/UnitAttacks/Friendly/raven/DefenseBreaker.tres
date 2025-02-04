@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UnitDeBuffAttack" load_steps=3 format=3 uid="uid://jhr4lcf764li"]
+
+[ext_resource type="Resource" uid="uid://cxreebwpm12ux" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/DefenseDeBuff.tres" id="1_5yjlp"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/UnitDebuff.gd" id="1_d1pf4"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_d1pf4")
+buffData = ExtResource("1_5yjlp")
+attack_name = "Defense Breaker"
+attackdmg = 30.0
+attack_desc = "Break defense with quick footwork"
+attack_anim_name = "attack3"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 4
+attack_on_cooldown = false
+attack_reach = 1

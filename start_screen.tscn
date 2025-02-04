@@ -34,6 +34,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(2, -662), Vector2(0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StartScreenUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_cjwtt"]
 resource_name = "optionsSlidein"
@@ -82,8 +94,10 @@ script = ExtResource("1_4jhim")
 layout_mode = 3
 anchor_right = 1.003
 anchor_bottom = 1.0
-offset_right = -0.456055
-offset_bottom = 3.0
+offset_left = 2.0
+offset_top = -662.0
+offset_right = 1.54395
+offset_bottom = -659.0
 
 [node name="Start" type="Button" parent="StartScreenUI"]
 unique_name_in_owner = true
@@ -165,4 +179,5 @@ layout_mode = 2
 [connection signal="pressed" from="StartScreenUI/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="StartScreenUI/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="optionsUI/PanelContainer/VBoxContainer2/optionsExit" to="." method="_on_options_exit_pressed"]
+[connection signal="drag_ended" from="optionsUI/PanelContainer/VBoxContainer2/VBoxContainer/char_unlocked_slider" to="optionsUI" method="_on_char_unlocked_slider_drag_ended"]
 [connection signal="value_changed" from="optionsUI/PanelContainer/VBoxContainer2/VBoxContainer/char_unlocked_slider" to="optionsUI" method="_on_char_unlocked_slider_value_changed"]

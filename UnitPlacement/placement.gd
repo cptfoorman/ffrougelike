@@ -27,7 +27,7 @@ signal EnemyUnitAdded(unit: Unit, unitPos: Vector2)
 @export var markersRow6: Array[DropMarker]
 
 ##so this is the unit placer, its job is to instantiate units scenes, give them proper unit data and initialize them
-## the rows and markers do violate DRY orinciples but its set up for a later mechanic
+## the rows and markers do violate DRY principles but its set up for the row mechanic
 @onready var button: Button = %Button
 
 
@@ -130,7 +130,7 @@ func fill_units():
 	row3.hide()
 	
 ###############################################################################
-###these funcs instance just a blank unit which then gets data and initializes#
+###these funcs instance just a blank unit which then gets data and initializes on signal#
 func instantiate_enemy_unit(unit_data: UnitData, globalpos: Vector2, unitRow: int):
 	var new_unit: Unit = unitScene.instantiate()
 	new_unit.unitdata = unit_data.duplicate(true)

@@ -1,20 +1,30 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://xojhwutx7nyq"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=16 format=3 uid="uid://xojhwutx7nyq"]
 
 [ext_resource type="PackedScene" uid="uid://jgxk6d158uu7" path="res://unit/UnitResouces/unitSpriteFrames/unitCollisionScenes/raven_collision_shape_2d.tscn" id="1_ipwkd"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_ocufu"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_hc4gk"]
+[ext_resource type="Resource" uid="uid://i45f13uejoh7" path="res://Items/ItemsResources/PotionOfStrenght.tres" id="2_w8x2t"]
 [ext_resource type="SpriteFrames" uid="uid://qucmm0ql78sn" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteframesRaven.tres" id="3_ikhtq"]
 [ext_resource type="Resource" uid="uid://dsrqwfjiwe2qa" path="res://unit/UnitResouces/UnitAttacks/Friendly/raven/ravenshade.tres" id="4_badvl"]
+[ext_resource type="Resource" uid="uid://cgip863x0trcq" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/addAttackStrategy2.tres" id="4_fcu0e"]
 [ext_resource type="Resource" uid="uid://psrk3ucs5lr5" path="res://unit/UnitResouces/UnitAttacks/Friendly/raven/ravenslice.tres" id="5_hrwlp"]
+[ext_resource type="Resource" uid="uid://dsoexpfy67n34" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/strplusStrategy.tres" id="5_v5d6r"]
+[ext_resource type="Resource" uid="uid://grvshaciu2f2" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/addDefenseBreaker.tres" id="6_105om"]
 [ext_resource type="Resource" uid="uid://dnksmpk0xyvyi" path="res://unit/UnitResouces/stats/friendly/ravenstats.tres" id="6_nnh0g"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="7_2nh5p"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="7_vgfug"]
+[ext_resource type="Resource" uid="uid://8dipswnqxyah" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/addAttackStrategy.tres" id="8_e1b3j"]
+[ext_resource type="Resource" uid="uid://bn3jtkgcmj750" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/addLifeSteal.tres" id="9_pobst"]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_ocufu")
 spriteFrames = ExtResource("3_ikhtq")
+level = 0
 unitStats = ExtResource("6_nnh0g")
 unitAttacks = Array[ExtResource("2_hc4gk")]([ExtResource("4_badvl"), ExtResource("5_hrwlp")])
 anim_flip = true
 unitStrategies = Array[ExtResource("7_2nh5p")]([])
+levelUpUnitStrategies = Array[ExtResource("7_2nh5p")]([ExtResource("4_fcu0e"), ExtResource("5_v5d6r"), ExtResource("5_v5d6r"), ExtResource("6_105om"), ExtResource("7_vgfug"), ExtResource("8_e1b3j"), ExtResource("6_105om"), ExtResource("5_v5d6r"), ExtResource("5_v5d6r"), ExtResource("7_vgfug"), ExtResource("7_vgfug"), ExtResource("9_pobst"), ExtResource("5_v5d6r"), ExtResource("5_v5d6r"), ExtResource("7_vgfug"), ExtResource("9_pobst")])
 collisionForDragable = ExtResource("1_ipwkd")
+craftable_item = ExtResource("2_w8x2t")

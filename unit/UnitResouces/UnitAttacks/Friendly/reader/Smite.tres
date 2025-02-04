@@ -12,6 +12,6 @@ attackdmg = 20.0
 attack_desc = "say a prayer to smite all opponents"
 attack_anim_name = "attack2"
 attack_ofset = Vector2(0, 0)
-attack_max_cooldown = 3
+attack_max_cooldown = 4
 attack_on_cooldown = false
 attack_reach = 1

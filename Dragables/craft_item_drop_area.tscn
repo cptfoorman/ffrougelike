@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtqkl1ipxuncx"]
+
+[ext_resource type="Script" path="res://Dragables/craft_item_drop_area.gd" id="1_bq8g1"]
+[ext_resource type="Texture2D" uid="uid://d26wbs5lkp414" path="res://assets/icons/redtile.png" id="2_ljel0"]
+[ext_resource type="Texture2D" uid="uid://dhil05pg04m4i" path="res://assets/icons/yellowtile.png" id="3_va556"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c041l"]
+
+[node name="CraftItemDropArea" type="Area2D" node_paths=PackedStringArray("collision")]
+script = ExtResource("1_bq8g1")
+collision = NodePath("CollisionShape2D")
+
+[node name="red" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_ljel0")
+
+[node name="yellow" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("3_va556")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_c041l")

@@ -7,10 +7,10 @@
 script = ExtResource("1_oo5jp")
 buffData = ExtResource("1_ttebe")
 attack_name = "Poison Ray"
-attackdmg = 40.0
+attackdmg = 20.0
 attack_desc = "Must Have been something they ate!"
 attack_anim_name = "attack2"
 attack_ofset = Vector2(0, 0)
-attack_max_cooldown = 0
+attack_max_cooldown = 3
 attack_on_cooldown = false
 attack_reach = 4

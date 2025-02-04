@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://57yw4idueego"]
+
+[ext_resource type="Resource" uid="uid://b317kf1f5j1hq" path="res://unit/UnitResouces/UnitAttacks/Friendly/reader/Smite.tres" id="1_1kdph"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_axfpc"]
+
+[resource]
+script = ExtResource("1_axfpc")
+new_attack = ExtResource("1_1kdph")
+description = "say a prayer to smite all opponents"
+textname = "Smite"
+chardef = "Reader"

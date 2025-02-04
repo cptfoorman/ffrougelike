@@ -7,6 +7,79 @@
 [node name="pathTree" type="Node2D" groups=["PathTree"]]
 script = ExtResource("1_mmkbf")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 1147.0
+offset_bottom = 644.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_jmld5")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(98, 210)
+points = PackedVector2Array(90, 128, -1, 0)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(188, 337)
+points = PackedVector2Array(0, 0, 109, -123)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(296, 217)
+points = PackedVector2Array(0, 4, 94, 95)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2(388, 315)
+points = PackedVector2Array(2, -1, 77, -178)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
+[node name="Line2D5" type="Line2D" parent="."]
+position = Vector2(465, 138)
+points = PackedVector2Array(1, 2, 143, 1)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
+[node name="Line2D6" type="Line2D" parent="."]
+position = Vector2(610, 139)
+points = PackedVector2Array(0, -2, 50, 117)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
+[node name="Line2D7" type="Line2D" parent="."]
+position = Vector2(659, 257)
+points = PackedVector2Array(-1, -1, 68, 110)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
+[node name="Line2D8" type="Line2D" parent="."]
+position = Vector2(726, 366)
+points = PackedVector2Array(1, -1, 77, 93)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
+[node name="Line2D9" type="Line2D" parent="."]
+position = Vector2(804, 461)
+points = PackedVector2Array(-1, -2, 181, 80)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
+[node name="Line2D10" type="Line2D" parent="."]
+position = Vector2(986, 542)
+points = PackedVector2Array(2, -1, 48, -382)
+texture = ExtResource("2_jhmn8")
+texture_mode = 2
+
 [node name="markerstash" type="Node2D" parent="."]
 unique_name_in_owner = true
 z_index = 2
@@ -55,76 +128,3 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1150.0
 offset_bottom = 649.0
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
-z_index = -10
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -5.0
-offset_top = -4.0
-offset_right = 6.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_jmld5")
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(98, 210)
-points = PackedVector2Array(90, 128, -1, 0)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2
-
-[node name="Line2D2" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(188, 337)
-points = PackedVector2Array(0, 0, 109, -123)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2
-
-[node name="Line2D3" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(296, 217)
-points = PackedVector2Array(0, 4, 94, 95)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2
-
-[node name="Line2D4" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(388, 315)
-points = PackedVector2Array(2, -1, 77, -178)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2
-
-[node name="Line2D5" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(465, 138)
-points = PackedVector2Array(1, 2, 143, 1)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2
-
-[node name="Line2D6" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(610, 139)
-points = PackedVector2Array(0, -2, 50, 117)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2
-
-[node name="Line2D7" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(659, 257)
-points = PackedVector2Array(-1, -1, 68, 110)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2
-
-[node name="Line2D8" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(726, 366)
-points = PackedVector2Array(1, -1, 77, 93)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2
-
-[node name="Line2D9" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(804, 461)
-points = PackedVector2Array(-1, -2, 181, 80)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2
-
-[node name="Line2D10" type="Line2D" parent="CanvasLayer/Control"]
-position = Vector2(986, 542)
-points = PackedVector2Array(2, -1, 48, -382)
-texture = ExtResource("2_jhmn8")
-texture_mode = 2

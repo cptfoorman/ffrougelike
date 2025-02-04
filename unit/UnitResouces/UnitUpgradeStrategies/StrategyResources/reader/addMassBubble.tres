@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://b10xiu771gnl0"]
+
+[ext_resource type="Resource" uid="uid://dvqdibv1884h5" path="res://unit/UnitResouces/UnitAttacks/Friendly/reader/MassBubble.tres" id="1_8w6fx"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_f8bep"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_f8bep")
+new_attack = ExtResource("1_8w6fx")
+description = "Massively Bubble"
+textname = "Mass Bubble"
+chardef = "Reader"

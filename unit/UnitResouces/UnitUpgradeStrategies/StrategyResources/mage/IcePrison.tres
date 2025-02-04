@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://d4iorda3gxafq"]
+
+[ext_resource type="Resource" uid="uid://cu48g3xgfaear" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/IcePrison.tres" id="1_8pcco"]
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_q3h6b"]
+
+[resource]
+script = ExtResource("1_q3h6b")
+new_attack = ExtResource("1_8pcco")
+description = "Freeze one enemy"
+textname = "Ice Prison"
+chardef = "Mage"

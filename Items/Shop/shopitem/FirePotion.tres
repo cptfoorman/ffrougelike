@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=4 format=3 uid="uid://bryabn0amtpe0"]
+
+[ext_resource type="Resource" uid="uid://loq46tlkqb24" path="res://Items/ItemsResources/FirePotion.tres" id="1_10fcw"]
+[ext_resource type="Script" path="res://Items/Shop/shopItem.gd" id="1_w3ern"]
+[ext_resource type="Texture2D" uid="uid://7xfslp2ou88g" path="res://assets/characters/items/firepotionitem.png" id="2_i48kb"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_w3ern")
+item = ExtResource("1_10fcw")
+itemCost = 150
+itemName = "Fire Potion"
+itemIcon = ExtResource("2_i48kb")

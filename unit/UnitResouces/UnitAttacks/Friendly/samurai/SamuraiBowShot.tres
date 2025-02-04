@@ -6,10 +6,10 @@
 resource_local_to_scene = true
 script = ExtResource("1_3m8gf")
 attack_name = "Bowshot"
-attackdmg = 50.0
+attackdmg = 40.0
 attack_desc = "If sword cant reach them, arrows can!"
 attack_anim_name = "attack3"
 attack_ofset = Vector2(-100, 0)
-attack_max_cooldown = 2
+attack_max_cooldown = 3
 attack_on_cooldown = false
 attack_reach = 3

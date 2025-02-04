@@ -6,8 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c041l"]
 
-[node name="UpgradeDropArea" type="Area2D"]
+[node name="UpgradeDropArea" type="Area2D" node_paths=PackedStringArray("collision")]
 script = ExtResource("1_fupr5")
+collision = NodePath("CollisionShape2D")
 
 [node name="red" type="Sprite2D" parent="."]
 unique_name_in_owner = true

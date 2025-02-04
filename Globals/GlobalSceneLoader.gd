@@ -41,12 +41,19 @@ var availableItemsArray: Array[Item] = [preload("res://Items/ItemsResources/Poti
 preload("res://Items/ItemsResources/bubblePotion.tres"),
 preload("res://Items/ItemsResources/PoisonFlask.tres"),
 preload("res://Items/ItemsResources/PotionOfDefense.tres"),
-preload("res://Items/ItemsResources/PotionOfStrenght.tres")]
+preload("res://Items/ItemsResources/PotionOfStrenght.tres"),
+preload("res://Items/ItemsResources/FirePotion.tres"),
+preload("res://Items/ItemsResources/IntPotion.tres"),
+preload("res://Items/ItemsResources/IceFlask.tres")]
 var availableShopItemsArray:Array[ShopItem] = [preload("res://Items/Shop/shopitem/potion.tres"),
 preload("res://Items/Shop/shopitem/strenghtPotion.tres"),
 preload("res://Items/Shop/shopitem/poisonFlask.tres"),
 preload("res://Items/Shop/shopitem/defensePotion.tres"),
-preload("res://Items/Shop/shopitem/BubblePotion.tres")]
+preload("res://Items/Shop/shopitem/BubblePotion.tres"),
+preload("res://Items/Shop/shopitem/FirePotion.tres"),
+preload("res://Items/Shop/shopitem/IcePotion.tres"),
+preload("res://Items/Shop/shopitem/IntPotion.tres")
+]
 
 var clonedUnitsArray: Array[UnitData]
 var currentUnitsArray: Array[UnitData]
@@ -62,6 +69,7 @@ var current_path_tree: PathTree
 var current_shop: Shop
 
 var current_money: int = 100
+var lvlUpMultiplier: int = 0
 
 var current_floor: int = -1
 var current_event_array: Array[int]
@@ -76,6 +84,7 @@ func _ready() -> void:
 	connect_start_screen_buttons()
 	clone_items()
 	clone_available_shop_items()
+	current_start_screen.play_slidein()
 	
 
 func get_current_start_screen():
@@ -244,6 +253,7 @@ func instantiate_start_screen():
 	
 #########################################################
 #######PATH TREE############################
+
 func instantiate_path_tree():
 	current_floor += 1
 	get_tree().change_scene_to_packed(pathTree)

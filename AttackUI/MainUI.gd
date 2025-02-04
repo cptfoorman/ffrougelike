@@ -7,6 +7,11 @@ class_name UI
 @onready var your_turn_label: Label = $TurnLabels/yourTurnLabel
 @onready var enemy_turn_label: Label = $TurnLabels/enemyTurnLabel
 @onready var reward_ui: RewardUI = $RewardUI
+@export var path_tree_scene: PackedScene
+@onready var fake_path_tree_slot: Node2D = %fake_path_tree_slot
+var current_path_tree: PathTree
+@onready var map: Button = %map
+@onready var map_back_button: Button = %mapBackButton
 
 var current_reward_unit: UnitData
 
@@ -38,7 +43,13 @@ func reward_ui_slidein():
 func reset_ui_anim():
 	animPlayer.play("attackselectReset")
 	
-	
+func instantiate_fake_path_tree():
+	var new_path_tree: PathTree = path_tree_scene.instantiate()
+	fake_path_tree_slot.add_child(new_path_tree)
+	current_path_tree = new_path_tree
+	map.hide()
+	map_back_button.show()
+	current_path_tree.initialize(globalSceneLoader.current_floor, globalSceneLoader.current_event_array)
 	
 func _on_attack_ui_attack_decided(unitattack: UnitAttack) -> void:
 	attack_ui_slideOut()
@@ -79,3 +90,13 @@ func _on_attack_ui_item_selected(item: Item) -> void:
 
 func _on_attack_ui_turn_passed() -> void:
 	TurnPassed.emit()
+
+
+func _on_map_back_button_pressed() -> void:
+	current_path_tree.queue_free()
+	map_back_button.hide()
+	map.show()
+
+
+func _on_map_pressed() -> void:
+	instantiate_fake_path_tree()

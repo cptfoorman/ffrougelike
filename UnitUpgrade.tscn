@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://bii43sbgtee12"]
+[gd_scene load_steps=70 format=3 uid="uid://bii43sbgtee12"]
 
 [ext_resource type="Script" path="res://unit_upgrade.gd" id="1_lv825"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="2_hf0j4"]
@@ -48,6 +48,20 @@
 [ext_resource type="Resource" uid="uid://5m8o47ocv0pe" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/samurai/addDefenseMeditate.tres" id="41_q0r3r"]
 [ext_resource type="Resource" uid="uid://fs2i6a048ixs" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/samurai/addBowshot.tres" id="42_ecivu"]
 [ext_resource type="Resource" uid="uid://dw37fqmoatmny" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/samurai/addBladestorm.tres" id="43_nqiad"]
+[ext_resource type="Resource" uid="uid://crq6oji07wdu1" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addDefensiveDrink.tres" id="44_1h0x5"]
+[ext_resource type="Resource" uid="uid://nhjtujdvtyu6" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addFireWine.tres" id="45_4kg7s"]
+[ext_resource type="PackedScene" uid="uid://dtqkl1ipxuncx" path="res://Dragables/craft_item_drop_area.tscn" id="45_xodx2"]
+[ext_resource type="Resource" uid="uid://bm1vjhwnv6mos" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/addTrueDrink.tres" id="46_kwfa1"]
+[ext_resource type="Resource" uid="uid://d4iorda3gxafq" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/IcePrison.tres" id="47_4s10w"]
+[ext_resource type="Resource" uid="uid://bbfs1w113sv2x" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/mage/massIcePrison.tres" id="48_b6gtw"]
+[ext_resource type="Resource" uid="uid://grvshaciu2f2" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/addDefenseBreaker.tres" id="49_bqutw"]
+[ext_resource type="Texture2D" uid="uid://c1glqkhh4kdpi" path="res://assets/characters/items/potionitem-sprite.png" id="50_iugcd"]
+[ext_resource type="Resource" uid="uid://bn3jtkgcmj750" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/addLifeSteal.tres" id="50_yjhqg"]
+[ext_resource type="Resource" uid="uid://b10xiu771gnl0" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/reader/addMassBubble.tres" id="51_l4ppu"]
+[ext_resource type="Resource" uid="uid://57yw4idueego" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/reader/addSmite.tres" id="52_ce1ol"]
+[ext_resource type="Resource" uid="uid://cba3cye5rslr0" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/witch/addRayofKill.tres" id="53_8cbdt"]
+[ext_resource type="Resource" uid="uid://xxbjbninvkh" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/crusader/addHolyHeal.tres" id="54_6kytx"]
+[ext_resource type="Resource" uid="uid://dnc7gqy5ansm" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/crusader/addMassBubble.tres" id="55_0y1xm"]
 
 [sub_resource type="Animation" id="Animation_o6we6"]
 resource_name = "upgrade_slidein"
@@ -153,8 +167,124 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_so3bn"]
+resource_name = "craft_item_slideout"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(670, 61), Vector2(684, 596)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rnsf2"]
+resource_name = "craft_item_slidein"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(684, 596), Vector2(670, 61)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ovtmm"]
+resource_name = "main_menu_slideout"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(59, 35), Vector2(45, -537)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xtjo5"]
+resource_name = "main_menu_slidein"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(45, -537), Vector2(59, 35)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_31ot1"]
 _data = {
+"craft_item_slidein": SubResource("Animation_rnsf2"),
+"craft_item_slideout": SubResource("Animation_so3bn"),
+"main_menu_slidein": SubResource("Animation_xtjo5"),
+"main_menu_slideout": SubResource("Animation_ovtmm"),
 "upgrade_slidein": SubResource("Animation_o6we6"),
 "upgrade_slideout": SubResource("Animation_rvv4f")
 }
@@ -163,7 +293,7 @@ _data = {
 script = ExtResource("1_lv825")
 upgradeUI = NodePath("CanvasLayer")
 unitHolder = NodePath("UnitHolder")
-possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro"), ExtResource("16_6ehgt"), ExtResource("17_l86nh"), ExtResource("18_g7oug"), ExtResource("19_wolto"), ExtResource("20_athyt"), ExtResource("21_mrvc4"), ExtResource("22_0pvhp"), ExtResource("23_dc4p0"), ExtResource("24_p3mu5"), ExtResource("25_vc768"), ExtResource("26_s2q3e"), ExtResource("27_hyf52"), ExtResource("28_2cff2"), ExtResource("29_ba7dp"), ExtResource("30_7r72a"), ExtResource("31_32hdy"), ExtResource("32_i1088"), ExtResource("33_g75ln"), ExtResource("34_7usus"), ExtResource("35_n250w"), ExtResource("36_od5dd"), ExtResource("37_bsstx"), ExtResource("38_uj0pq"), ExtResource("39_umq5d"), ExtResource("39_umq5d"), ExtResource("40_q8u88"), ExtResource("41_q0r3r"), ExtResource("42_ecivu"), ExtResource("43_nqiad")])
+possibleUpgrades = Array[ExtResource("2_hf0j4")]([ExtResource("3_4ga8i"), ExtResource("4_eu44o"), ExtResource("8_lq5mi"), ExtResource("9_dye4e"), ExtResource("10_ph728"), ExtResource("11_e05lt"), ExtResource("12_uk11x"), ExtResource("13_gvwj3"), ExtResource("5_7ruev"), ExtResource("6_e037r"), ExtResource("13_0rj0j"), ExtResource("7_tf6vs"), ExtResource("15_p46ro"), ExtResource("16_6ehgt"), ExtResource("17_l86nh"), ExtResource("18_g7oug"), ExtResource("19_wolto"), ExtResource("20_athyt"), ExtResource("21_mrvc4"), ExtResource("22_0pvhp"), ExtResource("23_dc4p0"), ExtResource("24_p3mu5"), ExtResource("25_vc768"), ExtResource("26_s2q3e"), ExtResource("27_hyf52"), ExtResource("28_2cff2"), ExtResource("29_ba7dp"), ExtResource("30_7r72a"), ExtResource("31_32hdy"), ExtResource("32_i1088"), ExtResource("33_g75ln"), ExtResource("34_7usus"), ExtResource("35_n250w"), ExtResource("36_od5dd"), ExtResource("37_bsstx"), ExtResource("38_uj0pq"), ExtResource("39_umq5d"), ExtResource("39_umq5d"), ExtResource("40_q8u88"), ExtResource("41_q0r3r"), ExtResource("42_ecivu"), ExtResource("43_nqiad"), ExtResource("44_1h0x5"), ExtResource("45_4kg7s"), ExtResource("46_kwfa1"), ExtResource("47_4s10w"), ExtResource("48_b6gtw"), ExtResource("49_bqutw"), ExtResource("50_yjhqg"), ExtResource("51_l4ppu"), ExtResource("52_ce1ol"), ExtResource("53_8cbdt"), ExtResource("54_6kytx"), ExtResource("55_0y1xm")])
 
 [node name="UnitHolder" parent="." instance=ExtResource("2_pvsyo")]
 
@@ -206,7 +336,14 @@ position = Vector2(221, 168)
 [node name="Marker2D13" type="Marker2D" parent="UnitHolder"]
 position = Vector2(293, 167)
 
+[node name="CraftItemDropArea" parent="." instance=ExtResource("45_xodx2")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(404, 271)
+
 [node name="UpgradeDropArea" parent="." instance=ExtResource("2_qshov")]
+unique_name_in_owner = true
+visible = false
 position = Vector2(404, 309)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -289,6 +426,79 @@ alignment = 1
 layout_mode = 2
 text = "Attacks"
 
+[node name="PanelContainer3" type="PanelContainer" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.582
+anchor_top = 0.094
+anchor_right = 0.818
+anchor_bottom = 0.73
+offset_left = 13.536
+offset_top = 535.088
+offset_right = 13.664
+offset_bottom = 534.96
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="itemTexture" type="TextureRect" parent="CanvasLayer/PanelContainer3/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("50_iugcd")
+expand_mode = 4
+stretch_mode = 3
+
+[node name="itemlabel" type="Label" parent="CanvasLayer/PanelContainer3/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Potion of health"
+
+[node name="craftButton" type="Button" parent="CanvasLayer/PanelContainer3/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Craft"
+
+[node name="PanelContainer4" type="PanelContainer" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.051
+anchor_top = 0.054
+anchor_right = 0.859
+anchor_bottom = 0.836
+offset_left = -13.752
+offset_top = -571.992
+offset_right = -13.5681
+offset_bottom = -571.728
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="rest" type="Button" parent="CanvasLayer/PanelContainer4/HBoxContainer"]
+layout_mode = 2
+text = "Rest
+Next Party Level-up +1"
+
+[node name="upgrade" type="Button" parent="CanvasLayer/PanelContainer4/HBoxContainer"]
+layout_mode = 2
+text = "Upgrade
+Give additional upgrade
+to a single unit"
+
+[node name="craft" type="Button" parent="CanvasLayer/PanelContainer4/HBoxContainer"]
+layout_mode = 2
+text = "Craft
+Let a unit craft an Item"
+
+[connection signal="UnitTaken" from="CraftItemDropArea" to="." method="_on_craft_item_drop_area_unit_taken"]
+[connection signal="unitDataCounted" from="CraftItemDropArea" to="." method="_on_craft_item_drop_area_unit_data_counted"]
 [connection signal="UnitTaken" from="UpgradeDropArea" to="." method="_on_upgrade_drop_area_unit_taken"]
 [connection signal="unitDataCounted" from="UpgradeDropArea" to="." method="_on_upgrade_drop_area_unit_data_counted"]
+[connection signal="ItemCrafted" from="CanvasLayer" to="." method="_on_canvas_layer_item_crafted"]
 [connection signal="UpgradePassed" from="CanvasLayer" to="." method="_on_canvas_layer_upgrade_passed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer3/VBoxContainer/craftButton" to="CanvasLayer" method="_on_craft_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer4/HBoxContainer/rest" to="." method="_on_rest_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer4/HBoxContainer/upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer4/HBoxContainer/craft" to="." method="_on_craft_pressed"]

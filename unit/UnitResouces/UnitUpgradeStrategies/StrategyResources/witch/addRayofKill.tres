@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AddAttackStrategy" load_steps=3 format=3 uid="uid://cba3cye5rslr0"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/AddAttackStrategy.gd" id="1_fp58o"]
+[ext_resource type="Resource" uid="uid://7kx55vufcs78" path="res://unit/UnitResouces/UnitAttacks/Friendly/Witch/RayOfKill.tres" id="1_lk8ol"]
+
+[resource]
+script = ExtResource("1_fp58o")
+new_attack = ExtResource("1_lk8ol")
+description = "cast a sickening ray making your enemies barf"
+textname = "Ray of Kill"
+chardef = "Witch"

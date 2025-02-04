@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="UnitFriendlyAoEBuffAttack" load_steps=4 format=3 uid="uid://dvqdibv1884h5"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/UnitAoeBuff.gd" id="1_1e8yb"]
+[ext_resource type="Resource" uid="uid://bdo1kk2jhafo8" path="res://unit/UnitResouces/UnitAttacks/Status/BuffData/Bubble.tres" id="1_x34iq"]
+[ext_resource type="SpriteFrames" uid="uid://kopi5r6254dj" path="res://Items/ItemsAnims/Bubblepower.tres" id="2_6fita"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_1e8yb")
+buff = ExtResource("1_x34iq")
+healAnim = ExtResource("2_6fita")
+attack_name = "Mass Bubble"
+attackdmg = 0.0
+attack_desc = "Bubble Up!"
+attack_anim_name = "attack1"
+attack_ofset = Vector2(0, 0)
+attack_max_cooldown = 10
+attack_on_cooldown = false
+attack_reach = 0

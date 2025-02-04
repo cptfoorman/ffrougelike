@@ -8,6 +8,7 @@ extends Control
 func _ready() -> void:
 	char_unlocked_slider.min_value = 1
 	char_unlocked_slider.max_value = globalSceneLoader.availableUnitsArray.size()
+	#char_unlocked_slider.value = globalSceneLoader.char_unlocked
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,4 +18,9 @@ func _process(delta: float) -> void:
 
 
 func _on_char_unlocked_slider_value_changed(value: float) -> void:
-	globalSceneLoader.char_unlocked = value
+	pass
+	#globalSceneLoader.char_unlocked = value
+
+
+func _on_char_unlocked_slider_drag_ended(value_changed: bool) -> void:
+	globalSceneLoader.char_unlocked = char_unlocked_slider.value
