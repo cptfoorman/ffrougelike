@@ -175,6 +175,7 @@ func _on_ui_upgrades_selected() -> void:
 	for unit in survivor_units:
 		unit.gain_level()
 	globalSceneLoader.instantiate_path_tree()
+	globalSceneLoader.lvlUpMultiplier = 0
 func _on_friendly_select(friendlyUnit: Unit):
 	mainUI.reset_ui_anim()
 	set_enemy_buttons_disabled()

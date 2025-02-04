@@ -17,3 +17,4 @@ unitStats = ExtResource("6_2xhj0")
 unitAttacks = Array[ExtResource("2_36hap")]([ExtResource("4_gnbwy"), ExtResource("5_2de51"), ExtResource("6_2pe11"), ExtResource("6_2pe11")])
 anim_flip = true
 unitStrategies = Array[ExtResource("3_jjphy")]([])
+levelUpUnitStrategies = Array[ExtResource("3_jjphy")]([])

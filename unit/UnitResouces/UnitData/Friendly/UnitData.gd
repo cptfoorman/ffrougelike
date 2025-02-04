@@ -28,4 +28,6 @@ func add_strategy(strategy:Base_Unit_Strategy):
 func add_unitAttack(unitAttack:Array[UnitAttack]):
 	unitAttacks.append(unitAttack)
 func gain_level():
-	level += clampi(1+globalSceneLoader.lvlUpMultiplier,1, levelUpUnitStrategies.size()-1)
+	level += 1+globalSceneLoader.lvlUpMultiplier
+	if level > levelUpUnitStrategies.size():
+		level = levelUpUnitStrategies.size()
