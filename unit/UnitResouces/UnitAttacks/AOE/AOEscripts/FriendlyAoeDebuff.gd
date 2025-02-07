@@ -9,8 +9,7 @@ func use_attack(target: Unit, strenght: int, attacker: Unit):
 	var targetArray: Array[Unit]
 	targetArray.append_array(target.return_current_enemy_units())
 	for unit in targetArray:
-		unit.spawn_aoe_sprite(aoeanimFrames, new_damage)
-		deBuff.apply_buff(unit)
+		unit.instance_enemy_buff(deBuff)
 	set_on_cooldown()
 	cooldown_attack()
 	

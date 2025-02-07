@@ -46,12 +46,20 @@ func get_random_unit_attack(unit: Unit)->UnitAttack:
 	var new_attack_array: Array[UnitAttack] = unit.get_attacks()
 	var attack: UnitAttack = new_attack_array.pick_random()
 	return attack
-	
+
+func get_unit_attack(unit: Unit)->UnitAttack:
+	var new_attack_array: Array[UnitAttack] = unit.get_attacks()
+	if unit.unitdata.attackPattern != null:
+		return new_attack_array[unit.unitdata.attackPattern.get_current_pattern()]
+	var attack: UnitAttack = new_attack_array.pick_random()
+	return attack
+
+
 func enemy_attack():
 	if possible_units_array.is_empty() == false:
 		var attacker: Unit = get_random_unit()
 		if attacker!= null:
-			var attack: UnitAttack = get_random_unit_attack(attacker)
+			var attack: UnitAttack = get_unit_attack(attacker)
 			var defender: Unit = get_by_row_unit(attack)
 			attacker.currentAttack = attack
 			attacker.play_attack_anim(defender.global_position)

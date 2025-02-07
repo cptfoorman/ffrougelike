@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://unit/unit.gd" id="1_rnc5g"]
 [ext_resource type="Resource" uid="uid://dnksmpk0xyvyi" path="res://unit/UnitResouces/stats/friendly/ravenstats.tres" id="2_dnebs"]
-[ext_resource type="PackedScene" uid="uid://bsmgndo3fc41i" path="res://unit/UnitResouces/UnitAttacks/aoe_anim.tscn" id="3_2w8j6"]
+[ext_resource type="PackedScene" uid="uid://bsmgndo3fc41i" path="res://unit/UnitResouces/UnitAttacks/AOE/aoe_anim.tscn" id="3_2w8j6"]
 [ext_resource type="PackedScene" uid="uid://nsb1t01xetm1" path="res://unit/UnitResouces/UnitAttacks/Status/buffAttackScripts/buff.tscn" id="4_d2non"]
 [ext_resource type="SpriteFrames" uid="uid://38tf7okpin03" path="res://unit/UnitResouces/unitSpriteFrames/Legion.tres" id="5_h8dra"]
 
@@ -42,6 +42,7 @@ offset_bottom = 12.0
 position = Vector2(12, -26)
 sprite_frames = ExtResource("5_h8dra")
 animation = &"attack3"
+flip_h = true
 
 [node name="friendlyBuffHolder" type="Node2D" parent="AnimatedSprite2D"]
 unique_name_in_owner = true
@@ -49,7 +50,7 @@ position = Vector2(-10, -3)
 
 [node name="EnemyBuffHolder" type="Node2D" parent="AnimatedSprite2D"]
 unique_name_in_owner = true
-position = Vector2(20, 26)
+position = Vector2(-1, -5)
 
 [node name="health" type="ProgressBar" parent="."]
 unique_name_in_owner = true

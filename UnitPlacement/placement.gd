@@ -139,7 +139,10 @@ func instantiate_enemy_unit(unit_data: UnitData, globalpos: Vector2, unitRow: in
 	new_unit.unitattacks.append_array(unit_data.get_unitAttacks())
 	new_unit.global_position = globalpos
 	new_unit.row_position = unitRow
+	new_unit.Factionset = new_unit.Faction.ENEMY
 	add_child(new_unit)
+	if unit_data.attackPattern != null:
+		new_unit.att
 	new_unit.flip_anim_h = unit_data.anim_flip
 	EnemyUnitAdded.emit(new_unit, globalpos)
 

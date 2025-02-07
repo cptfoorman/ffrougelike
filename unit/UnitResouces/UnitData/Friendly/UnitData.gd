@@ -11,6 +11,8 @@ class_name UnitData
 @export var levelUpUnitStrategies: Array[Base_Unit_Strategy]
 @export var collisionForDragable: PackedScene
 @export var craftable_item: Item
+@export var attackPattern: AttackPattern
+
 
 func get_spriteframes()->SpriteFrames:
 	return spriteFrames
