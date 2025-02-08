@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=8 format=3 uid="uid://cnxwhgd1cuiga"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://cnxwhgd1cuiga"]
 
+[ext_resource type="Resource" uid="uid://cvlije3has0" path="res://unit/UnitResouces/UnitData/Enemy/patterns/MagueBasicPattern.tres" id="1_fuwje"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_htdku"]
 [ext_resource type="SpriteFrames" uid="uid://bu8p0r0jjuo8h" path="res://unit/UnitResouces/unitSpriteFrames/unitspriteframesMague.tres" id="2_1krmv"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="3_j7uxf"]
@@ -12,7 +13,10 @@
 resource_local_to_scene = true
 script = ExtResource("1_htdku")
 spriteFrames = ExtResource("2_1krmv")
+level = 0
 unitStats = ExtResource("6_wplw5")
 unitAttacks = Array[ExtResource("3_j7uxf")]([ExtResource("4_5xequ"), ExtResource("5_ayfyq")])
 anim_flip = true
 unitStrategies = Array[ExtResource("7_4ul1p")]([])
+levelUpUnitStrategies = Array[ExtResource("7_4ul1p")]([])
+attackPattern = ExtResource("1_fuwje")

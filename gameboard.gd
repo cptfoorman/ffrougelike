@@ -8,6 +8,7 @@ class_name Gameboard
 @export var itemBackpack: ItemBackpack
 @export var mainUI: UI
 var unitPlacer: UnitPlacer
+@onready var playercam: Camera2D = %playercam
 
 func initialize(units: Array[UnitData], unitcount: int, enemyUnitData: Array[UnitData], items: Array[Item]):
 	unitPlacer = get_tree().get_first_node_in_group("UnitPlacer")
@@ -103,8 +104,10 @@ func _on_enemy_unit_selected(enemyUnit: Unit):
 	mainUI.reset_ui_anim()
 	set_enemy_buttons_disabled()
 	current_friendly_unit.play_attack_anim(enemyUnit.global_position)
+	tween_camera_in(enemyUnit)
 	await current_friendly_unit.animations.animation_finished
 	current_friendly_unit.currentAttack.use_attack(enemyUnit, current_friendly_unit.get_main_attack_modifier(), current_friendly_unit)
+	tween_camera_out()
 	await get_tree().create_timer(1.2).timeout
 	set_enemy_turn()
 func _on_ui_attack_selected(unitattack: UnitAttack) -> void:
@@ -118,12 +121,23 @@ func _on_ui_attack_selected(unitattack: UnitAttack) -> void:
 		set_select_friendly_buttons_enabled()
 	else:
 		set_enemy_buttons_enabled(unitattack.attack_reach)
+func tween_camera_in(defender: Unit):
+	var tween := create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(playercam,"zoom", Vector2(2,2), 0.5 )
+	tween.tween_property(playercam, "global_position", defender.global_position, 0.5 )
 
+func tween_camera_out():
+	var tween := create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(playercam,"zoom", Vector2(1.295,1.295), 0.5 )
+	tween.tween_property(playercam, "global_position", Vector2(354,198), 0.5 )
 
 func _on_ui_attack_deselected() -> void:
 	print("peacefull life")
 	set_enemy_buttons_disabled()
 	set_select_friendly_buttons_disabled()
+	set_friendly_buttons_enabled()
 
 
 func _on_enemy_units_enemy_turn_over() -> void:

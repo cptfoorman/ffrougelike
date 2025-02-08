@@ -37,7 +37,8 @@ var bossEnemyArray: Array[UnitData] = [
 	preload("res://unit/UnitResouces/UnitData/Enemy/bosses/BossMage.tres"),
 	preload("res://unit/UnitResouces/UnitData/Enemy/bosses/DwarwenBoss.tres")]
 	
-var availableItemsArray: Array[Item] = [preload("res://Items/ItemsResources/PotionOfHeal.tres"),
+var availableItemsArray: Array[Item] = [
+	preload("res://Items/ItemsResources/PotionOfHeal.tres"),
 preload("res://Items/ItemsResources/bubblePotion.tres"),
 preload("res://Items/ItemsResources/PoisonFlask.tres"),
 preload("res://Items/ItemsResources/PotionOfDefense.tres"),
@@ -45,7 +46,8 @@ preload("res://Items/ItemsResources/PotionOfStrenght.tres"),
 preload("res://Items/ItemsResources/FirePotion.tres"),
 preload("res://Items/ItemsResources/IntPotion.tres"),
 preload("res://Items/ItemsResources/IceFlask.tres")]
-var availableShopItemsArray:Array[ShopItem] = [preload("res://Items/Shop/shopitem/potion.tres"),
+var availableShopItemsArray:Array[ShopItem] = [
+	preload("res://Items/Shop/shopitem/potion.tres"),
 preload("res://Items/Shop/shopitem/strenghtPotion.tres"),
 preload("res://Items/Shop/shopitem/poisonFlask.tres"),
 preload("res://Items/Shop/shopitem/defensePotion.tres"),

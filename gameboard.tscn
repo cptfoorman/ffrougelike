@@ -176,7 +176,7 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_ef57j")
 
-[sub_resource type="Resource" id="Resource_jmwfo"]
+[sub_resource type="Resource" id="Resource_rmf5s"]
 resource_local_to_scene = true
 script = ExtResource("7_e8h6v")
 attack_name = "Jumpshot"
@@ -188,7 +188,7 @@ attack_max_cooldown = 1
 attack_on_cooldown = false
 attack_reach = 2
 
-[sub_resource type="Resource" id="Resource_j5eml"]
+[sub_resource type="Resource" id="Resource_lletd"]
 resource_local_to_scene = true
 script = ExtResource("7_e8h6v")
 attack_name = "Powershot"
@@ -200,7 +200,7 @@ attack_max_cooldown = 3
 attack_on_cooldown = false
 attack_reach = 3
 
-[sub_resource type="Resource" id="Resource_hn6t0"]
+[sub_resource type="Resource" id="Resource_5lx0e"]
 resource_local_to_scene = true
 script = ExtResource("8_jf3am")
 name = "Bowman"
@@ -212,18 +212,18 @@ inteligence = 5
 defense = 0.0
 main_modifier = 0
 
-[sub_resource type="Resource" id="Resource_pendq"]
+[sub_resource type="Resource" id="Resource_gqvqi"]
 resource_local_to_scene = true
 script = ExtResource("5_qvq3h")
 spriteFrames = ExtResource("6_jepfa")
 level = 0
-unitStats = SubResource("Resource_hn6t0")
-unitAttacks = Array[ExtResource("7_e8h6v")]([SubResource("Resource_jmwfo"), SubResource("Resource_j5eml")])
+unitStats = SubResource("Resource_5lx0e")
+unitAttacks = Array[ExtResource("7_e8h6v")]([SubResource("Resource_rmf5s"), SubResource("Resource_lletd")])
 anim_flip = true
 unitStrategies = Array[ExtResource("9_jflsl")]([])
 levelUpUnitStrategies = Array[ExtResource("9_jflsl")]([])
 
-[sub_resource type="Resource" id="Resource_5wpfx"]
+[sub_resource type="Resource" id="Resource_b7kvd"]
 resource_local_to_scene = true
 script = ExtResource("7_e8h6v")
 attack_name = "Ravenshade"
@@ -235,7 +235,7 @@ attack_max_cooldown = 2
 attack_on_cooldown = false
 attack_reach = 1
 
-[sub_resource type="Resource" id="Resource_o72x5"]
+[sub_resource type="Resource" id="Resource_uugyu"]
 resource_local_to_scene = true
 script = ExtResource("7_e8h6v")
 attack_name = "Ravenslice"
@@ -247,7 +247,7 @@ attack_max_cooldown = 1
 attack_on_cooldown = false
 attack_reach = 1
 
-[sub_resource type="Resource" id="Resource_ngsav"]
+[sub_resource type="Resource" id="Resource_espqd"]
 resource_local_to_scene = true
 script = ExtResource("8_jf3am")
 name = "Raven"
@@ -259,18 +259,18 @@ inteligence = 2
 defense = 5.0
 main_modifier = 0
 
-[sub_resource type="Resource" id="Resource_772u6"]
+[sub_resource type="Resource" id="Resource_62nr5"]
 resource_local_to_scene = true
 script = ExtResource("5_qvq3h")
 spriteFrames = ExtResource("10_yuav6")
 level = 0
-unitStats = SubResource("Resource_ngsav")
-unitAttacks = Array[ExtResource("7_e8h6v")]([SubResource("Resource_5wpfx"), SubResource("Resource_o72x5")])
+unitStats = SubResource("Resource_espqd")
+unitAttacks = Array[ExtResource("7_e8h6v")]([SubResource("Resource_b7kvd"), SubResource("Resource_uugyu")])
 anim_flip = false
 unitStrategies = Array[ExtResource("9_jflsl")]([])
 levelUpUnitStrategies = Array[ExtResource("9_jflsl")]([])
 
-[sub_resource type="Resource" id="Resource_e3fo4"]
+[sub_resource type="Resource" id="Resource_27ghp"]
 resource_local_to_scene = true
 script = ExtResource("7_e8h6v")
 attack_name = "MageSlice"
@@ -282,7 +282,7 @@ attack_max_cooldown = 1
 attack_on_cooldown = false
 attack_reach = 1
 
-[sub_resource type="Resource" id="Resource_55wd6"]
+[sub_resource type="Resource" id="Resource_e513r"]
 resource_local_to_scene = true
 script = ExtResource("7_e8h6v")
 attack_name = "Vortex"
@@ -294,7 +294,7 @@ attack_max_cooldown = 3
 attack_on_cooldown = false
 attack_reach = 2
 
-[sub_resource type="Resource" id="Resource_6ti8p"]
+[sub_resource type="Resource" id="Resource_7y077"]
 resource_local_to_scene = true
 script = ExtResource("8_jf3am")
 name = "Magus"
@@ -306,13 +306,13 @@ inteligence = 13
 defense = 2.0
 main_modifier = 1
 
-[sub_resource type="Resource" id="Resource_2jaxp"]
+[sub_resource type="Resource" id="Resource_gfg0q"]
 resource_local_to_scene = true
 script = ExtResource("5_qvq3h")
 spriteFrames = ExtResource("11_gk688")
 level = 0
-unitStats = SubResource("Resource_6ti8p")
-unitAttacks = Array[ExtResource("7_e8h6v")]([SubResource("Resource_e3fo4"), SubResource("Resource_55wd6")])
+unitStats = SubResource("Resource_7y077")
+unitAttacks = Array[ExtResource("7_e8h6v")]([SubResource("Resource_27ghp"), SubResource("Resource_e513r")])
 anim_flip = true
 unitStrategies = Array[ExtResource("9_jflsl")]([])
 levelUpUnitStrategies = Array[ExtResource("9_jflsl")]([])
@@ -324,7 +324,8 @@ enemyUnitsGroup = NodePath("enemyUnits")
 itemBackpack = NodePath("Itembackpack")
 mainUI = NodePath("UI")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="playercam" type="Camera2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(354, 198)
 zoom = Vector2(1.295, 1.295)
 
@@ -341,7 +342,7 @@ script = ExtResource("12_q7lxg")
 
 [node name="Placement" parent="." instance=ExtResource("15_u0x21")]
 position = Vector2(2, 1)
-availableEnemyUnitsArray = Array[ExtResource("5_qvq3h")]([SubResource("Resource_pendq"), SubResource("Resource_772u6"), SubResource("Resource_2jaxp")])
+availableEnemyUnitsArray = Array[ExtResource("5_qvq3h")]([SubResource("Resource_gqvqi"), SubResource("Resource_62nr5"), SubResource("Resource_gfg0q")])
 
 [node name="Itembackpack" parent="." instance=ExtResource("12_3kqlw")]
 position = Vector2(263, 55)

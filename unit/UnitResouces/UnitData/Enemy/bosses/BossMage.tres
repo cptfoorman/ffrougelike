@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="UnitData" load_steps=10 format=3 uid="uid://bwo58yo6ijmly"]
 
+[ext_resource type="Resource" uid="uid://cwwha2dm1ulld" path="res://unit/UnitResouces/UnitData/Enemy/patterns/boss/MageBossPattern.tres" id="1_73ame"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_cnmxv"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_5my8y"]
 [ext_resource type="SpriteFrames" uid="uid://bu8p0r0jjuo8h" path="res://unit/UnitResouces/unitSpriteFrames/unitspriteframesMague.tres" id="2_ptnwu"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_kmo0x"]
 [ext_resource type="Resource" uid="uid://dul6ewp3gcvlx" path="res://unit/UnitResouces/UnitAttacks/enemies/mague/EnemyMagueFan.tres" id="4_tdi3o"]
 [ext_resource type="Resource" uid="uid://juubmpktj0p0" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/castedvortex.tres" id="5_rq4a7"]
-[ext_resource type="Resource" uid="uid://dbvowvsl762r4" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/magusslice.tres" id="6_hxymm"]
 [ext_resource type="Resource" uid="uid://be5mwmr130780" path="res://unit/UnitResouces/UnitAttacks/Friendly/magus/magusvortex.tres" id="7_afixq"]
 [ext_resource type="Resource" uid="uid://b0ox7x2gvhxko" path="res://unit/UnitResouces/stats/bosses/MagueBoss.tres" id="8_02ogt"]
 
@@ -15,7 +15,8 @@ script = ExtResource("1_cnmxv")
 spriteFrames = ExtResource("2_ptnwu")
 level = 0
 unitStats = ExtResource("8_02ogt")
-unitAttacks = Array[ExtResource("2_5my8y")]([ExtResource("4_tdi3o"), ExtResource("4_tdi3o"), ExtResource("5_rq4a7"), ExtResource("6_hxymm"), ExtResource("7_afixq"), ExtResource("7_afixq")])
+unitAttacks = Array[ExtResource("2_5my8y")]([ExtResource("4_tdi3o"), ExtResource("5_rq4a7"), ExtResource("7_afixq")])
 anim_flip = true
 unitStrategies = Array[ExtResource("3_kmo0x")]([])
 levelUpUnitStrategies = Array[ExtResource("3_kmo0x")]([])
+attackPattern = ExtResource("1_73ame")

@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://c1myishwr242u"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=10 format=3 uid="uid://c1myishwr242u"]
 
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_m3jlr"]
+[ext_resource type="Resource" uid="uid://dupyfu8w8dkkp" path="res://unit/UnitResouces/UnitData/Enemy/patterns/boss/PriestBossPattern.tres" id="1_rvtkf"]
 [ext_resource type="SpriteFrames" uid="uid://duiv6eo5705tx" path="res://unit/UnitResouces/unitSpriteFrames/Reader.tres" id="2_d1knq"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_xjay3"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_xibpf"]
@@ -12,7 +13,10 @@
 [resource]
 script = ExtResource("1_m3jlr")
 spriteFrames = ExtResource("2_d1knq")
+level = 0
 unitStats = ExtResource("6_iqwhv")
-unitAttacks = Array[ExtResource("2_xjay3")]([ExtResource("4_78t2l"), ExtResource("5_8c6qa"), ExtResource("5_8c6qa"), ExtResource("5_8c6qa"), ExtResource("6_8hitq")])
+unitAttacks = Array[ExtResource("2_xjay3")]([ExtResource("4_78t2l"), ExtResource("5_8c6qa"), ExtResource("6_8hitq")])
 anim_flip = true
 unitStrategies = Array[ExtResource("3_xibpf")]([])
+levelUpUnitStrategies = Array[ExtResource("3_xibpf")]([])
+attackPattern = ExtResource("1_rvtkf")

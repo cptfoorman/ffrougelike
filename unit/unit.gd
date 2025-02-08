@@ -85,6 +85,9 @@ func get_attacks()-> Array[UnitAttack]:
 		if attack.attack_on_cooldown == false:
 			units_attacks.append(attack)
 	return units_attacks
+	
+func get_all_attacks()-> Array[UnitAttack]:
+	return unitattacks
 func getName():
 	return unitsstats.name
 func take_damage(damage: float):
@@ -107,6 +110,7 @@ func take_healing(healing: float):
 	prints(unitsstats.name, health)
 	healthbar.value = health
 	health_value_label.text = str(healthbar.value) + "HP"
+	selectButton.tooltip_text = "defense " +str(defense)
 	if health <= 0:
 		queue_free()
 		prints(unitsstats.name + " died")
@@ -156,6 +160,7 @@ func instance_enemy_buff(buff: BuffData):
 	var new_buff: BuffHolder = buffScene.instantiate()
 	enemy_buff_holder.add_child(new_buff)
 	new_buff.global_position = enemy_buff_holder.global_position
+	selectButton.tooltip_text = "defense " +str(defense)
 	new_buff.initialize(self, buff)
 func set_friendly_select_disabled():
 	friendlySelectButton.hide()
