@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://dkmg7le1swsts"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=10 format=3 uid="uid://dkmg7le1swsts"]
 
+[ext_resource type="Resource" uid="uid://dwoi5uxygnvnl" path="res://unit/UnitResouces/UnitData/Enemy/patterns/t2/BowmanT2.tres" id="1_g4kai"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_h4nym"]
 [ext_resource type="SpriteFrames" uid="uid://cjs2tyf5pq18r" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteFramesBowman.tres" id="2_ja5li"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_ltk8q"]
@@ -14,7 +15,8 @@ script = ExtResource("1_h4nym")
 spriteFrames = ExtResource("2_ja5li")
 level = 0
 unitStats = ExtResource("7_0ik6t")
-unitAttacks = Array[ExtResource("2_ltk8q")]([ExtResource("3_uoihf"), ExtResource("4_cvbtw"), ExtResource("3_uoihf"), ExtResource("5_dtft2"), ExtResource("4_cvbtw")])
+unitAttacks = Array[ExtResource("2_ltk8q")]([ExtResource("3_uoihf"), ExtResource("4_cvbtw"), ExtResource("5_dtft2")])
 anim_flip = true
 unitStrategies = Array[ExtResource("3_xqf2o")]([])
 levelUpUnitStrategies = Array[ExtResource("3_xqf2o")]([])
+attackPattern = ExtResource("1_g4kai")

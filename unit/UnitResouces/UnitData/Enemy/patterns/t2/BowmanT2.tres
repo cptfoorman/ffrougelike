@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="AttackPattern" load_steps=2 format=3 uid="uid://dwoi5uxygnvnl"]
+
+[ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Enemy/patterns/AttackPattern.gd" id="1_ngufq"]
+
+[resource]
+script = ExtResource("1_ngufq")
+pattern = Array[int]([0, 1, 1, 2])
+currentPatternIndex = 4

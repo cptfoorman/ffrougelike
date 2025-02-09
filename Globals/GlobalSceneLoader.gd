@@ -271,7 +271,9 @@ func initialize_path_tree():
 func connect_path_tree_signal():
 	current_path_tree.connect("EventSent", _on_event_sent)
 func add_next_tier_unit():
-	availableEnemyUnitsArray.append(availableEnemyUnitsTierTwoArray.pick_random())
+	var new_unit: UnitData = availableEnemyUnitsTierTwoArray.pick_random()
+	availableEnemyUnitsArray.append(new_unit)
+	availableEnemyUnitsTierTwoArray.erase(new_unit)
 func _on_event_sent(eventNum: int)-> void:
 	currentdiff+= 1
 	match eventNum:
