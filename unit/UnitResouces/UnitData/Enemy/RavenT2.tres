@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=10 format=3 uid="uid://dlv4caq36sxvg"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=13 format=3 uid="uid://dlv4caq36sxvg"]
 
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_lwgmx"]
+[ext_resource type="Resource" uid="uid://dunnwf5loo6pa" path="res://unit/UnitResouces/UnitData/Enemy/patterns/t2/ravenT2.tres" id="1_nk0wj"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_ox4pq"]
 [ext_resource type="SpriteFrames" uid="uid://qucmm0ql78sn" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteframesRaven.tres" id="2_qof0a"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="3_4si11"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_g8p82"]
+[ext_resource type="Resource" uid="uid://dsoexpfy67n34" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/raven/strplusStrategy.tres" id="4_tt7mj"]
 [ext_resource type="Resource" uid="uid://bnj2agct5jy2h" path="res://unit/UnitResouces/UnitAttacks/Friendly/raven/SpecialAttackRaven.tres" id="4_yqcb7"]
 [ext_resource type="Resource" uid="uid://dsrqwfjiwe2qa" path="res://unit/UnitResouces/UnitAttacks/Friendly/raven/ravenshade.tres" id="5_ghlxf"]
 [ext_resource type="Resource" uid="uid://psrk3ucs5lr5" path="res://unit/UnitResouces/UnitAttacks/Friendly/raven/ravenslice.tres" id="6_vmmjs"]
@@ -15,7 +18,8 @@ script = ExtResource("1_lwgmx")
 spriteFrames = ExtResource("2_qof0a")
 level = 0
 unitStats = ExtResource("8_cw6gr")
-unitAttacks = Array[ExtResource("2_ox4pq")]([ExtResource("4_yqcb7"), ExtResource("5_ghlxf"), ExtResource("5_ghlxf"), ExtResource("6_vmmjs"), ExtResource("7_w8g43")])
+unitAttacks = Array[ExtResource("2_ox4pq")]([ExtResource("4_yqcb7"), ExtResource("5_ghlxf"), ExtResource("6_vmmjs"), ExtResource("7_w8g43")])
 anim_flip = false
 unitStrategies = Array[ExtResource("3_g8p82")]([])
-levelUpUnitStrategies = Array[ExtResource("3_g8p82")]([])
+levelUpUnitStrategies = Array[ExtResource("3_g8p82")]([ExtResource("3_4si11"), ExtResource("4_tt7mj"), ExtResource("4_tt7mj"), ExtResource("4_tt7mj"), ExtResource("4_tt7mj"), ExtResource("4_tt7mj"), ExtResource("3_4si11"), ExtResource("3_4si11"), ExtResource("3_4si11"), ExtResource("3_4si11"), ExtResource("3_4si11"), ExtResource("4_tt7mj"), ExtResource("3_4si11"), ExtResource("4_tt7mj"), ExtResource("4_tt7mj")])
+attackPattern = ExtResource("1_nk0wj")

@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjemn32fc0t37"]
+[gd_scene load_steps=6 format=3 uid="uid://bjemn32fc0t37"]
 
 [ext_resource type="Script" path="res://Dragables/dragableArea.gd" id="1_mh6x2"]
 [ext_resource type="Resource" uid="uid://xojhwutx7nyq" path="res://unit/UnitResouces/UnitData/Friendly/RavenData.tres" id="2_pcvv8"]
 [ext_resource type="SpriteFrames" uid="uid://cjs2tyf5pq18r" path="res://unit/UnitResouces/unitSpriteFrames/unitSpriteFramesBowman.tres" id="3_bjh0h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ae1dy"]
+bg_color = Color(0.644323, 0.570919, 0.667557, 0.454902)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id="Theme_ydb1s"]
+Label/styles/normal = SubResource("StyleBoxFlat_ae1dy")
 
 [node name="Dragable" type="Area2D" node_paths=PackedStringArray("animation", "label")]
 script = ExtResource("1_mh6x2")
@@ -21,8 +31,11 @@ offset_left = -19.0
 offset_top = -43.0
 offset_right = 21.0
 offset_bottom = -20.0
+theme = SubResource("Theme_ydb1s")
 theme_override_font_sizes/font_size = 15
 text = "Lvl 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

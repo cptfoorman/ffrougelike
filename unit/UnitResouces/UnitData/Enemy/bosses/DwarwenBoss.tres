@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=10 format=3 uid="uid://p0epj2oithki"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=12 format=3 uid="uid://p0epj2oithki"]
 
 [ext_resource type="Resource" uid="uid://doqd2x2jakd1y" path="res://unit/UnitResouces/UnitData/Enemy/patterns/boss/DwarwenBossPattern.tres" id="1_467vq"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_pxvhd"]
 [ext_resource type="SpriteFrames" uid="uid://hspwp177qixh" path="res://unit/UnitResouces/unitSpriteFrames/Dwarwen.tres" id="2_6fctv"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_yhn83"]
+[ext_resource type="Resource" uid="uid://c1u8ucyb5wcyo" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/Strenght.tres" id="3_h6sgy"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_r1jc2"]
 [ext_resource type="Resource" uid="uid://clmupjuans0ch" path="res://unit/UnitResouces/stats/bosses/EnemyDwarwenBoss.tres" id="4_arjq2"]
 [ext_resource type="Resource" uid="uid://ccynn5vcbo4b7" path="res://unit/UnitResouces/UnitAttacks/enemies/dwarwen/enemyDwarwenHeal.tres" id="4_fxvuo"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="4_tvqvr"]
 [ext_resource type="Resource" uid="uid://7rwa4lr4kpb7" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/twoBash.tres" id="5_xqqo1"]
 [ext_resource type="Resource" uid="uid://cishg1nabvtgg" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/Beyblade.tres" id="6_ig1p3"]
 
@@ -19,5 +21,5 @@ unitStats = ExtResource("4_arjq2")
 unitAttacks = Array[ExtResource("2_yhn83")]([ExtResource("4_fxvuo"), ExtResource("5_xqqo1"), ExtResource("6_ig1p3")])
 anim_flip = true
 unitStrategies = Array[ExtResource("3_r1jc2")]([])
-levelUpUnitStrategies = Array[ExtResource("3_r1jc2")]([])
+levelUpUnitStrategies = Array[ExtResource("3_r1jc2")]([ExtResource("3_h6sgy"), ExtResource("4_tvqvr"), ExtResource("4_tvqvr"), ExtResource("4_tvqvr"), ExtResource("4_tvqvr"), ExtResource("4_tvqvr"), ExtResource("3_h6sgy"), ExtResource("3_h6sgy"), ExtResource("3_h6sgy"), ExtResource("3_h6sgy"), ExtResource("3_h6sgy"), ExtResource("3_h6sgy"), ExtResource("4_tvqvr"), ExtResource("3_h6sgy"), ExtResource("4_tvqvr")])
 attackPattern = ExtResource("1_467vq")

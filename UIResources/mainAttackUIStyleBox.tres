@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://drufvrd1kf3jy"]
+
+[ext_resource type="Texture2D" uid="uid://bwgiu3db4icv2" path="res://assets/Ui/mainAttackMenutxt.png" id="1_26617"]
+
+[resource]
+texture = ExtResource("1_26617")
+texture_margin_left = 6.0
+texture_margin_top = 4.0
+texture_margin_right = 6.0
+texture_margin_bottom = 4.0

@@ -102,7 +102,7 @@ func get_marker(markerArray: Array[DropMarker])->DropMarker:
 	
 ############################################################
 ###heres where instancing happens####################
-##this is a placeholder of sorts for enemies instances
+##this is a placeholder of sorts for enemy instances
 func fill_enemy_units():
 	for i in enemy_count:
 		var randomRow: Array[int] = [1,2,3]
@@ -141,6 +141,7 @@ func instantiate_enemy_unit(unit_data: UnitData, globalpos: Vector2, unitRow: in
 	new_unit.row_position = unitRow
 	new_unit.Factionset = new_unit.Faction.ENEMY
 	add_child(new_unit)
+	new_unit.unitdata.level = globalSceneLoader.current_enemy_lvlup
 	new_unit.flip_anim_h = unit_data.anim_flip
 	EnemyUnitAdded.emit(new_unit, globalpos)
 

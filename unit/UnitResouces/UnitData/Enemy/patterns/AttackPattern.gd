@@ -3,7 +3,7 @@ class_name AttackPattern
 
 
 @export var pattern: Array[int]
-@export var currentPatternIndex:= 0
+@export var currentPatternIndex:= pattern.size()
 
 
 func advancePattern():

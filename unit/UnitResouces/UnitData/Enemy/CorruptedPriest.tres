@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=9 format=3 uid="uid://cfxm1obg38qv6"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=11 format=3 uid="uid://cfxm1obg38qv6"]
 
+[ext_resource type="Resource" uid="uid://fkv34k4a3k0g" path="res://unit/UnitResouces/UnitData/Enemy/patterns/t2/CorruptedPriest.tres" id="1_eepf1"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_g4vah"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_36hap"]
 [ext_resource type="SpriteFrames" uid="uid://duiv6eo5705tx" path="res://unit/UnitResouces/unitSpriteFrames/Reader.tres" id="2_736fk"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_jjphy"]
-[ext_resource type="Resource" uid="uid://08jg2wawtpf6" path="res://unit/UnitResouces/UnitAttacks/enemies/enemyHealer/EnemyAoeHeal.tres" id="4_gnbwy"]
+[ext_resource type="Resource" uid="uid://drhm7511o3frl" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/reader/intplusStrategyReader.tres" id="3_ld7iw"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="4_q0t7u"]
 [ext_resource type="Resource" uid="uid://bi4nbdc73vu8w" path="res://unit/UnitResouces/UnitAttacks/enemies/bossPriest/EnemySmite.tres" id="5_2de51"]
 [ext_resource type="Resource" uid="uid://dw26svrifu73u" path="res://unit/UnitResouces/UnitAttacks/enemies/bossPriest/UnholyScript.tres" id="6_2pe11"]
 [ext_resource type="Resource" uid="uid://4uqphvwl0mdn" path="res://unit/UnitResouces/stats/enemy/HealerEnemyPriest.tres" id="6_2xhj0"]
@@ -14,7 +16,8 @@ script = ExtResource("1_g4vah")
 spriteFrames = ExtResource("2_736fk")
 level = 0
 unitStats = ExtResource("6_2xhj0")
-unitAttacks = Array[ExtResource("2_36hap")]([ExtResource("4_gnbwy"), ExtResource("5_2de51"), ExtResource("6_2pe11"), ExtResource("6_2pe11")])
+unitAttacks = Array[ExtResource("2_36hap")]([ExtResource("5_2de51"), ExtResource("6_2pe11")])
 anim_flip = true
 unitStrategies = Array[ExtResource("3_jjphy")]([])
-levelUpUnitStrategies = Array[ExtResource("3_jjphy")]([])
+levelUpUnitStrategies = Array[ExtResource("3_jjphy")]([ExtResource("3_ld7iw"), ExtResource("4_q0t7u"), ExtResource("3_ld7iw"), ExtResource("3_ld7iw"), ExtResource("4_q0t7u"), ExtResource("4_q0t7u"), ExtResource("3_ld7iw"), ExtResource("3_ld7iw"), ExtResource("3_ld7iw"), ExtResource("3_ld7iw"), ExtResource("4_q0t7u"), ExtResource("4_q0t7u"), ExtResource("3_ld7iw"), ExtResource("3_ld7iw"), ExtResource("4_q0t7u")])
+attackPattern = ExtResource("1_eepf1")

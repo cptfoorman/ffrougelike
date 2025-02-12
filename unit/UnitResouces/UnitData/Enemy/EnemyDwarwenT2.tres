@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=10 format=3 uid="uid://ba4170pret2qe"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=12 format=3 uid="uid://ba4170pret2qe"]
 
 [ext_resource type="Resource" uid="uid://chei4dttr2yix" path="res://unit/UnitResouces/UnitData/Enemy/patterns/t2/DwarwenT2.tres" id="1_bqwi2"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_pe8ff"]
 [ext_resource type="SpriteFrames" uid="uid://hspwp177qixh" path="res://unit/UnitResouces/unitSpriteFrames/Dwarwen.tres" id="2_i24ug"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="3_dpxrv"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="3_gol3q"]
+[ext_resource type="Resource" uid="uid://c1u8ucyb5wcyo" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/Dwarwen/Strenght.tres" id="4_86anb"]
 [ext_resource type="Resource" uid="uid://3316k8a0rd7y" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/oneBash.tres" id="4_s2t8t"]
 [ext_resource type="Resource" uid="uid://7rwa4lr4kpb7" path="res://unit/UnitResouces/UnitAttacks/Friendly/dwarwen/twoBash.tres" id="5_2ws2v"]
 [ext_resource type="Resource" uid="uid://ccynn5vcbo4b7" path="res://unit/UnitResouces/UnitAttacks/enemies/dwarwen/enemyDwarwenHeal.tres" id="6_kgn72"]
@@ -19,5 +21,5 @@ unitStats = ExtResource("6_qe2xa")
 unitAttacks = Array[ExtResource("3_gol3q")]([ExtResource("4_s2t8t"), ExtResource("4_s2t8t"), ExtResource("5_2ws2v"), ExtResource("6_kgn72"), ExtResource("5_2ws2v")])
 anim_flip = true
 unitStrategies = Array[ExtResource("7_1kl4k")]([])
-levelUpUnitStrategies = Array[ExtResource("7_1kl4k")]([])
+levelUpUnitStrategies = Array[ExtResource("7_1kl4k")]([ExtResource("3_dpxrv"), ExtResource("4_86anb"), ExtResource("3_dpxrv"), ExtResource("3_dpxrv"), ExtResource("3_dpxrv"), ExtResource("4_86anb"), ExtResource("4_86anb"), ExtResource("4_86anb"), ExtResource("4_86anb"), ExtResource("4_86anb"), ExtResource("4_86anb"), ExtResource("4_86anb"), ExtResource("4_86anb"), ExtResource("4_86anb"), ExtResource("4_86anb")])
 attackPattern = ExtResource("1_bqwi2")

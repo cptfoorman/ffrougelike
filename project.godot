@@ -45,6 +45,10 @@ EnemyUnits=""
 PathTree=""
 Shop=""
 
+[gui]
+
+theme/custom="res://UIResources/MainAttackUItheme.tres"
+
 [input]
 
 click={

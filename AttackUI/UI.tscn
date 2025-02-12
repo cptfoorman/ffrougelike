@@ -347,7 +347,7 @@ anchor_right = 1.0
 anchor_bottom = 0.989
 offset_left = 24.0
 offset_top = 262.768
-offset_right = -5.0
+offset_right = -78.0
 offset_bottom = 263.128
 script = ExtResource("1_jjdch")
 
@@ -359,7 +359,7 @@ anchor_right = 0.99
 anchor_bottom = 0.97
 offset_left = -5.0
 offset_top = -0.0700002
-offset_right = -13.77
+offset_right = 160.5
 offset_bottom = 1.93999
 
 [node name="HBoxContainer" type="HBoxContainer" parent="AttackUI/MainContainer"]

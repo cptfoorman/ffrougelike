@@ -40,6 +40,7 @@ func _process(delta: float) -> void:
 func connect_dragables():
 	for child in unitHolder.get_children():
 		if child is Dragable:
+			child.label.hide()
 			child.connect("TakenAway", _on_dragable_taken_away)
 			child.connect("Dropped", _on_dragable_dropped)
 func _on_dragable_dropped(unit_data: UnitData) -> void:

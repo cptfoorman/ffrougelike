@@ -75,7 +75,7 @@ var lvlUpMultiplier: int = 0
 
 var current_floor: int = -1
 var current_event_array: Array[int]
-
+var current_enemy_lvlup:= 0
 var currentdiff: int = 1
 var char_unlocked: int = 1
 
@@ -217,7 +217,7 @@ func instantiate_boss_gameboard():
 	await get_tree().create_timer(0.5).timeout
 	initialize_current_gameboard_for_boss()
 func initialize_current_gameboard_for_boss():
-	current_gameboard.initialize(get_current_party_array(), 5, get_boss_enemy_array(), get_current_items_array())
+	current_gameboard.initialize(get_current_party_array(), currentdiff-3, get_boss_enemy_array(), get_current_items_array())
 	
 #########################################################
 #######UPGRADES############################
@@ -288,6 +288,7 @@ func _on_event_sent(eventNum: int)-> void:
 			set_new_event_array()
 			current_floor = -1
 			add_next_tier_unit()
+			update_levels()
 		4:
 			instantiate_shop()
 func set_new_event_array():
@@ -295,5 +296,9 @@ func set_new_event_array():
 	var possible_events_array: Array[int] = [0,0,2,2,1,1,1,0,0,0,0,4,4]
 	for i in 10:
 		current_event_array.append(possible_events_array.pick_random())
+		
+func update_levels():
+	if current_enemy_lvlup<15:
+		current_enemy_lvlup +=3
 ########################################################
 ##########

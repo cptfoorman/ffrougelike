@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="UnitData" load_steps=10 format=3 uid="uid://c1myishwr242u"]
+[gd_resource type="Resource" script_class="UnitData" load_steps=12 format=3 uid="uid://c1myishwr242u"]
 
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitData/Friendly/UnitData.gd" id="1_m3jlr"]
 [ext_resource type="Resource" uid="uid://dupyfu8w8dkkp" path="res://unit/UnitResouces/UnitData/Enemy/patterns/boss/PriestBossPattern.tres" id="1_rvtkf"]
 [ext_resource type="SpriteFrames" uid="uid://duiv6eo5705tx" path="res://unit/UnitResouces/unitSpriteFrames/Reader.tres" id="2_d1knq"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitAttacks/Unitattacks.gd" id="2_xjay3"]
+[ext_resource type="Resource" uid="uid://drhm7511o3frl" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/reader/intplusStrategyReader.tres" id="3_gvnk7"]
 [ext_resource type="Script" path="res://unit/UnitResouces/UnitUpgradeStrategies/Base_Unit_Strategy.gd" id="3_xibpf"]
 [ext_resource type="Resource" uid="uid://bi4nbdc73vu8w" path="res://unit/UnitResouces/UnitAttacks/enemies/bossPriest/EnemySmite.tres" id="4_78t2l"]
+[ext_resource type="Resource" uid="uid://fegh102culhx" path="res://unit/UnitResouces/UnitUpgradeStrategies/StrategyResources/hpplusStrategy.tres" id="4_bkayv"]
 [ext_resource type="Resource" uid="uid://c76c86xcu3k7r" path="res://unit/UnitResouces/UnitAttacks/enemies/bossPriest/UnholyReading.tres" id="5_8c6qa"]
 [ext_resource type="Resource" uid="uid://08jg2wawtpf6" path="res://unit/UnitResouces/UnitAttacks/enemies/enemyHealer/EnemyAoeHeal.tres" id="6_8hitq"]
 [ext_resource type="Resource" uid="uid://4xt58jqq8j7b" path="res://unit/UnitResouces/stats/bosses/BossPriestStats.tres" id="6_iqwhv"]
@@ -18,5 +20,5 @@ unitStats = ExtResource("6_iqwhv")
 unitAttacks = Array[ExtResource("2_xjay3")]([ExtResource("4_78t2l"), ExtResource("5_8c6qa"), ExtResource("6_8hitq")])
 anim_flip = true
 unitStrategies = Array[ExtResource("3_xibpf")]([])
-levelUpUnitStrategies = Array[ExtResource("3_xibpf")]([])
+levelUpUnitStrategies = Array[ExtResource("3_xibpf")]([ExtResource("3_gvnk7"), ExtResource("4_bkayv"), ExtResource("4_bkayv"), ExtResource("4_bkayv"), ExtResource("3_gvnk7"), ExtResource("4_bkayv"), ExtResource("4_bkayv"), ExtResource("4_bkayv"), ExtResource("3_gvnk7"), ExtResource("3_gvnk7"), ExtResource("3_gvnk7"), ExtResource("4_bkayv"), ExtResource("4_bkayv"), ExtResource("3_gvnk7"), ExtResource("4_bkayv")])
 attackPattern = ExtResource("1_rvtkf")
